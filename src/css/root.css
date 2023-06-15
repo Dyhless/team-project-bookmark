@@ -1,0 +1,29 @@
+:root {
+
+   /* COLORS */
+
+   --black-color: #111111;
+   --grey-dark: #202024;
+   --blue-color: #4F2EE8;
+   --yellow-color: #EAC645;
+   --white-color: #FFFFFF;
+
+   --main-font-black-color: #111111;
+   --main-font-white-color: #F3F3F3;
+
+   --accent-font-blue-color: #4F2EE8;
+
+   --paragraph-grey-font-color: #B4AFAF;
+   --paragraph-white-font-color: #F6F6F6;
+
+   --dark-theme-background-black-color: #111111;
+   --dark-theme-background-grey-color: #202024;
+
+   /* FONTS */
+
+   --main-font: 'DM Sans', sans-serif;
+
+   /* other */
+
+
+}
