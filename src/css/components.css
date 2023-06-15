@@ -1,0 +1,44 @@
+body {
+   font-family: DM Sans, sans-serif;
+   font-size: 18px;
+   line-height: 1.5;
+   letter-spacing: -0.02em;
+   margin: 0;
+   color: var(--main-font-black-color);
+}
+
+/* CONTAINER */
+
+.container {
+   width: 100vw;
+   margin-right: auto;
+   margin-left: auto;
+}
+
+/* MOBILE */
+@media screen and (max-width: 767px) {
+   .container {
+      max-width: 375px;
+      padding-left: 20px;
+      padding-right: 20px;
+      /* outline: 1px solid blue; */
+   }
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+   .container {
+      max-width: 768px;
+      padding-left: 32px;
+      padding-right: 32px;
+      /* outline: 1px solid green; */
+   }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1440px) {
+   .container {
+      max-width: 1440px;
+      /* outline: 1px solid tomato; */
+   }
+}
