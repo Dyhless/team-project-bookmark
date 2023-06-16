@@ -1,0 +1,33 @@
+/* Временно. Удалить потом! ================================== */
+.nav__list__temporary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 54px;
+  gap: 14px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  color: rgb(153, 31, 0);
+}
+/* ================================= */
+
+.shopping-title {
+  color: var(--black-color);
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  /* identical to box height, or 108% */
+
+  letter-spacing: -0.04em;
+
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+}
+
+.part-two {
+  color: var(--blue-color);
+}
