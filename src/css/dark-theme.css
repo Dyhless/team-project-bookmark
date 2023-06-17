@@ -2,3 +2,7 @@ html.dark {
     background-color: var(--dark-theme-background-grey-color);
 
 }
+
+.logo.dark{
+    color: var(--main-font-white-color);
+}
