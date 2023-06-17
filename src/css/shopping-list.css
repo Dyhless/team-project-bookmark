@@ -1,16 +1,38 @@
 /* ================== Временно. Удалить потом!!!!! ================ */
 .nav__list__temporary {
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-top: 24px;
-  gap: 14px;
   font-weight: 700;
   font-size: 28px;
   line-height: 12px;
-  color: rgb(153, 31, 0);
+  color: rgb(94, 228, 5);
 }
 /* ===============Временно. Удалить потом!!!!!================== */
+
+@media screen and (max-width: 767.9px) {
+  .shopping-list__title {
+    margin: 40px 20px 120px 20px;
+  }
+
+  .text-saver {
+    max-width: 244px;
+    margin-bottom: 14px;
+    font-size: 14px;
+    line-height: 1.29;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023.9px) {
+  .shopping-list__title {
+    margin: 40px 32px 140px 32px;
+  }
+}
+
+@media screen and (max-width: 1023.9px) {
+  .support-ukraine {
+    display: none;
+  }
+}
 
 .shopping-list__title {
   color: var(--black-color);
@@ -21,12 +43,47 @@
   line-height: 52px;
 
   letter-spacing: -0.04em;
-
-  margin-top: 40px;
-  margin-bottom: 40px;
-  margin-left: 40px;
 }
 
 .part-two {
   color: var(--blue-color);
+}
+
+.screen-saver {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.text-saver {
+  max-width: 349px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  font-size: 18px;
+  line-height: 1.33;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (min-width: 1024px) {
+  .flex-container-shopping {
+    display: flex;
+    margin: 0 auto;
+    padding: 40px 20px 0 24px;
+  }
+
+  .shopping-list__title {
+    margin-left: 40px;
+    margin-bottom: 140px;
+  }
+
+  .screen-saver {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
 }
