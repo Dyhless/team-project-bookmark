@@ -19,21 +19,22 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
-<body>
-  <header>
-    <include src="./partials/header.html"></include>
-  </header>
-  <main>
-    <div class="container">
-      <aside class="site-bar">
-        <include src="./partials/category.html"></include>
-        <include src="./partials/slider.html"></include>
-      </aside>
-      <include src="partials/home-page.html"></include>
-    </div>
-  </main>
+  <body>
+    <header>
+      <include src="./partials/header.html"></include>
+    </header>
+    <main>
+      <div class="container">
+        <div class="desktop-layout">
+          <aside class="site-bar">
+            <include src="./partials/category.html"></include>
+            <include src="./partials/slider.html"></include>
+          </aside>
+          <include src="partials/home-page.html"></include>
+        </div>
+      </div>
+    </main>
 
-  <script type="module" src="./index.js"></script>
-</body>
-
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>
