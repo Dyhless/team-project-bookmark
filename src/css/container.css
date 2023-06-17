@@ -1,33 +1,38 @@
 .container {
-   width: 100vw;
-   margin-right: auto;
-   margin-left: auto;
+  /* Phone max-width */
+  max-width: 374.9px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  padding-bottom: 80px;
+
+  margin: 0 auto;
+
+  outline: solid 2px tomato;
 }
 
-/* MOBILE */
-@media screen and (max-width: 767px) {
-   .container {
-      max-width: 375px;
-      padding-left: 20px;
-      padding-right: 20px;
-      /* outline: 1px solid blue; */
-   }
+/* Tablet max-width */
+@media screen and (max-width: 1023.9px) {
+  .container {
+    max-width: 1023.9px;
+
+    /* Padding Tablet */
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 40px;
+    padding-bottom: 100px;
+  }
 }
 
-/* TABLET */
-@media screen and (min-width: 768px) {
-   .container {
-      max-width: 768px;
-      padding-left: 32px;
-      padding-right: 32px;
-      /* outline: 1px solid green; */
-   }
-}
+/* Desktop min-width */
+@media screen and (min-width: 1024px) {
+  .container {
+    /* Desktop max-width */
+    max-width: 1440px;
 
-/* DESKTOP */
-@media screen and (min-width: 1440px) {
-   .container {
-      max-width: 1440px;
-      /* outline: 1px solid tomato; */
-   }
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 40px;
+    padding-bottom: 100px;
+  }
 }

@@ -1,0 +1,15 @@
+.category {
+  height: 228px;
+  max-width: 356px;
+
+  overflow: auto;
+
+  outline: dashed 2px black;
+  background-color: blueviolet;
+}
+
+@media screen and (min-width: 768px) {
+  .category {
+    height: 472px;
+  }
+}

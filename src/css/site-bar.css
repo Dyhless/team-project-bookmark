@@ -1,0 +1,27 @@
+.site-bar {
+  display: flex;
+  flex-direction: column;
+  /* width: 335px; */
+  max-width: 335px;
+  gap: 40px;
+  margin-right: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .site-bar {
+    /* width: 672px; */
+    max-width: 672px;
+    gap: 32px;
+    flex-direction: row;
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .site-bar {
+    /* width: 356px; */
+    max-width: 356px;
+    flex-direction: column;
+    gap: 86px;
+  }
+}
