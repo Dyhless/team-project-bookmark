@@ -12,9 +12,12 @@
 @media screen and (max-width: 767.9px) {
   .shopping-list__title {
     margin: 40px 20px 120px 20px;
+    left: 20px;
+    top: 104px;
   }
 
   .text-saver {
+    font-weight: 400;
     max-width: 244px;
     margin-bottom: 14px;
     font-size: 14px;
@@ -25,6 +28,14 @@
 @media screen and (min-width: 768px) and (max-width: 1023.9px) {
   .shopping-list__title {
     margin: 40px 32px 140px 32px;
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  .text-saver {
+    max-width: 349px;
+    font-size: 18px;
+    line-height: 1.33;
   }
 }
 
@@ -39,8 +50,6 @@
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 52px;
 
   letter-spacing: -0.04em;
 }
@@ -57,11 +66,9 @@
 }
 
 .text-saver {
-  max-width: 349px;
   text-align: center;
   letter-spacing: -0.02em;
-  font-size: 18px;
-  line-height: 1.33;
+
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -75,6 +82,14 @@
   .shopping-list__title {
     margin-left: 40px;
     margin-bottom: 140px;
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  .text-saver {
+    max-width: 349px;
+    font-size: 18px;
+    line-height: 1.33;
   }
 
   .screen-saver {
