@@ -1,4 +1,4 @@
-import { BooksService } from './BooksService';
+import { BooksService } from './books-service';
 import Notiflix from 'notiflix';
 
 const booksService = new BooksService();
