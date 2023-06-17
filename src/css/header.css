@@ -1,0 +1,22 @@
+.header{
+    
+    background-color: var(--white-color);
+    color: var(--black-color);
+    left: 0px;
+top: 0px;
+
+border: 1.5px solid #111111;
+border-radius: 0px 0px 8px 8px;
+    height: 64px;
+    width: 100%;
+    display: flex;
+align-items: center;
+justify-content: space-between;
+    
+}
+
+.logo{
+    color: #000;
+  
+}
+
