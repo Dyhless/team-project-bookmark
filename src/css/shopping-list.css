@@ -1,25 +1,24 @@
-/* Временно. Удалить потом! ================================== */
+/* ================== Временно. Удалить потом!!!!! ================ */
 .nav__list__temporary {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 54px;
+  margin-top: 24px;
   gap: 14px;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 52px;
+  font-size: 28px;
+  line-height: 12px;
   color: rgb(153, 31, 0);
 }
-/* ================================= */
+/* ===============Временно. Удалить потом!!!!!================== */
 
-.shopping-title {
+.shopping-list__title {
   color: var(--black-color);
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
   line-height: 52px;
-  /* identical to box height, or 108% */
 
   letter-spacing: -0.04em;
 

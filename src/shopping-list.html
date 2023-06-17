@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shoppin List</title>
+    <title>Shopping List</title>
     <include src="./partials/favicon.html"></include>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
@@ -17,17 +17,53 @@
     />
     <link rel="stylesheet" href="./sass/index.scss" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
-    <!-- Section Shopping-List  -->
+    <main>
+      <div class="shopping-list__container container">
+        <!-- Support Block-->
+        <section class="shopping-list__container container"></section>
+        <!-- Shopping list block  -->
+        <section class="shopping-list__page">
+          <h1 class="shopping-list__title">
+            Shopping <span class="part-two">List</span>
+          </h1>
+          <!-- <h1 class="shopping-list__title" data-text="list">
+            shopping <span class="shopping-list__blue-title">list</span>
+          </h1> -->
+          <!-- basket to render cards -->
+          <ul class="shopping-list">
+            <!-- card -->
+            <!-- empty basket styles -->
+            <li class="on-empty-container">
+              <p class="empty-bookshelf__text">
+                This page is empty, add some books and proceed to order.
+              </p>
+              <img
+                srcset="
+                  images/shopping-list-empty-bg/shoping-list-empty-mobile_sm.png    265w,
+                  images/shopping-list-empty-bg/shoping-list-empty_lg.png           320w,
+                  images/shopping-list-empty-bg/shoping-list-empty-mobile_sm-2x.png 530w,
+                  images/shopping-list-empty-bg/shoping-list-empty_lg-2x.png        644w
+                "
+                sizes="(max-width: 768px) 265px,
+            (max-width: 1440px) 320px,
+            644px"
+                src="images/shopping-list-empty-bg/shoping-list-empty_lg-2x.png"
+                alt="Book Illustration"
+              />
+            </li>
+            <ul class="btn-pagination__list"></ul>
+          </ul>
+        </section>
+      </div>
     <section>
       <h2 class="shopping-title">
         Shopping <span class="part-two">List</span>
       </h2>
     </section>
     <!-- /Section Shopping-List  -->
-
-    <main>
       <div class="container">
         <aside class="site-bar">
           <include src="./partials/category.html"></include>
@@ -37,5 +73,6 @@
     </main>
 
     <script type="module" src="./index.js"></script>
+    <script type="module" src="./shopping-list-index.js"></script>
   </body>
 </html>
