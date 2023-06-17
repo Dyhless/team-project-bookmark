@@ -114,7 +114,7 @@ async function renderBooksCategories() {
       const { list_name, books } = categories[i];
       markup += `
       <li>
-        <h3 class="item-category">${list_name}</h3>
+        <h3 class="name-category">${list_name}</h3>
         <ul class="list-category">
           <li class="item-category-book" data-book-id="${books[0]._id}">
           <a class="link-books" href="#">
