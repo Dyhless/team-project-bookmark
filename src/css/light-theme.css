@@ -1,5 +1,6 @@
 :root {
     /* --black-color: #111111; */
+
     --main-txt-color:  rgba(17, 17, 17,1);
     --pagination-back: rgba(17, 17,17,1)
 
@@ -12,8 +13,8 @@
    --btn-border:rgba(79, 46, 232, 1);
    --accent-font-blue-color: #4F2EE8; 
 
-   /*  --yellow-color: #EAC645; */
-   --active-page: rgb(234, 198, 69);
+   /*  --yellow-color: #EAC645; === актив пейдж */
+   /* --active-page: rgb(234, 198, 69);  */
    --pagination-next:rgb(234,198,69);
 
    /* --white-color: #FFFFFF; фон хедера та карток в SL*/
