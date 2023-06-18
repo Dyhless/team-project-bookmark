@@ -1,4 +1,5 @@
-.desktop-layout {
+/* .desktop-layout {
+    width: 375px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -10,21 +11,23 @@
 
 @media screen and (min-width: 768px) {
     .desktop-layout {
+        width: 768px;
         padding-left: 32px;
         padding-right: 32px;
         gap: 100px;
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .desktop-layout {
+        width: 1200px;
         flex-direction: row;
         gap: 40px;
         align-items: start;
         padding-left: 24px;
         padding-right: 24px;
     }
-}
+} */
 
 .title-best-sellers {
     font-weight: 700;
@@ -72,7 +75,9 @@
     }
 }
 
+
 .img-card-book {
+    display: block;
     width: 335px;
     height: 485px;
     margin-bottom: 14px;
