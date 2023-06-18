@@ -35,7 +35,7 @@
     line-height: 1.19;
     letter-spacing: -0.04em;
     text-transform: capitalize;
-    color: var(--main-font-black-color);
+    color: var(--main-txt-color);
     margin-bottom: 40px;
 }
 
@@ -56,7 +56,7 @@
     line-height: 1.29px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    /* color: var(--paragraph-color); */
+    color: var(--paragraph-color);
     margin-bottom: 18px;
     display: block;
 }
@@ -152,7 +152,7 @@
     overflow: hidden;
     text-transform: uppercase;
     text-overflow: ellipsis;
-    color: var(--black-color);
+    color: var(--main-txt-color);
     margin-bottom: 4px;
 }
 
@@ -167,7 +167,7 @@
     text-overflow: ellipsis;
     padding-top: 4px;
     padding-bottom: 4px;
-    color: var(--paragraph-grey-font-color);
+    color: var(--paragraph-color);
 }
 
 .see-more {
@@ -179,22 +179,22 @@
     letter-spacing: -0.01em;
     text-transform: uppercase;
 
-    color: var(--main-font-black-color);
+    color: var(--main-txt-color);
     box-sizing: border-box;
     width: 124px;
     height: 46px;
     margin-left: auto;
     margin-bottom: 40px;
     background: transparent;
-    border: 2px solid var(--blue-color);
+    border: 2px solid var(--accent-font-blue-color);
     border-radius: 40px;
     transition: color, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .see-more:hover,
 .see-more:focus {
-    background: var(--blue-color);
-    color: var(--white-color);
+    background: var(--accent-font-blue-color);
+    color: var(--secondary-txt-color);
 }
 
 .link-books:hover {
