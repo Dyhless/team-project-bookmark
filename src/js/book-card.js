@@ -290,6 +290,10 @@ const updateBooksCategories = async () => {
     for (let p = 0; p < categories.length; p++) {
       seeMoreBtns[p].addEventListener('click', () => {
         categoriesForBtn[p + 1].click();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
       });
     }
   }
