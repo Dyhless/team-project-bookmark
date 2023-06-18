@@ -8,19 +8,16 @@
   overflow-y: scroll;
   overflow-x: hidden;
 }
-  
-
-  @media (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     .category {
       width: 100%;
       height: 228px;
-      left: 20px;
-      top: 104px;
+      /* left: 20px;
+      top: 104px; */
       margin-left: auto;
       margin-right: auto;
   }}
-  
-  @media (min-width: 768px) and (max-width: 1023px) {
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
     .category {
       width: 337px;
       height: 472px;
@@ -29,17 +26,14 @@
       margin-left: auto;
       margin-right: auto;
   }}
-  
-  @media (min-width: 1024px) {
+    @media screen and (min-width: 1024px) {
   .category { 
     width: 356px;
     height: 472px;
     left: 24px;
     top: 112px;
   }}
-  
-  
-
+   
   
   .categBook { /* Сталізація списку */
     display: flex;
@@ -53,12 +47,19 @@
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 133%;
     letter-spacing: -0.02em;
     transition: font-weight 0.2s ease;
   
     color: rgba(17, 17, 17, 0.6);
   }
+  @media screen and (max-width: 767px) {
+    .bookcat{line-height: 112%}
+  }
+  @media screen and (min-width: 768px) {
+    .bookcat {line-height: 133%;}
+  }
+
+
   .last-word-category {/* стилізація останнього слова назви */
     font-family: 'DM Sans';
     font-style: normal;
@@ -112,16 +113,6 @@
   }
   
   
-  @media screen and (min-width: 768px) {
-    .category {
-      height: 472px;
-    }
-  }
-  
-
-
-
-
   /* Стилізую секцію для вигрузки картинок */
   .top-books-section {
     box-sizing: border-box;
@@ -144,10 +135,6 @@
     color: #111111;
   }
 
-
-
-
-
   /* Слилізуємо картку книжки */
   .book-card-preview {
     display: flex;
@@ -157,6 +144,24 @@
     height: 306px;
     margin-bottom: 40px;
   }
+  @media screen and (max-width: 767px){
+    .book-card-preview {
+      width: 100%;
+      height: auto;
+  }}
+  @media screen and (min-width: 768px) and (max-width: 1439px){
+    .book-card-preview {
+      width: 218px;
+      height: 366px;
+
+      margin-left: auto;
+      margin-right: auto;
+  }}
+  @media screen and (min-width: 1440px) {
+    .book-card-preview {
+      width: 180px;
+      height: 306px;
+  }}
 
   /* стилізуєм ул нового списку по категоріям */
   .selected-category {
@@ -186,20 +191,42 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 117%;
-  letter-spacing: -0.04em;
-
+  letter-spacing: 0.04em;
   color: #B4AFAF;
   }
 
   /* стилізую вікно для картинки окремої книжки */
   .book-image {
-    width: 180px;
-    height: 256px;
     border-radius: 8px;
     overflow: hidden;
+    margin-bottom: 14px;
+  }
+  @media screen and (max-width: 767px) {
+    .book-image{
+    width: 100%;
+    height: auto;
+  }}
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
+    .book-image{
+    width: 218px;
+    height: 316px;
+  }}
+  @media screen and (min-width: 1440px) {
+    .book-image{
+    width: 180px;
+    height: 256px;
+  }}
+
+  .book-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
   }
 
-  .descktop-layout {
-    padding-left: 0;
-    padding-right: 0;
-  }
+    /* @media screen and (max-width: 767px) {
+    }}
+    @media screen and (min-width: 768px) and (max-width: 1439px) {
+    }}
+    @media screen and (min-width: 1440px) {
+    }} */
+  

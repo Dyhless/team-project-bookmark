@@ -43,7 +43,7 @@ async function getBooksByCategory(categoryName) {
       const newBookLI = document.createElement('li');
       newBookLI.classList.add('book-card-preview');
       const bookFace = `<div class="book-image">
-                          <img src="${bookRes.book_image}" width=100% height=100%>
+                          <img src="${bookRes.book_image}">
                         </div>
                         <div>
                           <h2 class="book-title">${bookRes.title}</h2>
@@ -96,3 +96,4 @@ async function getCategoryList() {
 window.addEventListener('load', getCategoryList);
 
 // 
+
