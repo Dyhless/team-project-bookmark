@@ -57,7 +57,7 @@
     letter-spacing: -0.02em;
     transition: font-weight 0.2s ease;
   
-    color: var(--paragraph-color);
+    color: var(--category-name);
   }
   .last-word-category {/* стилізація останнього слова назви */
     font-family: 'DM Sans';
@@ -81,7 +81,7 @@
     letter-spacing: -0.02em;
     text-transform: uppercase;
   
-    color: var(--accent-font-blue-color);
+    color: var(--hovertxt);
     white-space: nowrap;
   }
   
