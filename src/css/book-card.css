@@ -69,7 +69,7 @@
     }   
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
     .list-category {
         gap: 24px;
     }
@@ -90,7 +90,7 @@
     }
 }
       
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
     .img-card-book {
         width: 180px;
         height: 256px;
@@ -114,7 +114,7 @@
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
     .bestsellers-text-wrapper {
         margin-bottom: 32px;
     }
@@ -136,7 +136,7 @@
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
     .title-wrap,
     .author-wrap {
         width: 180px;
@@ -200,3 +200,4 @@
 .link-books:hover {
     cursor: pointer;
 }
+
