@@ -1,4 +1,6 @@
-import axios from 'axios';
+import axios, { all } from 'axios';
+import Notiflix from 'notiflix';
+
 // вибираєм головний контейнер в category html
 const asideList = document.querySelector('.category');
 // вибираєм головний контейнер в home page html
@@ -28,7 +30,6 @@ async function getBooksByCategory(categoryName) {
       const words = categoryName.split(' ');
       const lastWordOfCategory = words.pop();
       const cuttedNameOFCategory = words.join(' ');
-      console.log(words)
       selectedCatName.innerHTML = `${cuttedNameOFCategory} <split class="last-word-category">${lastWordOfCategory}</split>`;
 
 
@@ -65,6 +66,11 @@ async function getCategoryList() {
       'https://books-backend.p.goit.global/books/category-list'
     );
     const data = response.data;
+    const allCategories = document.createElement('li');
+    allCategories.classList.add('bookcat');
+    allCategories.textContent = 'All categories';
+    listOfCateg.appendChild(allCategories);
+
     data.forEach(category => {
       //створюю елемент списку категорій
       const newLICateg = document.createElement('li');
