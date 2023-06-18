@@ -38,6 +38,7 @@
 } */
 
 .container {
+  overflow: hidden;
   width: 100vw;
   margin-right: auto;
   margin-left: auto;
@@ -78,6 +79,7 @@
 
 @media screen and (min-width: 1440px) {
   .container {
+    
     max-width: 1440px;
     display: flex;
     flex-direction: row;
