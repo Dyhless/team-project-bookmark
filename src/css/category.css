@@ -1,15 +1,205 @@
-.category {
-  height: 228px;
-  max-width: 356px;
-
-  overflow: auto;
-
-  outline: dashed 2px black;
-  background-color: blueviolet;
+/* стилізація бокового блоку категорії */
+.category { 
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
+  
 
-@media screen and (min-width: 768px) {
-  .category {
+  @media (max-width: 767px) {
+    .category {
+      width: 100%;
+      height: 228px;
+      left: 20px;
+      top: 104px;
+      margin-left: auto;
+      margin-right: auto;
+  }}
+  
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .category {
+      width: 337px;
+      height: 472px;
+      left: 32px;
+      top: 112px;
+      margin-left: auto;
+      margin-right: auto;
+  }}
+  
+  @media (min-width: 1024px) {
+  .category { 
+    width: 356px;
     height: 472px;
+    left: 24px;
+    top: 112px;
+  }}
+  
+  
+
+  
+  .categBook { /* Сталізація списку */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
   }
-}
+  
+  .bookcat { /* Стилізація тексту списку категорій */
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 133%;
+    letter-spacing: -0.02em;
+    transition: font-weight 0.2s ease;
+  
+    color: rgba(17, 17, 17, 0.6);
+  }
+  .last-word-category {/* стилізація останнього слова назви */
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 108%;
+    letter-spacing: -0.04em;
+
+    color: #4F2EE8;
+  }
+  
+  .bookcat:hover,
+  .bookcat:focus {
+    cursor: pointer;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 133%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  
+    color: #4F2EE8;
+    white-space: nowrap;
+  }
+  
+  
+  
+  ::-webkit-scrollbar {
+    width: 8px; /* Стилізація бокового скролу */
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px; /* Ширина полоси прокрутки */
+  }
+  
+  /* Стилізація кришки полоси прокрутки */
+  ::-webkit-scrollbar-thumb {
+    background-color: #E0E0E0; /* Колір полоси прокрутки */
+    border-radius: 4px; /* Закругленість країв полоси прокрутки */
+  }
+  
+  /* Стилізація фону полоси прокрутки */
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Колір фону полоси прокрутки */
+  }
+  
+  /* Стилізація фону полоси прокрутки */
+  ::-webkit-scrollbar-track {
+    background-color: #ffffff; /* Колір фону полоси прокрутки */
+  }
+  
+  
+  @media screen and (min-width: 768px) {
+    .category {
+      height: 472px;
+    }
+  }
+  
+
+
+
+
+  /* Стилізую секцію для вигрузки картинок */
+  .top-books-section {
+    box-sizing: border-box;
+  }
+
+  .constainer-books-card {
+    box-sizing: border-box;
+  }
+
+  /* стилізуємо заголовок списку вибраної категорії */
+  .selected-category-name {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 108%;
+    letter-spacing: -0.04em;
+    margin-bottom: 40px;
+
+    color: #111111;
+  }
+
+
+
+
+
+  /* Слилізуємо картку книжки */
+  .book-card-preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 180px;
+    height: 306px;
+    margin-bottom: 40px;
+  }
+
+  /* стилізуєм ул нового списку по категоріям */
+  .selected-category {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  /* стилізую загаловок книжки */
+  .book-title {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 112%;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+
+    color: #111111;
+  }
+
+  /* стилізуєм автора книги */
+  .book-author {
+  font-family: 'DM Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+  letter-spacing: -0.04em;
+
+  color: #B4AFAF;
+  }
+
+  /* стилізую вікно для картинки окремої книжки */
+  .book-image {
+    width: 180px;
+    height: 256px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .descktop-layout {
+    padding-left: 0;
+    padding-right: 0;
+  }
