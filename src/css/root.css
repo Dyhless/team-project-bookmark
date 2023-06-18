@@ -2,7 +2,7 @@
 
    /* COLORS */
 
-   --black-color: #111111;
+   /* --black-color: #111111;
    --grey-dark: #202024;
    --blue-color: #4F2EE8;
    --yellow-color: #EAC645;
@@ -17,7 +17,9 @@
    --paragraph-white-font-color: #F6F6F6;
 
    --dark-theme-background-black-color: #111111;
-   --dark-theme-background-grey-color: #202024;
+   --dark-theme-background-grey-color: #202024; */
+
+   color-scheme: light dark;
 
    /* FONTS */
 
