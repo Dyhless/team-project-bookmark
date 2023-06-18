@@ -35,7 +35,7 @@
 }
 
 .shopping-list__title {
-  color: var(--black-color);
+  /* color: var(--main-txt-color); */
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
@@ -45,9 +45,9 @@
   letter-spacing: -0.04em;
 }
 
-.part-two {
+/* .part-two {
   color: var(--blue-color);
-}
+} */
 
 .screen-saver {
   display: flex;
@@ -62,7 +62,7 @@
   letter-spacing: -0.02em;
   font-size: 18px;
   line-height: 1.33;
-  color: rgba(0, 0, 0, 0.6);
+  /* color: rgba(0, 0, 0, 0.6); */
 }
 
 @media screen and (min-width: 1024px) {

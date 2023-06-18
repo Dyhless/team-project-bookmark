@@ -65,18 +65,18 @@ async function getCategoryList() {
       'https://books-backend.p.goit.global/books/category-list'
     );
     const data = response.data;
-    console.log(data)
     const sortedData = data.sort((a, b) => a.list_name.localeCompare(b.list_name));
     
     
     const allCategories = document.createElement('li');
     allCategories.classList.add('bookcat');
+    allCategories.classList.add('allBooks');
     allCategories.textContent = 'All categories';
     listOfCateg.appendChild(allCategories);
+    const allCatPoint = document.querySelector('.allBooks');
+    allCatPoint.addEventListener('click', ()=>{window.location.href = 'index.html'})
     
     sortedData.forEach(category => {
-      
-      console.log(category)
       //створюю елемент списку категорій
       const newLICateg = document.createElement('li');
       newLICateg.classList.add('bookcat');

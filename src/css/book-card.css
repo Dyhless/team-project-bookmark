@@ -56,7 +56,7 @@
     line-height: 1.29px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--paragraph-grey-font-color);
+    /* color: var(--paragraph-color); */
     margin-bottom: 18px;
     display: block;
 }

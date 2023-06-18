@@ -20,11 +20,11 @@ function addDarkClassToHTML() {
 try {
     if (localStorage.getItem('theme') === 'dark') {
       html.classList.add('dark');
-    //   document.querySelector('.themetoggle span').textContent = 'dark_mode';
+    
     }
     else {
       html.classList.remove('dark');
-    //   document.querySelector('.themetoggle span').textContent = 'wb_sunny';
+   
     }
   } catch (err) { }
 
