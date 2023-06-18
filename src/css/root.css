@@ -1,28 +1,67 @@
 :root {
 
-   /* COLORS */
+      --shopping-list-border: #4f2ee866;
+    
+      /* COLORS */
+/* кольори без змін */
+   --accent-font-blue-color: #4F2EE8;
+   --yellow-color: #EAC645;
 
    /* --black-color: #111111;
    --grey-dark: #202024;
    --blue-color: #4F2EE8;
-   --yellow-color: #EAC645;
    --white-color: #FFFFFF;
-
    --main-font-black-color: #111111;
    --main-font-white-color: #F3F3F3;
-
-   --accent-font-blue-color: #4F2EE8;
-
    --paragraph-grey-font-color: #B4AFAF;
    --paragraph-white-font-color: #F6F6F6;
-
    --dark-theme-background-black-color: #111111;
    --dark-theme-background-grey-color: #202024; */
 
-   color-scheme: light dark;
+   
 
    /* FONTS */
 
    --main-font: 'DM Sans', sans-serif;
 
+}
+
+:root[data-theme=light] {
+    --main-color: #111;
+    --card-background: #fff;
+    --text-in-logo: #000;
+    --text-in-btn: #f3f3f3;
+    --signup-btn: #11111180;
+    --nav-link-hovered: #fff;
+    --body-background: #f6f6f6;
+    --categories-main: #1119;
+    --categories-accent: #4f2ee8;
+    --categories-scrollbar: #e0e0e0;
+    --back-btn-background: #111;
+    --back-btn-non-active: #b4afaf;
+    --active-btn-txt: #fff;
+    --non-active-btn-txt: #000;
+    --placeholder-card-background: #fff;
+    --amazon-logo: grayscale(100%);
+    --icon-color: #111;
+}
+
+:root[data-theme=light] {
+    --main-color: #111;
+    --card-background: #fff;
+    --text-in-logo: #000;
+    --text-in-btn: #f3f3f3;
+    --signup-btn: #11111180;
+    --nav-link-hovered: #fff;
+    --body-background: #f6f6f6;
+    --categories-main: #1119;
+    --categories-accent: #4f2ee8;
+    --categories-scrollbar: #e0e0e0;
+    --back-btn-background: #111;
+    --back-btn-non-active: #b4afaf;
+    --active-btn-txt: #fff;
+    --non-active-btn-txt: #000;
+    --placeholder-card-background: #fff;
+    --amazon-logo: grayscale(100%);
+    --icon-color: #111;
 }

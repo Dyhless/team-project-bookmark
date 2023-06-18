@@ -1,17 +1,17 @@
 body {
-   font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
 
-   margin: 0 auto;
-   padding: 0;
-   max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1440px;
 
-   /* background-color: #f6f6f6; */
-   overflow: overlay;
+  background-color: var(--background-body);
+  overflow: overlay;
 }
 
 a {
-   text-decoration: none;
-   color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 h1,
@@ -21,18 +21,18 @@ h4,
 h5,
 h6,
 p {
-   margin: 0;
-   padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
-   list-style: none;
-   padding: 0;
-   margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 img {
-   display: block;
-   max-width: 100%;
-   height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }

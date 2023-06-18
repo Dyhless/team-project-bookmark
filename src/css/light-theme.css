@@ -5,7 +5,7 @@
 
       /* --main-font-black-color: rgba(17, 17, 17, 1);*/ 
 
-   /* --grey-dark: #202024 */
+   /* --grey-dark: #202024 фон полоси прокрутки*/
 
    /* blue-color: #4F2EE8; */
    --hovertxt: rgba(234, 198, 69, 1);
@@ -29,6 +29,7 @@
   /* фонди тхт не змінювала*/
    --paragraph-white-font-color: #f6f6f6;
    --background-body:  rgba(246, 246, 246, 1);
+   --pagination-bkg: #f4f4f4;
 
 /* 
    --dark-theme-background-black-color: rgb(17, 17, 17);
@@ -42,37 +43,22 @@
 
 --scroll: rgba(224, 224, 224,1);
 --logo-txt: #000000;
+--scroll-line: #f1f1f1;
 
  }
 
- body{
-   background-color: var(--background-body);
- }
 
- .header{
-    background-color: var(--header-background);
-    color: var(--main-txt-color);
-    border: 1.5px solid var(--main-txt-color);
- }
 
-.logo{
-    color: var(--logo-txt);
-  
-}
 
-.item-category{
-    color: var(--paragraph-color);
-}
+
+
+
+
+
+
 
 /* Shopping list */
-.shopping-list__title{
- color: var(--main-txt-color);
-}
 
-.part-two {
-  color: var(--accent-font-blue-color);
-}
 
-.text-saver {
-    color: var(--category-name);
-}
+
+
