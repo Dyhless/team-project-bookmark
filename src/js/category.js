@@ -6,7 +6,6 @@ const asideList = document.querySelector('.category');
 // вибираєм головний контейнер в home page html
 const homePageContainer = document.querySelector('.container-books-card');
 //вибираєм список результатів пошуку книжок по категоріям
-const resultFindCategory = document.querySelector('.top-books');
 
 const listStructure = `<ul class="categBook"></ul>`;
 
@@ -66,12 +65,18 @@ async function getCategoryList() {
       'https://books-backend.p.goit.global/books/category-list'
     );
     const data = response.data;
+    console.log(data)
+    const sortedData = data.sort((a, b) => a.list_name.localeCompare(b.list_name));
+    
+    
     const allCategories = document.createElement('li');
     allCategories.classList.add('bookcat');
     allCategories.textContent = 'All categories';
     listOfCateg.appendChild(allCategories);
-
-    data.forEach(category => {
+    
+    sortedData.forEach(category => {
+      
+      console.log(category)
       //створюю елемент списку категорій
       const newLICateg = document.createElement('li');
       newLICateg.classList.add('bookcat');
