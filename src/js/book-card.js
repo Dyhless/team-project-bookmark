@@ -212,6 +212,17 @@ async function renderBooksCategories() {
     listTopBooks.innerHTML = '';
     listTopBooks.insertAdjacentHTML('beforeend', markup);
   }
+
+  // =============== See more =======
+
+  const seeMoreBtns = document.querySelectorAll('.see-more');
+  const categoriesForBtn = document.querySelectorAll('.bookcat');
+
+  for (let p = 0; p < categories.length; p++) {
+    seeMoreBtns[p].addEventListener('click', () => {
+      categoriesForBtn[p + 1].click();
+    });
+  }
 })();
 
 // ======= Розмітка найпопулярніших книжок ==============================
