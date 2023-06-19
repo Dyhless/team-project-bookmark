@@ -1,4 +1,5 @@
-.backdrop {
+/* Изменил название класса  */
+.backdrop-modal-book {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,7 +10,9 @@
   background-color: rgb(0, 0, 0, 0.4);
   transition: opacity 1000ms, visibility 1000ms;
 }
-.backdrop.is-hidden {
+
+/* Изменил название класса  */
+.backdrop-modal-book.is-hidden-modal-book {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -34,7 +37,7 @@
   position: absolute;
   top: 676px;
   left: 62px;
-  border: 2px solid #4f2ee8;
+  border: 2px solid var(--accent-font-blue-color);
   border-radius: 40px;
   width: 211px;
   height: 46px;
@@ -44,13 +47,13 @@
 }
 .modal-btn:hover,
 .modal-btn:focus {
-  background-color: #4f2ee8;
-  border-color: #4f2ee8;
+  background-color: var(--accent-font-blue-color);
+  border-color: var(--accent-font-blue-color);
 }
 
 .modal-btn:hover > .text-btn,
 .modal-btn:focus > .text-btn {
-  color: white;
+  color: var(--white-color);
 }
 
 .text-btn {
@@ -61,7 +64,7 @@
   line-height: 1.29;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  color: #111111;
+  color: var(--main-txt-color);
   margin: 0;
 }
 
@@ -69,7 +72,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  stroke: black;
+  stroke: var(--main-txt-color);
   position: absolute;
   top: 12px;
   right: 12px;
@@ -100,7 +103,7 @@
 
 .modal-close:hover,
 .modal-close:focus {
-  stroke: #4f2ee8;
+  stroke: var(--accent-font-blue-color);
   border: none;
 }
 .modal-icon {
@@ -110,7 +113,6 @@
 /* body.modal-open {
   overflow: hidden;
 } */
-
 .card-img-modal {
   width: 192px;
   height: 281px;

@@ -1,4 +1,5 @@
-<div class="backdrop is-hidden" data-modal>
+<!-- Изменил название класса  -->
+<div class="backdrop-modal-book is-hidden-modal-book" data-modal>
   <div class="modal">
     <div class="card-modal"><p>text</p></div>
     <button class="modal-close" data-modal-close>
@@ -6,8 +7,11 @@
         <use href="/src/images/sprite.svg#x-close"></use>
       </svg>
     </button>
-    <button class="modal-btn" type="button">
+    <button class="modal-btn js-add-to-list" type="button">
       <p class="text-btn">add to shopping list</p>
+    </button>
+    <button class="modal-btn js-remove-from-list is-hidden" data-book-id="">
+      Remove from the shopping list
     </button>
   </div>
 </div>

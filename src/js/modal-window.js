@@ -61,8 +61,8 @@
     //     refs.openModalBtn.getAttribute('aria-expanded') === 'true' || false;
     //   refs.openModalBtn.setAttribute('aria-expanded', !isModalOpen);
     removeWindowEventListener();
-    document.body.classList.add('modal-open');
-    refs.modal.classList.remove('is-hidden');
+    document.body.classList.toggle("modal-open");
+    refs.modal.classList.toggle('is-hidden-modal-book'); 
     document.addEventListener('keydown', logBackdropClick);
 
     //   const scrollLockMethod = !isModalOpen
