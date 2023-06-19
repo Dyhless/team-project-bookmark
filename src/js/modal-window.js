@@ -25,8 +25,12 @@
 
   async function cardForModal(e) {
     // проверка если попал на картинку
-    openModal();
+   
     id = e.target.getAttribute('data-id');
+    if (id===null){
+      return;
+    } else
+    openModal();
     console.log('это айди', id);
     const { book_image, description, author, title } = await fetchBookById(id);
 
@@ -69,7 +73,7 @@
 
   function closeModal(){
     document.body.classList.remove('modal-open');
-    refs.modal.classList.add("is-hidden");
+    refs.modal.classList.add('is-hidden');
     document.removeEventListener('keydown', logBackdropClick);
     window.addEventListener('click', cardForModal);
   };

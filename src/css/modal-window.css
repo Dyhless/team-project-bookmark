@@ -107,9 +107,9 @@
   transition: stroke 250ms;
 }
 
-body.modal-open {
+/* body.modal-open {
   overflow: hidden;
-}
+} */
 
 .card-img-modal {
   width: 192px;
