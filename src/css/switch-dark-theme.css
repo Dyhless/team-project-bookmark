@@ -40,3 +40,33 @@
   left: calc(100% - 1px);
   transform: translateX(-100%);
 }
+
+
+
+/* код для додавання іконок в перемикач */
+label svg{
+  width: 16px;
+  height: 16px;
+  position: absolute;
+z-index: 10;
+top: 4px;
+}
+ label svg.sun{
+  fill:gold;
+left: 1px;
+transition: 0.3s;
+ }
+
+ label svg.moon{
+  fill:var(--backg-overlay-modal);
+  left: 23px;
+  transition: 0.3s;
+ }
+
+.input-switch:checked + .lable-switch svg.sun {
+  fill: var(--backg-overlay-modal);
+}
+
+.input-switch:checked + .lable-switch svg.moon {
+  fill: gold;
+}
