@@ -15,5 +15,7 @@
 @import url('./light-theme.css'); */
 
 @import url('./book-card.css');
-
 @import url('./pagination.css');
+@import url('./scroll-up.css');
+
+@import url('./loader.css');
