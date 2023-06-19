@@ -14,6 +14,27 @@ asideList.insertAdjacentHTML('beforeend', listStructure);
 // вибираємо ул
 const listOfCateg = document.querySelector('.categBook');
 
+function getFallbackImageUrl() {
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth < 768) {
+    return new URL(
+      '../images/plug-empte-book_335x485.png',
+      import.meta.url
+    );
+  } else if (screenWidth < 1440) {
+    return new URL(
+      '../images/plug-empte-book_218x316.png',
+      import.meta.url
+    );
+  } else {
+    return new URL(
+      '../images/plug-empte-book_180x256.png',
+      import.meta.url
+    );
+  }
+}
+
 //створюємо функцію, яка викликає запити по катекорії
 async function getBooksByCategory(categoryName) {
   homePageContainer.innerHTML = '';
@@ -43,7 +64,7 @@ async function getBooksByCategory(categoryName) {
       const newBookLI = document.createElement('li');
       newBookLI.classList.add('book-card-preview');
       const bookFace = `<div class="book-image">
-                          <img src="${bookRes.book_image}">
+                          <img src="${bookRes.book_image}" alt="book-title-preview" loading="lazy" onerror="src='${getFallbackImageUrl()}'">
                         </div>
                         <div>
                           <h2 class="book-title">${bookRes.title}</h2>
@@ -53,7 +74,7 @@ async function getBooksByCategory(categoryName) {
       newBookUl.appendChild(newBookLI);
     });
   } catch (error) {
-    console.log(error);
+    Notiflix.Notify.failure('Oops! Something went wrong... Please try again.');
   }
 }
 
