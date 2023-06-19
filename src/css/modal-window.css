@@ -1,4 +1,4 @@
-.backdrop {
+.backdrop-modal-book {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,7 +9,7 @@
   background-color: rgb(0, 0, 0, 0.4);
   transition: opacity 1000ms, visibility 1000ms;
 }
-.backdrop.is-hidden {
+.backdrop-modal-book.is-hidden-modal-book {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -84,10 +84,10 @@
   stroke: #4f2ee8;
   border: none;
 }
-.modal-icon{
+.modal-icon {
   transition: stroke 250ms;
 }
 
-body.modal-open{
+/* body.modal-open {
   overflow: hidden;
-}
+} */
