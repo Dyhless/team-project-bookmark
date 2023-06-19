@@ -21,20 +21,12 @@
   </head>
   <body>
     <header>
-      <!-- Навигация временная. Потом удалить за ненадобностью !!!! -->
-      <ul class="nav__list__temporary container">
-        <li class="nav__item">
-          <a href="index.html">Home</a>
-          <a href="shopping-list.html">Shopping List</a>
-        </li>
-      </ul>
-      <!-- /Навигация временная. Потом удалить за ненадобностью !!!! -->
+      <include src="./partials/header.html"></include>
     </header>
     <main>
       <div class="flex-container-shopping">
         <div class="support-ukraine">
           <aside class="site-bar">
-            <include src="./partials/category.html"></include>
             <include src="./partials/slider.html"></include>
           </aside>
         </div>
@@ -63,13 +55,13 @@
               </div>
             </div>
             <ul class="list js-container-list-shop container-list-shop"></ul>
-            <div class="tui-pagination" id="pagination"></div>
+            <!-- <include src="./partials/pagination.html"></include> -->
           </div>
         </section>
       </div>
     </main>
+    <include src="./partials/pagination.html"></include>
 
-    <script type="module" src="./index.js"></script>
-    <script type="module" src="./js/shopping-list.js"></script>
+    <script type="module" src="./shopping-list.js"></script>
   </body>
 </html>

@@ -1,26 +1,131 @@
 :root {
+    
+      /* COLORS */
+/* кольори без змін */
+   --accent-font-blue-color: #4F2EE8;
+   --yellow-color: #EAC645;
+   --backg-overlay-modal: rgba(17, 17, 17, 0.4);
 
-   /* COLORS */
-
-   --black-color: #111111;
+   /* --black-color: #111111;
    --grey-dark: #202024;
    --blue-color: #4F2EE8;
-   --yellow-color: #EAC645;
    --white-color: #FFFFFF;
-
    --main-font-black-color: #111111;
    --main-font-white-color: #F3F3F3;
-
-   --accent-font-blue-color: #4F2EE8;
-
    --paragraph-grey-font-color: #B4AFAF;
    --paragraph-white-font-color: #F6F6F6;
-
    --dark-theme-background-black-color: #111111;
-   --dark-theme-background-grey-color: #202024;
+   --dark-theme-background-grey-color: #202024; */
+
+    --main-txt-color:  rgba(17, 17, 17, 1);
+    --pagination-back: rgba(17, 17,17, 1)
+    --hovertxt: rgba(79, 46, 232, 1);
+    --btn-border:rgba(79, 46, 232, 1);
+  
+    --pagination-next:rgb(234,198,69);
+    --header-background: rgb(255, 255, 255);
+    --secondary-txt-color: rgb(243, 243, 243);
+    --paragraph-color: rgb(180, 175, 175);
+    --paragraph-white-font-color: #f6f6f6;
+    --background-body:  rgba(246, 246, 246, 1);
+    --pagination-bkg: #f4f4f4;
+    --shopping-list-border: #4f2ee866;
+    --category-name: rgba(17, 17, 17, 0.6);
+    --scroll: rgba(224, 224, 224,1);
+    --logo-txt: #000000;
+    --scroll-line: #f1f1f1;
+
+   
 
    /* FONTS */
 
    --main-font: 'DM Sans', sans-serif;
 
+}
+
+/* :root[data-theme=light] { */
+
+    /* --main-txt-color:  rgba(17, 17, 17, 1);
+    --pagination-back: rgba(17, 17,17, 1)
+    --hovertxt: rgba(79, 46, 232, 1);
+    --btn-border:rgba(79, 46, 232, 1);
+  
+    --pagination-next:rgb(234,198,69);
+    --header-background: rgb(255, 255, 255);
+    --secondary-txt-color: rgb(243, 243, 243);
+    --paragraph-color: rgb(180, 175, 175);
+    --paragraph-white-font-color: #f6f6f6;
+    --background-body:  rgba(246, 246, 246, 1);
+    --pagination-bkg: #f4f4f4;
+    --shopping-list-border: #4f2ee866;
+    --category-name: rgba(255, 255, 255, 0.6);
+    --scroll: rgba(224, 224, 224,1);
+    --logo-txt: #000000;
+    --scroll-line: #f1f1f1; */
+
+
+    /* --main-color: #111;
+    --card-background: #fff;
+    --text-in-logo: #000;
+    --text-in-btn: #f3f3f3;
+    --signup-btn: #11111180;
+    --nav-link-hovered: #fff;
+    --body-background: #f6f6f6;
+    --categories-main: #1119;
+    --categories-accent: #4f2ee8;
+    --categories-scrollbar: #e0e0e0;
+    --back-btn-background: #111;
+    --back-btn-non-active: #b4afaf;
+    --active-btn-txt: #fff;
+    --non-active-btn-txt: #000;
+    --placeholder-card-background: #fff;
+    --amazon-logo: grayscale(100%);
+    --icon-color: #111; */
+
+/* } */
+
+:root[data-theme=dark] {
+
+ --main-txt-color:  rgba(255, 255, 255,1);
+
+ /* не міняла */
+    --pagination-back: rgba(17, 17,17,1)
+    --pagination-next:rgb(234,198,69);
+    --secondary-txt-color: rgb(243, 243, 243);
+    --paragraph-color: rgb(180, 175, 175);
+
+/* змінила */
+    --hovertxt: rgba(234, 198, 69, 1);
+    --btn-border:rgba(79, 46, 232, 1);
+    --header-background: rgb(17, 17, 17);
+    --category-name: rgba(255, 255, 255, 0.6);
+    --background-body:  rgba(32, 32, 36, 1);
+    --logo-txt: rgb(243, 243, 243);
+    --shopping-list-border: rgba(79, 46, 232, 0.4);
+    --scroll: rgba(17, 17, 17, 0.6);
+
+
+    --paragraph-white-font-color: #f6f6f6;
+    --pagination-bkg: #f4f4f4;
+          
+    --scroll-line: rgba(32, 32, 36, 0.6);
+
+
+    /* 
+    --card-background: #111;
+    --text-in-logo: #f3f3f3;
+    --nav-link-hovered: #111;
+    --body-background: #202024;
+    --categories-main: #fff9;
+    --categories-accent: #eac645;
+    --categories-scrollbar: #1119;
+    --back-btn-background: #000;
+    --back-btn-non-active: #fff;
+    --active-btn-txt: #000;
+    --non-active-btn-txt: #fff;
+    --placeholder-card-background: #202024;
+    --text-in-btn: #202024;
+    --signup-btn: #f6f6f680;
+    --amazon-logo: brightness(0)invert(1);
+    --icon-color: #f6f6f6; */
 }

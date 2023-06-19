@@ -1,0 +1,17 @@
+.header {
+  left: 0px;
+  top: 0px;
+  background-color: var(--header-background);
+  color: var(--main-txt-color);
+  border: 1.5px solid var(--main-txt-color);
+  border-radius: 0px 0px 8px 8px;
+  height: 64px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: var(--logo-txt);
+}

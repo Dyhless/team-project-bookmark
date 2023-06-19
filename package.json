@@ -23,7 +23,9 @@
     "modern-normalize": "^1.1.0",
     "notiflix": "^3.2.6",
     "swiper": "^9.3.1",
-    "tui-pagination": "^3.4.1"
+    "tui-pagination": "^3.4.1",
+    "firebase": "^9.19.1"
+
   },
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.6.0",

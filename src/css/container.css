@@ -1,6 +1,6 @@
-.container {
+/* .container { */
   /* Phone max-width */
-  max-width: 374.9px;
+  /* max-width: 374.9px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 40px;
@@ -9,33 +9,85 @@
   margin: 0 auto;
 
   outline: solid 2px tomato;
-}
+} */
 
 /* Tablet max-width */
-@media screen and (max-width: 1023.9px) {
+/* @media screen and (max-width: 1023.9px) {
   .container {
-    max-width: 1023.9px;
+    max-width: 1023.9px; */
 
     /* Padding Tablet */
-    padding-left: 32px;
+    /* padding-left: 32px;
     padding-right: 32px;
     padding-top: 40px;
     padding-bottom: 100px;
   }
-}
+} */
 
 /* Desktop min-width */
-@media screen and (min-width: 1024px) {
-  .container {
+/* @media screen and (min-width: 1024px) {
+  .container { */
     /* Desktop max-width */
-    max-width: 1440px;
+    /* max-width: 1440px; */
 
-    padding-left: 24px;
+    /* padding-left: 24px;
     padding-right: 24px;
     padding-top: 40px;
     padding-bottom: 100px;
   }
+} */
+
+.container {
+  overflow: hidden;
+  width: 100vw;
+  margin-right: auto;
+  margin-left: auto;
+  
+  /* display: flex;
+  flex-direction: column;
+  gap: 40px; */
+  /* align-items: center;
+  justify-content: center; */
+  
+
+  outline: 2px solid red;
+      outline-offset: -2px;
 }
 
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 375px;
+    margin-bottom: 40px;
+      padding-left: 20px;
+      padding-right: 20px;
+      
+      outline: 1px solid blue;
 
+  }
+}
 
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 32px;
+      padding-right: 32px;
+      padding-top: 40px;
+      padding-bottom: 100px;
+    outline: 1px solid green;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    
+    max-width: 1440px;
+    display: flex;
+    flex-direction: row;
+      gap: 40px;
+      align-items: start;
+      padding-left: 24px;
+      padding-right: 24px;
+
+    outline: 1px solid tomato;
+  }
+}
