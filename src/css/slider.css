@@ -7,8 +7,8 @@
 
   background: radial-gradient(
     183.6% 183.01% at 59.76% -23.42%,
-    #4f2ee8 18.03%,
-    #ffffff 100%
+    var(--accent-font-blue-color) 18.03%,
+    var(--white-color) 100%
   );
   box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
   border-radius: 16px;
@@ -37,7 +37,7 @@
   font-size: 28px;
   line-height: 1.14;
   letter-spacing: -0.04em;
-  color: #ffffff;
+  color: var(--white-color);
 }
 
 .swiper-container {
@@ -66,7 +66,7 @@
 }
 
 .slide__number {
-  color: #ffffff;
+  color: var(--white-color);
   font-size: 14px;
   line-height: 1.29em;
 }
@@ -81,7 +81,7 @@
   top: inherit !important;
   bottom: 14px !important;
   left: 50% !important;
-  background-color: #ffffff;
+  background-color: var(--white-color);
   width: 38px !important;
   height: 38px !important;
   transform: translateX(-50%);
