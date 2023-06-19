@@ -10,7 +10,7 @@
 .tui-page-btn.tui-is-disabled.tui-prev,
 .tui-page-btn.tui-is-disabled.tui-next,
 .tui-page-btn.tui-is-disabled.tui-last {
-  background-color: black;
+  background-color: var(--pagination-back);
 }
 
 .tui-ico-ellipsis,
@@ -58,26 +58,26 @@
 }
 
 .tui-pagination .tui-page-btn:hover {
-  background-color: #f4f4f4;
+  background-color: var(--pagination-bkg);
 }
 
 .tui-page-btn.tui-next,
 .tui-page-btn.tui-last,
 .tui-page-btn.tui-first,
 .tui-page-btn.tui-prev {
-  background-color: #eac645;
+  background-color: var(--pagination-next);
 }
 
 .tui-pagination .tui-is-selected,
 .tui-pagination strong {
-  color: #fff;
-  background: black;
-  border-color: #4b96e6;
+  color: var(--header-background);
+  background: var(--main-txt-color);
+  border-color: var(--accent-font-blue-color);
   cursor: default;
 }
 
 .tui-pagination .tui-is-selected:hover {
-  background-color: #4b96e6;
+  background-color: var(--accent-font-blue-color);
 }
 
 .tui-pagination .tui-first-child.tui-is-selected,
@@ -199,7 +199,7 @@
 }
 
 .tui-pagination .tui-is-disabled:hover {
-  background: #b4afaf;
+  background: var(--paragraph-color);
   cursor: default;
 }
 
@@ -237,7 +237,7 @@
 }
 
 .tui-page-inputs .tui-page-current {
-  color: #4b96e6;
+  color: var(--accent-font-blue-color);
 }
 
 .tui-page-separator {

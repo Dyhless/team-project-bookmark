@@ -50,7 +50,7 @@
     letter-spacing: -0.02em;
     transition: font-weight 0.2s ease;
   
-    color: rgba(17, 17, 17, 0.6);
+    color: var(--category-name);
   }
   @media screen and (max-width: 767px) {
     .bookcat{line-height: 112%}
@@ -68,7 +68,7 @@
     line-height: 108%;
     letter-spacing: -0.04em;
 
-    color: #4F2EE8;
+    color: var(--accent-font-blue-color);
   }
   
   .bookcat:hover,
@@ -82,7 +82,7 @@
     letter-spacing: -0.02em;
     text-transform: uppercase;
   
-    color: #4F2EE8;
+    color: var(--hovertxt);
     white-space: nowrap;
   }
   
@@ -98,18 +98,18 @@
   
   /* Стилізація кришки полоси прокрутки */
   ::-webkit-scrollbar-thumb {
-    background-color: #E0E0E0; /* Колір полоси прокрутки */
+    background-color: var(--scroll); /* Колір полоси прокрутки */
     border-radius: 4px; /* Закругленість країв полоси прокрутки */
   }
   
   /* Стилізація фону полоси прокрутки */
   ::-webkit-scrollbar-track {
-    background-color: #f1f1f1; /* Колір фону полоси прокрутки */
+    background-color: var(--scroll-line); /* Колір фону полоси прокрутки */
   }
   
   /* Стилізація фону полоси прокрутки */
   ::-webkit-scrollbar-track {
-    background-color: #ffffff; /* Колір фону полоси прокрутки */
+    background-color: var(--header-background); /* Колір фону полоси прокрутки */
   }
   
   
@@ -132,7 +132,7 @@
     letter-spacing: -0.04em;
     margin-bottom: 40px;
 
-    color: #111111;
+    color: var(--main-txt-color);
   }
 
   /* Слилізуємо картку книжки */
@@ -181,7 +181,7 @@
     text-transform: uppercase;
     margin-bottom: 4px;
 
-    color: #111111;
+    color: var(--main-txt-color);
   }
 
   /* стилізуєм автора книги */

@@ -1,11 +1,11 @@
 /* розміщення світчера корегувати */
-input[type='checkbox'] {
+.input-switch[type='checkbox'] {
   height: 0;
   width: 0;
   visibility: hidden;
 }
 
-label {
+.lable-switch {
   cursor: pointer;
   text-indent: -9999px;
   width: 40px;
@@ -17,7 +17,7 @@ label {
   position: relative;
 }
 
-label:after {
+.lable-switch:after {
   content: '';
   position: absolute;
   left: 1px;
@@ -31,12 +31,12 @@ label:after {
   transition: 0.3s;
 }
 
-input:checked + label {
+.input-switch:checked + .lable-switch {
   background: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
   box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-input:checked + label:after {
+.input-switch:checked + .lable-switch:after {
   left: calc(100% - 1px);
   transform: translateX(-100%);
 }
