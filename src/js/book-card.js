@@ -255,7 +255,7 @@ const updateBooksCategories = async () => {
           <a class="link-books" href="#">
             <div class="card-book">
               <div class="img-card-book">
-                <img src="${book_image}" alt="book" class="img-book" loading="lazy" />
+                <img src="${book_image}" alt="book" class="img-book" data-id="${_id}" loading="lazy" />
               </div>
               <div class="bestsellers-text-wrapper">
                 <div class="title-wrap">
