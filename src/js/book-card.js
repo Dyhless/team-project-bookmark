@@ -1,4 +1,4 @@
-import { BooksService } from './books-service';console
+import { BooksService } from './books-service';
 import Notiflix from 'notiflix';
 
 const booksService = new BooksService();
@@ -250,12 +250,16 @@ const updateBooksCategories = async () => {
 
     for (let j = 0; j < numBooksToShow && j < books.length; j += 1) {
       const { _id, book_image, title, author } = books[j];
+
       categoryMarkup += `
-        <li class="item-category-book" data-book-id="${_id}">
+        <li class="item-category-book js-book-modal" data-book-id="${_id}">
           <a class="link-books" href="#">
             <div class="card-book">
               <div class="img-card-book">
-                <img src="${book_image}" alt="book" class="img-book" loading="lazy" />
+                <img src="${book_image}" alt="book" class="img-book" loading="lazy" onerror="src='${new URL(
+        '../images/plug-empte-book_335x485.png',
+        import.meta.url
+      )}'"/>
               </div>
               <div class="bestsellers-text-wrapper">
                 <div class="title-wrap">
@@ -283,7 +287,7 @@ const updateBooksCategories = async () => {
   if (listTopBooks) {
     listTopBooks.innerHTML = '';
     listTopBooks.insertAdjacentHTML('beforeend', markup);
-
+    //======= Дашин код ==============
     const seeMoreBtns = document.querySelectorAll('.see-more');
     const categoriesForBtn = document.querySelectorAll('.bookcat');
 
@@ -296,6 +300,7 @@ const updateBooksCategories = async () => {
         });
       });
     }
+    //======= /Дашин код ==============
   }
 };
 
