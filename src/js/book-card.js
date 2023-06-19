@@ -249,13 +249,13 @@ const updateBooksCategories = async () => {
     `;
 
     for (let j = 0; j < numBooksToShow && j < books.length; j += 1) {
-      const { _id, book_image, title, author } = books[j];
+      const { _id, book_imag, title, author } = books[j];
       categoryMarkup += `
         <li class="item-category-book" data-book-id="${_id}">
           <a class="link-books" href="#">
             <div class="card-book">
               <div class="img-card-book">
-                <img src="${book_image}" alt="book" class="img-book" loading="lazy" />
+                <img src="${book_imag}" alt="${title}" class="img-book" loading="lazy" onerror="src='https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=1200&quality=85&auto=format&fit=max&s=a52bbe202f57ac0f5ff7f47166906403'" />
               </div>
               <div class="bestsellers-text-wrapper">
                 <div class="title-wrap">
@@ -283,7 +283,7 @@ const updateBooksCategories = async () => {
   if (listTopBooks) {
     listTopBooks.innerHTML = '';
     listTopBooks.insertAdjacentHTML('beforeend', markup);
-
+    //===================== Дашина частинка
     const seeMoreBtns = document.querySelectorAll('.see-more');
     const categoriesForBtn = document.querySelectorAll('.bookcat');
 
@@ -296,6 +296,7 @@ const updateBooksCategories = async () => {
         });
       });
     }
+    //===================== /Дашина частинка
   }
 };
 
