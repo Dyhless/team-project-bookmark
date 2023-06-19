@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // Якщо в ЛС записана темна тема, то її видаляємо при кліку на світчер і встановиться тема за змовченням - світла
 // Якщо нічого немає в ЛС, тоді записуємо тему темну 
 function onToggleTheme(evt) {
-  evt.preventDefault();
+  // evt.preventDefault();
   addDarkAttribute();
 
   if (localStorage.getItem('theme') === 'dark') {
