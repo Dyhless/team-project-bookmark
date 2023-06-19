@@ -10,7 +10,6 @@
 @import url('./category.css');
 @import url('./slider.css');
 @import url('./switch-dark-theme.css');
-@import url('./scroll-up.css');
 
 /* @import url('./dark-theme.css');
 @import url('./light-theme.css'); */
@@ -18,3 +17,4 @@
 @import url('./book-card.css');
 
 @import url('./pagination.css');
+@import url('./scroll-up.css');
