@@ -1,4 +1,5 @@
 import { BooksService } from './books-service';
+import { handleScroll } from './handleScroll';
 import Notiflix from 'notiflix';
 
 const booksService = new BooksService();
@@ -251,15 +252,32 @@ const updateBooksCategories = async () => {
     for (let j = 0; j < numBooksToShow && j < books.length; j += 1) {
       const { _id, book_image, title, author } = books[j];
 
+      function getFallbackImageUrl() {
+        const screenWidth = window.innerWidth;
+
+        if (screenWidth < 768) {
+          return new URL(
+            '../images/plug-empte-book_335x485.png',
+            import.meta.url
+          );
+        } else if (screenWidth < 1440) {
+          return new URL(
+            '../images/plug-empte-book_218x316.png',
+            import.meta.url
+          );
+        } else {
+          return new URL(
+            '../images/plug-empte-book_180x256.png',
+            import.meta.url
+          );
+        }
+      }
       categoryMarkup += `
         <li class="item-category-book js-book-modal" data-book-id="${_id}">
           <a class="link-books" href="#">
             <div class="card-book">
               <div class="img-card-book">
-                <img src="${book_image}" alt="book" class="img-book" loading="lazy" onerror="src='${new URL(
-        '../images/plug-empte-book_335x485.png',
-        import.meta.url
-      )}'"/>
+                <img src="${book_image}" alt="book" class="img-book" loading="lazy" onerror="src='${getFallbackImageUrl()}'"/>
               </div>
               <div class="bestsellers-text-wrapper">
                 <div class="title-wrap">
