@@ -15,7 +15,7 @@
     //     refs.openModalBtn.getAttribute('aria-expanded') === 'true' || false;
     //   refs.openModalBtn.setAttribute('aria-expanded', !isModalOpen);
     document.body.classList.toggle("modal-open");
-    refs.modal.classList.toggle('is-hidden-modal-book');
+    refs.modal.classList.toggle('is-hidden-modal-book'); 
     document.addEventListener('keydown', logBackdropClick);
   
 

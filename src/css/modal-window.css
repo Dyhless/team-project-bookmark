@@ -1,3 +1,4 @@
+/* Изменил название класса  */
 .backdrop-modal-book {
   position: fixed;
   top: 0;
@@ -9,6 +10,8 @@
   background-color: rgb(0, 0, 0, 0.4);
   transition: opacity 1000ms, visibility 1000ms;
 }
+
+/* Изменил название класса  */
 .backdrop-modal-book.is-hidden-modal-book {
   opacity: 0;
   visibility: hidden;
