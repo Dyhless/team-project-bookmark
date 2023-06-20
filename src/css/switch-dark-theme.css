@@ -3,6 +3,7 @@
   height: 0;
   width: 0;
   visibility: hidden;
+  position: absolute;
 }
 
 .lable-switch {
@@ -40,9 +41,6 @@
   left: calc(100% - 1px);
   transform: translateX(-100%);
 }
-
-
-
 /* код для додавання іконок в перемикач */
 label svg{
   width: 16px;
@@ -70,3 +68,4 @@ transition: 0.3s;
 .input-switch:checked + .lable-switch svg.moon {
   fill: gold;
 }
+
