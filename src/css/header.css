@@ -3,7 +3,7 @@
   /* width: 100%; */
   top: 0;
   left: 0;
-  z-index: 50;
+
   display: flex;
   border: 1.5px solid var(--main-txt-color);
   border-radius: 0px 0px 8px 8px;
@@ -11,6 +11,13 @@
   padding: 0 16;
 }
 
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+}
 .logo {
   display: flex;
   align-items: center;
@@ -53,6 +60,6 @@
 
 .form {
   position: absolute;
-  right: 0;
-  top: 9%;
+  right: 1%;
+  top: 10%;
 }
