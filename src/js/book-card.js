@@ -2,6 +2,8 @@ import { BooksService } from './books-service';
 import { handleScroll } from './handleScroll';
 import Notiflix from 'notiflix';
 
+import { hideLoader, showLoader } from './loader';
+
 const booksService = new BooksService();
 const listTopBooks = document.querySelector('.top-books');
 
@@ -219,6 +221,7 @@ let markup = '';
 async function renderBooksCategories() {
   try {
     const { data } = await booksService.fetchTopBooks();
+
     return data;
   } catch (error) {
     console.log(error);
@@ -228,6 +231,7 @@ async function renderBooksCategories() {
 
 const updateBooksCategories = async () => {
   const categories = await renderBooksCategories();
+
   let numBooksToShow = 5;
 
   if (window.innerWidth < 768) {
@@ -272,6 +276,7 @@ const updateBooksCategories = async () => {
           );
         }
       }
+
       categoryMarkup += `
         <li class="item-category-book js-book-modal" data-book-id="${_id}">
           <a class="link-books" href="#">
@@ -305,6 +310,7 @@ const updateBooksCategories = async () => {
   if (listTopBooks) {
     listTopBooks.innerHTML = '';
     listTopBooks.insertAdjacentHTML('beforeend', markup);
+
     //======= Дашин код ==============
     const seeMoreBtns = document.querySelectorAll('.see-more');
     const categoriesForBtn = document.querySelectorAll('.bookcat');
@@ -312,14 +318,17 @@ const updateBooksCategories = async () => {
     for (let p = 0; p < categories.length; p++) {
       seeMoreBtns[p].addEventListener('click', () => {
         categoriesForBtn[p + 1].click();
+
         window.scrollTo({
           top: 0,
           behavior: 'smooth',
         });
       });
     }
+
     //======= /Дашин код ==============
   }
+  hideLoader();
 };
 
 window.addEventListener('resize', updateBooksCategories);

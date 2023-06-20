@@ -172,8 +172,8 @@
     linear-gradient(#ddd 100px, transparent 0),
     linear-gradient(#ddd 100px, transparent 0);
 
-  background-position: 15px 30px, 15px 60px, 15px 90px,
-    105px 30px, 105px 60px, 105px 90px;
+  background-position: 15px 30px, 15px 60px, 15px 90px, 105px 30px, 105px 60px,
+    105px 90px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
@@ -195,7 +195,6 @@
   transform-origin: left center;
   animation: paging 1s linear infinite;
 }
-
 
 @keyframes paging {
   to {

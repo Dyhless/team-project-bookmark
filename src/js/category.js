@@ -1,5 +1,6 @@
 import axios, { all } from 'axios';
 import Notiflix from 'notiflix';
+import { hideLoader, showLoader } from './loader';
 
 // вибираєм головний контейнер в category html
 const asideList = document.querySelector('.category');
@@ -16,21 +17,23 @@ const listOfCateg = document.querySelector('.categBook');
 
 //створюємо функцію, яка викликає запити по катекорії
 async function getBooksByCategory(categoryName) {
+  showLoader();
   homePageContainer.innerHTML = '';
+
   try {
     const responseCategoty = await axios.get(
       `https://books-backend.p.goit.global/books/category?category=${categoryName}`
-      );
-      const dataFile = responseCategoty.data;
-      
-      //створюємо заголовок вибраної категорії
-      const selectedCatName = document.createElement('h2');
-      selectedCatName.classList.add('selected-category-name');
-      const words = categoryName.split(' ');
-      const lastWordOfCategory = words.pop();
-      const cuttedNameOFCategory = words.join(' ');
-      selectedCatName.innerHTML = `${cuttedNameOFCategory} <split class="last-word-category">${lastWordOfCategory}</split>`;
+    );
 
+    const dataFile = responseCategoty.data;
+
+    //створюємо заголовок вибраної категорії
+    const selectedCatName = document.createElement('h2');
+    selectedCatName.classList.add('selected-category-name');
+    const words = categoryName.split(' ');
+    const lastWordOfCategory = words.pop();
+    const cuttedNameOFCategory = words.join(' ');
+    selectedCatName.innerHTML = `${cuttedNameOFCategory} <split class="last-word-category">${lastWordOfCategory}</split>`;
 
     homePageContainer.appendChild(selectedCatName);
     //створюємо новий список
@@ -49,33 +52,42 @@ async function getBooksByCategory(categoryName) {
                           <h2 class="book-title">${bookRes.title}</h2>
                           <p class="book-author">${bookRes.author}</p>
                         </div>`;
+
       newBookLI.innerHTML = bookFace;
       newBookUl.appendChild(newBookLI);
     });
+    hideLoader();
   } catch (error) {
     console.log(error);
+    hideLoader();
   }
 }
 
 // створюємо функцію, яка буде викликати всі категорії з сервера. Результат роботи цієї функції
 // це заповнене бокове меню з вибором категорій книг і встановлений слухач на елементи списка
 async function getCategoryList() {
+  showLoader();
   try {
     const response = await axios.get(
       'https://books-backend.p.goit.global/books/category-list'
     );
     const data = response.data;
-    const sortedData = data.sort((a, b) => a.list_name.localeCompare(b.list_name));
-    
-    
+
+    const sortedData = data.sort((a, b) =>
+      a.list_name.localeCompare(b.list_name)
+    );
+
     const allCategories = document.createElement('li');
     allCategories.classList.add('bookcat');
     allCategories.classList.add('allBooks');
     allCategories.textContent = 'All categories';
+
     listOfCateg.appendChild(allCategories);
     const allCatPoint = document.querySelector('.allBooks');
-    allCatPoint.addEventListener('click', ()=>{window.location.href = 'index.html'})
-    
+    allCatPoint.addEventListener('click', () => {
+      window.location.href = 'index.html';
+    });
+
     sortedData.forEach(category => {
       //створюю елемент списку категорій
       const newLICateg = document.createElement('li');
@@ -90,10 +102,10 @@ async function getCategoryList() {
     });
   } catch (error) {
     console.log(error);
+    hideLoader();
   }
 }
 
 window.addEventListener('load', getCategoryList);
 
-// 
-
+//
