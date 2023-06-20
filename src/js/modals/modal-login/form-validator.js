@@ -32,28 +32,57 @@ export default function validateOnSubmit(e) {
   // Проверка заполнения полей формы
   if (name === '' || email === '' || password === '') {
     e.preventDefault();
-    Notify.failure('Please fill in all form fields');
+    Notify.failure('Please fill in all form fields', {
+      width: '330px',
+      position: 'center-top',
+      background: '#ff00ff',
+      textColor: '#000000',
+      notiflixIconColor: '#ffffff',
+      fontSize: '18px',
+      
+    });
     return;
   };
 
   // Проверка имени пользователя.
   if (!testName) {
     e.preventDefault();
-    Notify.failure('Please enter a valid name');
+    Notify.failure('Please enter a valid name', {
+      width: '330px',
+      position: 'center-top',
+      background: '#ff00ff',
+      textColor: '#000000',
+      notiflixIconColor: '#ffffff',
+      fontSize: '18px',
+    });
     return;
   }
 
   // Проверка формата электронной почты.
   else if (!testEmail) {
     e.preventDefault();
-    Notify.failure('Please enter a valid email');
+    Notify.failure('Please enter a valid email', {
+      width: '330px',
+      position: 'center-top',
+      background: '#ff00ff',
+      textColor: '#000000',
+      notiflixIconColor: '#ffffff',
+      fontSize: '18px',
+    });
     return;
   }
 
   // Проверка длины пароля (не менее 5-и символов).
   else if (!testPassword) {
     e.preventDefault();
-    Notify.failure('Password must be more than 5 characters');
+    Notify.failure('Password must be more than 5 characters', {
+      width: '330px',
+      position: 'center-top',
+      background: '#ff00ff',
+      textColor: '#000000',
+      notiflixIconColor: '#ffffff',
+      fontSize: '18px',
+    });
     return;
   }
 
