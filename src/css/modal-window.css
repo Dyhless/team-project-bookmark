@@ -7,7 +7,7 @@
   height: 100%;
   z-index: 100;
 
-  background-color: rgb(0, 0, 0, 0.4);
+  background-color: var(--backg-overlay-modal);
   transition: opacity 1000ms, visibility 1000ms;
 }
 
@@ -26,8 +26,8 @@
 
   width: 335px;
   height: 762px;
-  background-color: #ffffff;
-  border: 2px solid #111111;
+  background-color: var(--modal-bgr);
+  border: 2px solid var(--main-txt-color);
   border-radius: 18px;
 }
 .modal-btn {
