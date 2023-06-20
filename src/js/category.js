@@ -43,7 +43,7 @@ async function getBooksByCategory(categoryName) {
       `https://books-backend.p.goit.global/books/category?category=${categoryName}`
       );
       const dataFile = responseCategoty.data;
-      
+            
       //створюємо заголовок вибраної категорії
       const selectedCatName = document.createElement('h2');
       selectedCatName.classList.add('selected-category-name');
@@ -72,7 +72,7 @@ async function getBooksByCategory(categoryName) {
                         </div></div>`;
       newBookLI.innerHTML = bookFace;
       newBookUl.appendChild(newBookLI);
-    });
+         });
   } catch (error) {
     Notiflix.Notify.failure('Oops! Something went wrong... Please try again.');
   }
