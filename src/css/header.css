@@ -5,9 +5,9 @@
   left: 0;
 
   display: flex;
-  border: 1.5px solid #111111;
+  border: 1.5px solid var(--main-txt-color);
   border-radius: 0px 0px 8px 8px;
-  background-color: var(--card-background);
+  background-color: var(--header-background);
   padding: 0 16;
 }
 
@@ -32,7 +32,7 @@
   line-height: 1.2;
   letter-spacing: -0.04em;
   text-transform: uppercase;
-  color: var (--main-color);
+  color: var (--main-txt-color);
   display: flex;
   align-items: baseline;
   gap: 10px;
@@ -50,7 +50,6 @@
 
 .nav__svg {
   position: absolute;
-<<<<<<< Updated upstream
 }
 
 .switch {
@@ -61,13 +60,6 @@
 
 .form {
   position: absolute;
-<<<<<<< Updated upstream
-  right: 0;
-  top: 9%;
-=======
->>>>>>> Stashed changes
-=======
   right: 1%;
   top: 10%;
->>>>>>> Stashed changes
 }
