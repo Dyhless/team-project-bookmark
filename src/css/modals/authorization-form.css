@@ -265,7 +265,7 @@
 .modal-form__input::placeholder {
   opacity: 0;
   transition: opacity 250ms ease-in-out;
-  color: rgba(17, 17, 17, 0.5);
+  color: var(--avtoriz-modal-toggle);
 }
 
 .modal-form__input:focus::placeholder {
@@ -311,7 +311,7 @@
   top: 50%;
   transform: translateY(-50%);
 
-  fill: var(--header-background);
+  fill: var(--modal-bgr);
   stroke: var(--avtoriz-form);
 
   height: 18px;
@@ -340,12 +340,15 @@
 
   border: none;
   border-radius: 40px;
+
+  transition: background-color 250ms ease-in-out;
 }
 
 /* додала ховер */
 .modal-form__submit:hover,
 .modal-form__submit:focus{
   background-color: var(--accent-font-blue-color);
+
 }
 @media screen and (min-width: 1280px) {
   .modal-form__submit {
