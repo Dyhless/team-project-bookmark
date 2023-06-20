@@ -43,14 +43,14 @@
   text-align: center;
   /* padding: 10px; */
   margin-left: 0;
-  color: #333333;
+  color: var(--main-txt-color);
   font-size: 16px;
   font-weight: bold;
   /* line-height: 1; */
   line-height: 38px;
   text-decoration: none;
   vertical-align: middle;
-  border: 1px solid var(--pagination-back);
+  border: 1px solid var(--main-txt-color);
   border-radius: 50%;
   text-align: center;
 
@@ -178,8 +178,14 @@
   /* line-height: 38px; */
   white-space: nowrap;
   font-weight: bold;
-  border: 1px solid var(--pagination-back);
+  border: 1px solid var(--black-color);
 }
+
+.tui-pagination .tui-prev-is-ellip,
+.tui-pagination .tui-next-is-ellip{
+   border: 1px solid var(--main-txt-color);
+   }
+
 /* @media screen and (min-width: 768px) {
   .tui-pagination .tui-first,
   .tui-pagination .tui-prev,
@@ -213,6 +219,15 @@
   display: inline-block;
   vertical-align: middle;
   font-size: 0px;
+}
+
+/* .tui-pagination .tui-ico-ellip{
+  filter: brightness(0) invert(1);
+} */
+
+.tui-pagination .tui-ico-next,
+.tui-pagination .tui-ico-last{
+  filter: brightness(0) invert(0);
 }
 
 .tui-pagination .tui-prev-is-ellip,

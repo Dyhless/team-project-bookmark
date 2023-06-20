@@ -25,7 +25,7 @@
   line-height: 1.2;
   letter-spacing: -0.04em;
   text-transform: uppercase;
-  color: var (--main-txt-color);
+  color: var(--main-txt-color);
   display: flex;
   align-items: baseline;
   gap: 10px;
@@ -38,7 +38,7 @@
 
 .site-nav__link:hover {
   border-radius: 36px;
-  color: var(--header-hover-bcg);
+  color: var(--yellow-color);
 }
 
 .nav__svg {
