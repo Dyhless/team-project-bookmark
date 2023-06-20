@@ -63,13 +63,13 @@ async function getBooksByCategory(categoryName) {
     dataFile.forEach(bookRes => {
       const newBookLI = document.createElement('li');
       newBookLI.classList.add('book-card-preview');
-      const bookFace = `<div class="book-image">
+      const bookFace = `<div class="book-preview-container" id="${bookRes._id}"><div class="book-image">
                           <img src="${bookRes.book_image}" alt="book-title-preview" loading="lazy" onerror="src='${getFallbackImageUrl()}'">
                         </div>
                         <div>
                           <h2 class="book-title">${bookRes.title}</h2>
                           <p class="book-author">${bookRes.author}</p>
-                        </div>`;
+                        </div></div>`;
       newBookLI.innerHTML = bookFace;
       newBookUl.appendChild(newBookLI);
     });
