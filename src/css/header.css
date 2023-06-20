@@ -43,6 +43,7 @@
 
 .nav__svg {
   position: absolute;
+<<<<<<< Updated upstream
 }
 
 .switch {
@@ -55,4 +56,6 @@
   position: absolute;
   right: 0;
   top: 9%;
+=======
+>>>>>>> Stashed changes
 }
