@@ -1,6 +1,8 @@
 import { BooksService } from './books-service';
 import Notiflix from 'notiflix';
 
+import { loader, showLoader, hideLoader } from './loader';
+
 const booksService = new BooksService();
 const listTopBooks = document.querySelector('.top-books');
 
@@ -345,6 +347,7 @@ const updateBooksCategories = async () => {
     }
     //     //======= /Дашин код ==============
   }
+  hideLoader();
 };
 
 window.addEventListener('resize', updateBooksCategories);
