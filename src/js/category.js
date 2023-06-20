@@ -43,7 +43,7 @@ async function getBooksByCategory(categoryName) {
       `https://books-backend.p.goit.global/books/category?category=${categoryName}`
       );
       const dataFile = responseCategoty.data;
-      
+            
       //створюємо заголовок вибраної категорії
       const selectedCatName = document.createElement('h2');
       selectedCatName.classList.add('selected-category-name');
@@ -64,7 +64,7 @@ async function getBooksByCategory(categoryName) {
       const newBookLI = document.createElement('li');
       newBookLI.classList.add('book-card-preview');
       const bookFace = `<div class="book-image">
-                          <img src="${bookRes.book_image}" alt="book-title-preview" loading="lazy" onerror="src='${getFallbackImageUrl()}'">
+                          <img src="${bookRes.book_image}" alt="book-title-preview" loading="lazy" onerror="src='${getFallbackImageUrl()}'" data-id="${bookRes._id}">
                         </div>
                         <div>
                           <h2 class="book-title">${bookRes.title}</h2>
@@ -72,7 +72,7 @@ async function getBooksByCategory(categoryName) {
                         </div>`;
       newBookLI.innerHTML = bookFace;
       newBookUl.appendChild(newBookLI);
-    });
+         });
   } catch (error) {
     Notiflix.Notify.failure('Oops! Something went wrong... Please try again.');
   }

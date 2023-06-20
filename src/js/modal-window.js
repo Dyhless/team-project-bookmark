@@ -25,13 +25,13 @@
 
   async function cardForModal(e) {
     // проверка если попал на картинку
-   
+
     id = e.target.getAttribute('data-id');
-    if (id===null){
+    if (id === null) {
       return;
-    } else
-    openModal();
+    } else openModal();
     console.log('это айди', id);
+    // обработка ошибки фетча?
     const { book_image, description, author, title } = await fetchBookById(id);
 
     const markup = `<img src="${book_image}" alt="book" class="card-img-modal">
@@ -61,31 +61,29 @@
     //     refs.openModalBtn.getAttribute('aria-expanded') === 'true' || false;
     //   refs.openModalBtn.setAttribute('aria-expanded', !isModalOpen);
     removeWindowEventListener();
-    document.body.classList.toggle("modal-open");
-    refs.modal.classList.toggle('is-hidden-modal-book'); 
+    document.body.classList.add('modal-open');
+    refs.modal.classList.remove('is-hidden-modal-book');
     document.addEventListener('keydown', logBackdropClick);
 
     //   const scrollLockMethod = !isModalOpen
     //     ? 'disableBodyScroll'
     //     : 'enableBodyScroll';
     //   bodyScrollLock[scrollLockMethod](document.body);
-  };
+  }
 
-  function closeModal(){
+  function closeModal() {
     document.body.classList.remove('modal-open');
-    refs.modal.classList.add('is-hidden');
+    refs.modal.classList.add('is-hidden-modal-book');
     document.removeEventListener('keydown', logBackdropClick);
     window.addEventListener('click', cardForModal);
-  };
-
+  }
 
   function logBackdropClick(e) {
-    if (e.target.className === 'backdrop' || e.code === 'Escape') {
-      refs.modal.classList.add('is-hidden');
+    if (e.target.className === 'backdrop-modal-book' || e.code === 'Escape') {
+      refs.modal.classList.add('is-hidden-modal-book');
       document.body.classList.remove('modal-open');
       document.removeEventListener('keydown', logBackdropClick);
       window.addEventListener('click', cardForModal);
-    } else 
-    return; 
+    } else return;
   }
 })();
