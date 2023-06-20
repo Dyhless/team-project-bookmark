@@ -260,6 +260,8 @@
 
   border: 2px solid var(--avtoriz-form);
   border-radius: 40px;
+/* додала колір тексту */
+  color: var(--main-txt-color);
 }
 
 .modal-form__input::placeholder {
