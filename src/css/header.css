@@ -1,17 +1,61 @@
-.header {
-  left: 0px;
-  top: 0px;
-  background-color: var(--header-background);
-  color: var(--main-txt-color);
-  border: 1.5px solid var(--main-txt-color);
-  border-radius: 0px 0px 8px 8px;
-  height: 64px;
-  width: 100%;
+.header-container {
+  position: relative;
+  /* width: 100%; */
+  top: 0;
+  left: 0;
+  z-index: 50;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  border: 1.5px solid #111111;
+  border-radius: 0px 0px 8px 8px;
+  background-color: var(--card-background);
+  padding: 0 16;
 }
 
 .logo {
+  display: flex;
+  align-items: center;
   color: var(--logo-txt);
+  font-weight: 700;
+}
+
+.site-nav {
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: var (--main-color);
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-left: 75px;
+}
+
+.site-nav__item {
+  padding: 24px;
+}
+
+.site-nav__link:hover {
+  border-radius: 36px;
+  color: var(--header-hover-bcg);
+}
+
+.nav__svg {
+  position: absolute;
+<<<<<<< Updated upstream
+}
+
+.switch {
+  position: absolute;
+  right: 27%;
+  top: 9%;
+}
+
+.form {
+  position: absolute;
+  right: 0;
+  top: 9%;
+=======
+>>>>>>> Stashed changes
 }
