@@ -11,15 +11,7 @@
   text-indent: -9999px;
   width: 40px;
   height: 24px;
-<<<<<<< Updated upstream
-  background: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
-=======
-  background: linear-gradient(
-    180deg,
-    var(--accent-font-blue-color) 0%,
-    #dcdcdc 100%
-  );
->>>>>>> Stashed changes
+  background: linear-gradient(180deg, var(--accent-font-blue-color) 0%, #dcdcdc 100%);
   box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
   display: block;
   border-radius: 100px;
@@ -35,21 +27,13 @@
   bottom: 8.33%;
   width: 18px;
   height: 18px;
-  background: #fff;
+  background: var(--white-color);
   border-radius: 90px;
   transition: 0.3s;
 }
 
 .input-switch:checked + .lable-switch {
-<<<<<<< Updated upstream
-  background: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
-=======
-  background: linear-gradient(
-    180deg,
-    var(--accent-font-blue-color) 0%,
-    #686868 100%
-  );
->>>>>>> Stashed changes
+  background: linear-gradient(180deg, var(--accent-font-blue-color) 0%, #686868 100%);
   box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -57,28 +41,25 @@
   left: calc(100% - 1px);
   transform: translateX(-100%);
 }
-<<<<<<< Updated upstream
-=======
-
 /* код для додавання іконок в перемикач */
-label svg {
+label svg{
   width: 16px;
   height: 16px;
   position: absolute;
-  z-index: 10;
-  top: 4px;
+z-index: 10;
+top: 4px;
 }
-label svg.sun {
-  fill: gold;
-  left: 1px;
-  transition: 0.3s;
-}
+ label svg.sun{
+  fill:gold;
+left: 1px;
+transition: 0.3s;
+ }
 
-label svg.moon {
-  fill: var(--backg-overlay-modal);
+ label svg.moon{
+  fill:var(--backg-overlay-modal);
   left: 23px;
   transition: 0.3s;
-}
+ }
 
 .input-switch:checked + .lable-switch svg.sun {
   fill: var(--backg-overlay-modal);
@@ -87,4 +68,4 @@ label svg.moon {
 .input-switch:checked + .lable-switch svg.moon {
   fill: gold;
 }
->>>>>>> Stashed changes
+

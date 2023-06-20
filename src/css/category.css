@@ -192,7 +192,7 @@
   font-size: 12px;
   line-height: 117%;
   letter-spacing: 0.04em;
-  color: #B4AFAF;
+  color: var(--paragraph-color);
   }
 
   /* стилізую вікно для картинки окремої книжки */
@@ -218,8 +218,8 @@
   }}
 
   .book-image img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
