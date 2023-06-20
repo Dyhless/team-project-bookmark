@@ -39,7 +39,7 @@ export default function validateOnSubmit(e) {
       textColor: '#000000',
       notiflixIconColor: '#ffffff',
       fontSize: '18px',
-      
+      // не змінює кольори
     });
     return;
   };
