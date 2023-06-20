@@ -6,6 +6,7 @@
    --yellow-color: #EAC645;
    --backg-overlay-modal: rgba(17, 17, 17, 0.4);
    --white-color: #fff;
+   --black-color: #111111;
 
    /* --black-color: #111111;
    --grey-dark: #202024;
@@ -36,8 +37,10 @@
     --logo-txt: #000000;
     --scroll-line: #f1f1f1;
     --modal-bgr: rgba(255, 255, 255, 1);
-       
-    --amazon-logo: grayscale(100%);
+    --avtoriz-form: rgba(17, 17. 17, 1);
+    --avtoriz-modal-toggle: rgba(17, 17, 17, 0.5);
+
+        --amazon-logo: grayscale(100%);
      
 
    /* FONTS */
@@ -67,10 +70,10 @@
     --shopping-list-border: rgba(79, 46, 232, 0.4);
     --scroll: rgba(17, 17, 17, 0.6);
     --modal-bgr: rgba(32, 32, 36, 1);
-
+    --avtoriz-form: rgba(246, 246, 246, 1);
     --paragraph-white-font-color: #f6f6f6;
     --pagination-bkg: #f4f4f4;
-          
+    --avtoriz-modal-toggle: rgba(246, 246, 246, 0.5);  
     --scroll-line: rgba(31, 31, 35, 0.6);
 
     
