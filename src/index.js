@@ -13,3 +13,4 @@ import './js/modals/modal-login/authorization-form.js';
 import './js/modals/modal-login/form-validator.js';
 
 import './js/loader.js';
+
