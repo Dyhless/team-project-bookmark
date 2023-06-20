@@ -1,4 +1,4 @@
-const loader = document.querySelector('.loader');
+const loader = document.querySelector('.loader-backdrop');
 
 function hideLoader() {
   loader.classList.add('is-hidden');
