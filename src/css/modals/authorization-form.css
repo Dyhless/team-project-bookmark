@@ -6,13 +6,13 @@
 
   padding: 14px;
   width: fit-content;
-  border: 1.5px solid #111111;
+  border: 1.5px solid var(--black-color);
   border-radius: 18px;
 
-  background-color: #4f2ee8;
-  color: #ffffff;
+  background-color: var(--accent-font-blue-color);
+  color: var(--white-color);
   font-weight: 500;
-  font-size: 14px;
+  font-size: 18px;
 
   cursor: pointer;
   transition: background-color 500ms ease-in-out, color 200ms ease-in-out,
@@ -20,9 +20,9 @@
 }
 
 .userbar-btn:hover {
-  background-color: white;
-  color: #111111;
-  border-color: #4f2ee8;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  border-color: var(--accent-font-blue-color);
 }
 
 .userbar-btn.user-in {
@@ -50,8 +50,8 @@
   padding: 4px 12px;
   width: fit-content;
 
-  background-color: #4f2ee8;
-  color: #ffffff;
+  background-color: var(--accent-font-blue-color);
+  color: var(--white-color);
   font-weight: 700;
   font-size: 22px;
 
@@ -86,7 +86,7 @@
 
   width: 100%;
   background-color: white;
-  border: 1.5px solid #111111;
+  border: 1.5px solid var(--avtoriz-form);
   border-radius: 18px;
 
   padding: 14px;
@@ -162,12 +162,12 @@
   top: 50%;
   left: 50%;
 
-  background-color: #f6f6f6;
+  background-color: var(--background-body);
   /* min-height: 384px; */
   max-width: 335px;
   padding: 40px 20px 40px 20px;
 
-  border: 2px solid #111111;
+  border: 2px solid var(--main-txt-color);
   border-radius: 18px;
 
   cursor: default;
@@ -214,11 +214,11 @@
 }
 
 .modal__close-button:hover .close-button__x-icon {
-  stroke: #4f2ee8;
+  stroke: var(--accent-font-blue-color);
 }
 
 .close-button__x-icon {
-  stroke: #111111;
+  stroke: var(--avtoriz-form);
 
   height: 20px;
   width: 20px;
@@ -258,7 +258,7 @@
   height: 50px;
   background-color: transparent;
 
-  border: 2px solid #111111;
+  border: 2px solid var(--avtoriz-form);
   border-radius: 40px;
 }
 
@@ -285,7 +285,7 @@
   transform: translateY(-50%);
   left: 40px;
 
-  color: #111111;
+  color: var(--avtoriz-form);
   text-transform: uppercase;
   font-weight: 700;
   font-size: 16px;
@@ -311,8 +311,8 @@
   top: 50%;
   transform: translateY(-50%);
 
-  fill: white;
-  stroke: #111111;
+  fill: var(--header-background);
+  stroke: var(--avtoriz-form);
 
   height: 18px;
   width: 18px;
@@ -327,8 +327,8 @@
 
 .modal-form__submit {
   width: 100%;
-  background-color: #111111;
-  color: #f6f6f6;
+  background-color: var(--avtoriz-form);
+  color: var(--background-body);
   cursor: pointer;
 
   text-transform: uppercase;
@@ -342,6 +342,11 @@
   border-radius: 40px;
 }
 
+/* додала ховер */
+.modal-form__submit:hover,
+.modal-form__submit:focus{
+  background-color: var(--accent-font-blue-color);
+}
 @media screen and (min-width: 1280px) {
   .modal-form__submit {
     font-size: 18px;
@@ -361,7 +366,7 @@
 
 .modal-toggle__el {
   background-color: transparent;
-  color: rgba(17, 17, 17, 0.5);
+  color: var(--avtoriz-modal-toggle);
   border: none;
   font-weight: 700;
   font-size: 14px;
@@ -377,12 +382,12 @@
 }
 
 .modal-toggle__el:hover {
-  color: #4f2ee8;
+  color: var(--accent-font-blue-color);
 }
 
 .modal-toggle__el--current {
   text-decoration: underline;
-  color: #4f2ee8;
+  color: var(--accent-font-blue-color);
 }
 
 /* Дополнительные классы */
@@ -407,3 +412,5 @@
   opacity: 0;
   pointer-events: none;
 }
+
+
