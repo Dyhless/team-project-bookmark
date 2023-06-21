@@ -15,6 +15,8 @@
   display: block;
   border-radius: 100px;
   position: relative;
+
+  transition: 0.3s;
 }
 
 .lable-switch:after {
@@ -41,24 +43,24 @@
   transform: translateX(-100%);
 }
 /* код для додавання іконок в перемикач */
-label svg{
+label svg {
   width: 16px;
   height: 16px;
   position: absolute;
-z-index: 10;
-top: 4px;
+  z-index: 10;
+  top: 4px;
 }
- label svg.sun{
-  fill:gold;
-left: 1px;
-transition: 0.3s;
- }
+label svg.sun {
+  fill: gold;
+  left: 1px;
+  transition: 0.3s;
+}
 
- label svg.moon{
-  fill:var(--backg-overlay-modal);
+label svg.moon {
+  fill: var(--backg-overlay-modal);
   left: 23px;
   transition: 0.3s;
- }
+}
 
 .input-switch:checked + .lable-switch svg.sun {
   fill: var(--backg-overlay-modal);

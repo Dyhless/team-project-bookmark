@@ -9,6 +9,8 @@
   border-radius: 0px 0px 8px 8px;
   background-color: var(--header-background);
   padding: 0 16;
+
+  transition: background-color 0.3s ease;
 }
 
 .fixed-header {
