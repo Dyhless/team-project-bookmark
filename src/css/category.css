@@ -52,8 +52,7 @@
   font-weight: 400;
   font-size: 16px;
   letter-spacing: -0.02em;
-  transition: font-weight 0.5s ease;
-  transition: color 0.5s ease;
+  transition: font-weight 1.5s ease, color 0,2 ease
 }
 
 .bookcat:hover,
@@ -251,7 +250,7 @@
   .book-preview-container:focus {
     border-radius: 8px;
     transform: scale(1.1); /* Приближення елементу на 10% */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 50 0 10px rgba(0, 0, 0, 0.3);
   }
 
   .book-preview-container .book-author,
@@ -274,5 +273,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.last-word-category{
+  color:#4F2EE8;
 }
 
