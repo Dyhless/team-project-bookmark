@@ -31,7 +31,17 @@ function getFallbackImageUrl() {
 //створюємо функцію, яка викликає запити по катекорії
 async function getBooksByCategory(categoryName) {
   showLoader();
+
+
+
   homePageContainer.innerHTML = '';
+  const categoryList = document.querySelectorAll('.bookcat');
+categoryList.forEach((category) => {
+  category.classList.remove('current-page');
+});
+
+
+
   try {
     const responseCategoty = await axios.get(
       `https://books-backend.p.goit.global/books/category?category=${categoryName}`
@@ -87,8 +97,8 @@ async function getCategoryList() {
     );
 
     const allCategories = document.createElement('li');
-    allCategories.classList.add('bookcat');
-    allCategories.classList.add('allBooks');
+    allCategories.classList.add('bookcat','allBooks');
+    allCategories.classList.add('current-page');
     allCategories.textContent = 'All categories';
     listOfCateg.appendChild(allCategories);
     const allCatPoint = document.querySelector('.allBooks');
@@ -96,6 +106,7 @@ async function getCategoryList() {
       window.location.href = 'index.html';
     });
 
+    categoryList = document.querySelectorAll('.bookcat');
     sortedData.forEach(category => {
       //створюю елемент списку категорій
       const newLICateg = document.createElement('li');
@@ -104,7 +115,11 @@ async function getCategoryList() {
       newLICateg.innerHTML = category.list_name;
 
       newLICateg.addEventListener('click', () => {
-        //тут виправити нижче
+        categoryList.forEach((category) => {
+          category.classList.remove('current-page');
+        });
+        // Додаємо клас 'current-page' до активного елемента
+        newLICateg.classList.add('current-page');
         getBooksByCategory(category.list_name);
       });
     });

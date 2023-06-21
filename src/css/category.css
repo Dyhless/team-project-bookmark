@@ -85,6 +85,20 @@
     color: var(--hovertxt);
     white-space: nowrap;
   }
+
+  .current-page{
+    cursor: pointer;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 133%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  
+    color: var(--hovertxt);
+    white-space: nowrap;
+  }
   
   
   
@@ -223,10 +237,7 @@
     object-fit: cover;
   }
 
-    /* @media screen and (max-width: 767px) {
-    }}
-    @media screen and (min-width: 768px) and (max-width: 1439px) {
-    }}
-    @media screen and (min-width: 1440px) {
-    }} */
+
+
+ 
   
