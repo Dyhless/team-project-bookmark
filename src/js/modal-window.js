@@ -1,5 +1,4 @@
-
-import Notiflix from "notiflix";
+import Notiflix from 'notiflix';
 
 (() => {
   const refs = {
@@ -52,9 +51,11 @@ import Notiflix from "notiflix";
     };
 
     const markup = `<img src="${book_image}" alt="book" class="card-img-modal">
+<div class="text-card-dt"> 
 <h5 class="title">${title}</h5>
 <p class="author-card-modal">${author}</p>
 <p class="text-card-modal">${description}</p>
+
 <ul class="shops-modal">
 <li class="li-modal">
 <a href="${amazon_link}" target="_blank">
@@ -78,6 +79,7 @@ import Notiflix from "notiflix";
     )}" alt="Book-shop"></a>
 </li>
 </ul>
+</div>
 `;
     console.log('markup', markup);
 
