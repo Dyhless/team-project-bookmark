@@ -18,6 +18,6 @@
 @import url('./pagination.css');
 @import url('./scroll-up.css');
 
-@import url('./loader.css');
+/* @import url('./loader.css'); */
 
 @import url('./modals/authorization-form.css');
