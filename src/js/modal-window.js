@@ -39,7 +39,7 @@ const bookAPI = new BooksService();
     if (id === null) {
       return;
     } else openModal();
-    console.log('это айди', id);
+    // console.log('это айди', id);
     // обработка ошибки фетча?
     try {
       const book = await bookAPI.fetchBookById(id);

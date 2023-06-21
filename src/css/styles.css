@@ -4,8 +4,7 @@
 
 /* !!! */
 @import url('./header.css');
-
-/*! @import url('./modal-window.css'); */
+/* @import url('./modal-window.css'); */
 
 @import url('./site-bar.css');
 
@@ -22,6 +21,6 @@
 
 @import url('./scroll-up.css');
 
-/*! @import url('./loader.css'); */
+/* @import url('./loader.css'); */
 
 @import url('./modals/authorization-form.css');

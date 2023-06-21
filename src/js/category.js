@@ -55,16 +55,17 @@ async function getBooksByCategory(categoryName) {
     newCategoryList.classList.add('selected-category');
     homePageContainer.appendChild(newCategoryList);
     const newBookUl = document.querySelector('.selected-category');
-
     //створюємо нові результати пошуку і заповняєм список результатів
     dataFile.forEach(bookRes => {
       const newBookLI = document.createElement('li');
       newBookLI.classList.add('book-card-preview');
-      const bookFace = `<div class="book-preview-container"">
-                          <div class="book-image">
-                            <img src="${bookRes.book_image}" class="img-book" alt="book-title-preview" 
-                            loading="lazy" onerror="src='${getFallbackImageUrl()}'" data-id="${bookRes._id}">
-                          </div>
+      const bookFace = `<div class="book-preview-container""><div class="book-image">
+      <img src="${
+        bookRes.book_image
+      }" class="img-book" alt="book-title-preview" loading="lazy" onerror="src='${getFallbackImageUrl()}'" data-id="${
+        bookRes._id
+      }">
+                        </div>
                         <div>
                           <h2 class="book-title">${bookRes.title}</h2>
                           <p class="book-author">${bookRes.author}</p>
@@ -79,6 +80,8 @@ async function getBooksByCategory(categoryName) {
   }
 }
 
+// створюємо функцію, яка буде викликати всі категорії з сервера. Результат роботи цієї функції
+// це заповнене бокове меню з вибором категорій книг і встановлений слухач на елементи списка
 async function getCategoryList() {
   showLoader();
   try {
