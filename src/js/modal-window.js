@@ -50,10 +50,25 @@ const bookAPI = new BooksService();
       // ========== Додавання до localStorage ==========
 
       const addBtn = document.querySelector('.js-add-to-list');
+      const notify = document.querySelector('.notify');
+      const removeBtn = document.querySelector('.js-remove-from-list');
 
       addBtn.addEventListener('click', addToShoppingList);
+      removeBtn.addEventListener('click', () => removeFromShoppingList());
 
       const BOOKS_STORAGE = 'storage-of-books';
+
+      function updateAddButton() {
+        if (isInShoppingList(id)) {
+          addBtn.classList.add('is-hidden');
+          removeBtn.classList.remove('is-hidden');
+          notify.classList.remove('is-hidden');
+        } else {
+          addBtn.classList.remove('is-hidden');
+          removeBtn.classList.add('is-hidden');
+          notify.classList.add('is-hidden');
+        }
+      }
 
       function isInShoppingList(bookId) {
         let booksDataJson = localStorage.getItem(BOOKS_STORAGE);
@@ -66,7 +81,7 @@ const bookAPI = new BooksService();
 
       function addToShoppingList() {
         if (isInShoppingList(book._id)) {
-          // console.log('The book is already in the shopping list.');
+          console.log('The book is already in the shopping list.');
         } else {
           let booksDataJson = localStorage.getItem(BOOKS_STORAGE);
           let booksData = [];
@@ -75,10 +90,21 @@ const bookAPI = new BooksService();
           }
           booksData.push(book);
           localStorage.setItem(BOOKS_STORAGE, JSON.stringify(booksData));
-          // console.log(
-          //   'Congratulations! You have added the book to the shopping list.'
-          // );
+          updateAddButton();
         }
+      }
+
+      function removeFromShoppingList() {
+        let booksDataJson = localStorage.getItem(BOOKS_STORAGE);
+        if (booksDataJson === null) {
+          return;
+        }
+        let booksData = JSON.parse(booksDataJson);
+        const updatedBooksData = booksData.filter(
+          item => item._id !== book._id
+        );
+        localStorage.setItem(BOOKS_STORAGE, JSON.stringify(updatedBooksData));
+        updateAddButton();
       }
 
       //==================
@@ -114,6 +140,7 @@ const bookAPI = new BooksService();
       // console.log('markup', markup);
 
       renderMarkupModal(markup);
+      updateAddButton();
     } catch (error) {
       // console.log(error);
     }
