@@ -39,12 +39,12 @@ const bookAPI = new BooksService();
     if (id === null) {
       return;
     } else openModal();
-    console.log('это айди', id);
+    // console.log('это айди', id);
     // обработка ошибки фетча?
     try {
       const book = await bookAPI.fetchBookById(id);
 
-      console.log('book', book);
+      // console.log('book', book);
       const { book_image, description, author, title, buy_links } = book;
       getLinkToShop(buy_links);
       // ========== Додавання до localStorage ==========
@@ -75,9 +75,9 @@ const bookAPI = new BooksService();
           }
           booksData.push(book);
           localStorage.setItem(BOOKS_STORAGE, JSON.stringify(booksData));
-          console.log(
-            'Congratulations! You have added the book to the shopping list.'
-          );
+          // console.log(
+          //   'Congratulations! You have added the book to the shopping list.'
+          // );
         }
       }
 
@@ -113,7 +113,7 @@ const bookAPI = new BooksService();
 </ul>
 </div>
 `;
-      console.log('markup', markup);
+      // console.log('markup', markup);
 
       renderMarkupModal(markup);
     } catch (error) {
