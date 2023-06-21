@@ -43,6 +43,14 @@ import Notiflix from "notiflix";
       await fetchBookById(id);
     getLinkToShop(buy_links);
 
+    bookData = {
+      _id: id,
+      book_image,
+      description,
+      author,
+      title,
+    };
+
     const markup = `<img src="${book_image}" alt="book" class="card-img-modal">
 <h5 class="title">${title}</h5>
 <p class="author-card-modal">${author}</p>
@@ -72,6 +80,7 @@ import Notiflix from "notiflix";
 </ul>
 `;
     console.log('markup', markup);
+
     renderMarkupModal(markup);
   }
 
@@ -130,5 +139,37 @@ import Notiflix from "notiflix";
       document.removeEventListener('keydown', logBackdropClick);
       window.addEventListener('click', cardForModal);
     } else return;
+  }
+
+  // ========== Додавання до localStorage ==========
+  let bookData = {};
+  const addBtn = document.querySelector('.js-add-to-list');
+
+  addBtn.addEventListener('click', addToShoppingList);
+
+  const BOOKS_STORAGE = 'books';
+
+  function isInShoppingList(bookId) {
+    let booksDataJson = localStorage.getItem(BOOKS_STORAGE);
+    if (!booksDataJson) {
+      return false;
+    }
+    let booksData = JSON.parse(booksDataJson);
+    return booksData.some(book => book._id === bookId);
+  }
+
+  function addToShoppingList() {
+    if (isInShoppingList(bookData._id)) {
+      console.log('Книга вже є у списку покупок');
+    } else {
+      let booksDataJson = localStorage.getItem(BOOKS_STORAGE);
+      let booksData = [];
+      if (booksDataJson) {
+        booksData = JSON.parse(booksDataJson);
+      }
+      booksData.push(bookData);
+      localStorage.setItem(BOOKS_STORAGE, JSON.stringify(booksData));
+      console.log('Вітаємо! Ви додали книгу до списку покупок');
+    }
   }
 })();
