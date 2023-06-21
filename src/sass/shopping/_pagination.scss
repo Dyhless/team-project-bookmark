@@ -1,0 +1,117 @@
+.paginations {
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.paginations__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paginations__container-back,
+.paginations__container-end {
+  display: none;
+}
+
+.paginations__container-pages {
+  display: flex;
+  margin-left: 15px;
+  margin-right: 15px;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+
+.paginations__btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  border: 1px solid #111111;
+
+  @media screen and (min-width: 768px) {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.paginations__btn--back {
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8px;
+  background-color: #111111;
+  border-color: black;
+
+  &:hover {
+    background-color: #4f2ee8;
+  }
+
+  &:active {
+    background-color: dimgray;
+  }
+
+  &:first-child {
+    margin: 0px;
+  }
+}
+
+.paginations__btn--pages {
+  margin-left: 10px;
+  background-color: transparent;
+  color: #111111;
+  border-color: #111111;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+
+  &:first-child {
+    margin: 0px;
+  }
+}
+
+.paginations__btn--end {
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8px;
+  background-color: #eac645;
+  border-color: black;
+
+  &:hover {
+    background-color: gold;
+  }
+
+  &:active {
+    background-color: darkgoldenrod;
+  }
+
+  &:first-child {
+    margin: 0px;
+  }
+}
+
+.shopping__list {
+  min-height: 320px;
+
+  @media screen and (min-width: 768px) {
+    min-height: 215px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    min-height: 680px;
+  }
+}
+
+.active {
+  background-color: #111111;
+  color: white;
+}
+
+.paginations__icon{
+  pointer-events: none;
+}

@@ -9,6 +9,8 @@
   border-radius: 0px 0px 8px 8px;
   background-color: var(--header-background);
   padding: 0 16;
+
+  transition: background-color 0.3s ease;
 }
 
 @media screen and (min-width: 1024px) {
@@ -70,7 +72,7 @@
 
 .site-nav__link:hover {
   border-radius: 36px;
-  color: var(--header-hover-bcg);
+  color: var(--yellow-color);
 }
 
 .nav__svg {

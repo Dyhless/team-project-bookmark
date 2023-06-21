@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', generateSlides);
 
 function generateSlides() {
 
-  const isMobile = window.innerWidth < 768;
+  const isMobile = window.innerWidth < 767;
   const slidesPerView = isMobile ? 4 : 6;
 
   let allSlides;
@@ -56,7 +56,7 @@ function generateSlides() {
           <div class="slide__number">${(originalIndex + 1)
             .toString()
             .padStart(2, '0')}</div>
-          <a href="${slide.url}" class="slider__link" target="_blank">
+          <a href="${slide.url}" class="slider__link" target="_blank" rel="noopener noreferrer nofollow">
             <img
             src="${slide.img}"
             alt="${slide.title}"

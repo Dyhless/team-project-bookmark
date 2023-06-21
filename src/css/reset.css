@@ -7,6 +7,8 @@ body {
 
   background-color: var(--background-body);
   overflow: overlay;
+
+  transition: background-color 0.3s ease;
 }
 
 a {

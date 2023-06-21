@@ -7,6 +7,7 @@
   height: 100%;
   z-index: 100;
 
+  padding: 40px 24px;
   background-color: var(--backg-overlay-modal);
   transition: opacity 1000ms, visibility 1000ms;
 }
@@ -44,6 +45,7 @@
   background-color: transparent;
   padding: 0;
   transition: background-color 250ms;
+  cursor: pointer;
 }
 .modal-btn:hover,
 .modal-btn:focus {
@@ -81,6 +83,7 @@
   background-color: transparent;
   border: none;
   padding: 0;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -123,3 +126,34 @@
 }
 .text-card-modal {
 }  */
+
+.shops-modal {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 5;
+}
+
+/* .amazon {
+    cursor: pointer;
+  }
+  .apple {
+cursor: pointer;    
+  }
+.book-shop {
+cursor: pointer;
+} */
+
+.amazon:hover,
+.amazon:focus,
+.apple:hover,
+.apple:focus,
+.book-shop:hover,
+.book-shop:focus {
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
+}
+
+
+.li-modal{
+  cursor: pointer;
+}
