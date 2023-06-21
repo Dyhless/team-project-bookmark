@@ -150,6 +150,17 @@
   right: 15%;
   top: 9%;
 }
+@media screen and (min-width: 768px) {
+  .switch {
+    right: 28%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .switch {
+    right: 15%;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .switch {
