@@ -96,10 +96,10 @@
     padding: 24px;
   }
 
-  @media screen and (min-width: 1280px) {
-    width: 996px;
-    height: 213px;
-  }
+  // @media screen and (min-width: 1280px) {
+  //   width: 996px;
+  //   height: 213px;
+  // }
 
   .grid-img {
     grid-area: 1 / 1 / 3 / 2;
@@ -273,4 +273,21 @@
 .shopping__card-btn:hover,
 .shopping__card-btn:hover {
   background: #eac645;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .shopping__container {
+      margin-left: 32px;
+      margin-right: auto;
+
+    }
+}
+
+@media screen and (min-width: 1024px) {
+  .shopping__container {
+  margin-left: 40px;
+  margin-right: 24px;
+  }
 }
