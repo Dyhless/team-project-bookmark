@@ -1,14 +1,13 @@
 import './js/book-card.js';
 import './js/books-service.js';
 import './js/dark-theme.js';
-import './js/fonds-info.js';
-import './js/modal-window.js';
+import './js/modal-window.js';  // Проверить
 import './js/slider.js';
-import './js/category.js';
+import './js/category.js'; // Проверить
 import './js/scroll-up.js';
-import './js/header-fixed-position.js';
-// import './js/burger.js';
-import './js/loader.js';
+// import './js/header-fixed-position.js'; // Проверить
+// import './js/burger.js'; // Проверить
+// import './js/loader.js';  // Проверить
 
 // Authorization "firebase".
 import './js/modals/firebase/firebase.js';

@@ -92,6 +92,3 @@ export default function validateOnSubmit(e) {
   // Если проверки прошли успешно => отправляем форму.
   return true;
 }
-
-
-//! Поправить стили сообщений "Notiflix".

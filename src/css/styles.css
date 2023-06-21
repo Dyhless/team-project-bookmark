@@ -1,13 +1,17 @@
 @import url('./root.css');
 @import url('./reset.css');
-
 @import url('./container.css');
+
+/* !!! */
 @import url('./header.css');
-/* @import url('./shopping-list.css'); */
-@import url('./modal-window.css');
+
+@import url('./modal-window.css');   /* Проверить */
 
 @import url('./site-bar.css');
+
+/* !!! */
 @import url('./category.css');
+
 @import url('./slider.css');
 @import url('./switch-dark-theme.css');
 
@@ -15,9 +19,9 @@
 @import url('./light-theme.css'); */
 
 @import url('./book-card.css');
-@import url('./pagination.css');
+
 @import url('./scroll-up.css');
 
-@import url('./loader.css');
+/*! @import url('./loader.css'); */
 
 @import url('./modals/authorization-form.css');
