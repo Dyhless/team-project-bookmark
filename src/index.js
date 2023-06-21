@@ -7,7 +7,7 @@ import './js/slider.js';
 import './js/category.js';
 import './js/scroll-up.js';
 import './js/header-fixed-position.js';
-import './js/burger.js';
+// import './js/burger.js';
 import './js/loader.js';
 
 // Authorization "firebase".
