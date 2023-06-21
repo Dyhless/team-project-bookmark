@@ -44,7 +44,7 @@ const bookAPI = new BooksService();
     try {
       const book = await bookAPI.fetchBookById(id);
 
-      // console.log('book', book);
+      console.log('book', book);
       const { book_image, description, author, title, buy_links } = book;
       getLinkToShop(buy_links);
       // ========== Додавання до localStorage ==========
@@ -75,9 +75,9 @@ const bookAPI = new BooksService();
           }
           booksData.push(book);
           localStorage.setItem(BOOKS_STORAGE, JSON.stringify(booksData));
-          // console.log(
-          //   'Congratulations! You have added the book to the shopping list.'
-          // );
+          console.log(
+            'Congratulations! You have added the book to the shopping list.'
+          );
         }
       }
 
@@ -87,7 +87,6 @@ const bookAPI = new BooksService();
 <h5 class="title">${title}</h5>
 <p class="author-card-modal">${author}</p>
 <p class="text-card-modal">${description}</p>
-
 <ul class="shops-modal">
 <li class="li-modal">
 <a href="${amazon_link}" target="_blank">
@@ -111,9 +110,8 @@ const bookAPI = new BooksService();
       )}" alt="Book-shop"></a>
 </li>
 </ul>
-</div>
 `;
-      // console.log('markup', markup);
+      console.log('markup', markup);
 
       renderMarkupModal(markup);
     } catch (error) {
