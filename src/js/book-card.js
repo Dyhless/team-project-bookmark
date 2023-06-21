@@ -29,15 +29,6 @@ function getFallbackImageUrl() {
 
 async function updateBooksCategories() {
   const categories = await renderBooksCategories();
-  let numBooksToShow = 5;
-
-  if (window.innerWidth < 768) {
-    numBooksToShow = 1;
-  } else if (window.innerWidth < 1440) {
-    numBooksToShow = 3;
-  } else {
-    numBooksToShow = 5;
-  }
 
   let markup = '';
 
@@ -48,7 +39,7 @@ async function updateBooksCategories() {
         <ul class="list-category">
     `;
 
-    for (let j = 0; j < numBooksToShow && j < books.length; j += 1) {
+    for (let j = 0; j < books.length; j += 1) {
       const { _id, book_image, title, author } = books[j];
 
       categoryMarkup += `
