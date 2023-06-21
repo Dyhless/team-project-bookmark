@@ -8,6 +8,8 @@
   right: 10px;
   bottom: 10px;
 
+  display: none;
+
   justify-content: center;
   align-items: center;
 
