@@ -164,14 +164,14 @@ for (let i = 1; i <= totalPages; i++) {
   paginationContainerPages.appendChild(button);
 }
 
-paginationContainerPages.firstChild.classList.add('active');
+paginationContainerPages.firstChild.classList.add('pagination-def-active');
 
 paginationsSection.addEventListener(
   'click',
   handlerPaginationsButtonsStartPreviousNextStart
 );
 function handlerPaginationsButtonsStartPreviousNextStart(event) {
-  const activButton = document.querySelector('.active');
+  const activButton = document.querySelector('.pagination-def-active');
   // console.log(event.target);
   if (event.target.tagName !== 'BUTTON') {
     return;
@@ -185,8 +185,8 @@ function handlerPaginationsButtonsStartPreviousNextStart(event) {
         createNewBooks();
         removeDisableforElement(endButton);
 
-        activButton.classList.remove('active');
-        activButton.previousElementSibling.classList.add('active');
+        activButton.classList.remove('pagination-def-active');
+        activButton.previousElementSibling.classList.add('pagination-def-active');
       }
       break;
     case nextButton:
@@ -196,8 +196,8 @@ function handlerPaginationsButtonsStartPreviousNextStart(event) {
         createNewBooks();
         removeDisableforElement(startButton);
 
-        activButton.classList.remove('active');
-        activButton.nextElementSibling.classList.add('active');
+        activButton.classList.remove('pagination-def-active');
+        activButton.nextElementSibling.classList.add('pagination-def-active');
       }
       break;
     case startButton:
@@ -275,11 +275,11 @@ function checkingArrayBooks() {
   }
 }
 function highlighteTheСurrentРage(element) {
-  const activButton = document.querySelector('.active');
+  const activButton = document.querySelector('.pagination-def-active');
 
   if (activButton) {
-    activButton.classList.remove('active');
+    activButton.classList.remove('pagination-def-active');
   }
 
-  element.classList.add('active');
+  element.classList.add('pagination-def-active');
 }
