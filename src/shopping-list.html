@@ -17,52 +17,30 @@
     />
     <link rel="stylesheet" href="./sass/index.scss" />
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
   </head>
   <body>
     <header>
       <include src="./partials/header.html"></include>
     </header>
-    <main>
-      <div class="flex-container-shopping">
-        <div class="support-ukraine">
-          <aside class="site-bar">
-            <include src="./partials/slider.html"></include>
-          </aside>
-        </div>
 
-        <section class="shopping-list">
-          <div class="container-shop">
-            <h1 class="shopping-list__title">
-              Shopping <span class="part-two">List</span>
-            </h1>
-            <div class="screen-saver js-screen-saver">
-              <p class="text-saver">
-                This page is empty, add some books and proceed to order.
-              </p>
-              <div class="pile-books">
-                <img
-                  srcset="
-                    images/shopping-list-empty-bg/shoping-list-empty-mobile_sm.png    265w,
-                    images/shopping-list-empty-bg/shoping-list-empty_lg.png           320w,
-                    images/shopping-list-empty-bg/shoping-list-empty-mobile_sm-2x.png 530w,
-                    images/shopping-list-empty-bg/shoping-list-empty_lg-2x.png        644w
-                  "
-                  sizes="(max-width: 768px) 265px,320px,644px"
-                  src="images/shopping-list-empty-bg/shoping-list-empty_lg-2x.png"
-                  alt="Book Illustration"
-                />
-              </div>
-            </div>
-            <ul class="list js-container-list-shop container-list-shop"></ul>
-            <!-- <include src="./partials/pagination.html"></include> -->
-          </div>
-        </section>
-      </div>
-    </main>
-    <include src="./partials/pagination.html"></include>
-    <include src="./partials/loader.html"></include>
+    <!--Page -->
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar-shoppinglist">
+        <!-- Support Ukraine -->
+        <include src="./partials/slider.html"></include>
+      </aside>
 
+      <!-- Main -->
+      <main class="content">
+        <!-- Page content -->
+        <include src="./partials/shopping/shopping-list-content.html"></include>
+        <include src="./partials/shopping/pagination.html"></include>
+      </main>
+    </div>
+
+    <!-- JS -->
     <script type="module" src="./shopping-list.js"></script>
   </body>
 </html>
