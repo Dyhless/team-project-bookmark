@@ -1,6 +1,7 @@
 .is-hidden {
   display: none;
 }
+
 .loader-backdrop {
   position: fixed;
   top: 0;

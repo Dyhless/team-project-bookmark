@@ -1,5 +1,5 @@
 /* стилізація бокового блоку категорії */
-.category { 
+.category {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -8,78 +8,65 @@
   overflow-y: scroll;
   overflow-x: hidden;
 }
-  @media screen and (max-width: 767px) {
-    .category {
-      width: 100%;
-      height: 228px;
-      /* left: 20px;
+@media screen and (max-width: 767px) {
+  .category {
+    width: 100%;
+    height: 228px;
+    /* left: 20px;
       top: 104px; */
-      margin-left: auto;
-      margin-right: auto;
-  }}
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .category {
-      width: 337px;
-      height: 472px;
-      left: 32px;
-      top: 112px;
-      margin-left: auto;
-      margin-right: auto;
-  }}
-    @media screen and (min-width: 1024px) {
-  .category { 
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .category {
+    width: 337px;
+    height: 472px;
+    left: 32px;
+    top: 112px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .category {
     width: 356px;
     height: 472px;
     left: 24px;
     top: 112px;
-  }}
-   
-  
-  .categBook { /* Сталізація списку */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 32px;
   }
-  
-  .bookcat { /* Стилізація тексту списку категорій */
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    letter-spacing: -0.02em;
-    transition: font-weight 0.2s ease;
-  
-    color: var(--category-name);
-  }
-  @media screen and (max-width: 767px) {
-    .bookcat{line-height: 112%}
-  }
-  @media screen and (min-width: 768px) {
-    .bookcat {line-height: 133%;}
-  }
+}
 
+.categBook {
+  /* Сталізація списку */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
 
-  .last-word-category {/* стилізація останнього слова назви */
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 108%;
-    letter-spacing: -0.04em;
+.bookcat {
+  /* Стилізація тексту списку категорій */
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  transition: font-weight 0.2s ease;
 
-    color: var(--accent-font-blue-color);
+  color: var(--category-name);
+
+  transition: color 0.3s ease;
+}
+@media screen and (max-width: 767px) {
+  .bookcat {
+    line-height: 112%;
   }
-  
-  .bookcat:hover,
-  .bookcat:focus {
-    cursor: pointer;
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
+}
+@media screen and (min-width: 768px) {
+  .bookcat {
     line-height: 133%;
-    letter-spacing: -0.02em;
+letter-spacing: -0.02em;
     text-transform: uppercase;
   
     color: var(--hovertxt);
@@ -131,75 +118,83 @@
   .top-books-section {
     box-sizing: border-box;
   }
+}
 
   .container-books-card {
     box-sizing: border-box;
   }
 
-  /* стилізуємо заголовок списку вибраної категорії */
-  .selected-category-name {
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 108%;
-    letter-spacing: -0.04em;
-    margin-bottom: 40px;
+.constainer-books-card {
+  box-sizing: border-box;
+}
 
-    color: var(--main-txt-color);
-  }
+/* стилізуємо заголовок списку вибраної категорії */
+.selected-category-name {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 108%;
+  letter-spacing: -0.04em;
+  margin-bottom: 40px;
 
-  /* Слилізуємо картку книжки */
+  color: var(--main-txt-color);
+}
+
+/* Слилізуємо картку книжки */
+.book-card-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 180px;
+  height: 306px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
   .book-card-preview {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .book-card-preview {
+    width: 218px;
+    height: 366px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .book-card-preview {
     width: 180px;
     height: 306px;
-    margin-bottom: 40px;
   }
-  @media screen and (max-width: 767px){
-    .book-card-preview {
-      width: 100%;
-      height: auto;
-  }}
-  @media screen and (min-width: 768px) and (max-width: 1439px){
-    .book-card-preview {
-      width: 218px;
-      height: 366px;
+}
 
-      margin-left: auto;
-      margin-right: auto;
-  }}
-  @media screen and (min-width: 1440px) {
-    .book-card-preview {
-      width: 180px;
-      height: 306px;
-  }}
+/* стилізуєм ул нового списку по категоріям */
+.selected-category {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
 
-  /* стилізуєм ул нового списку по категоріям */
-  .selected-category {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-  }
+/* стилізую загаловок книжки */
+.book-title {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 112%;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
 
-  /* стилізую загаловок книжки */
-  .book-title {
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 112%;
-    letter-spacing: -0.04em;
-    text-transform: uppercase;
-    margin-bottom: 4px;
+  color: var(--main-txt-color);
+}
 
-    color: var(--main-txt-color);
-  }
-
-  /* стилізуєм автора книги */
-  .book-author {
+/* стилізуєм автора книги */
+.book-author {
   font-family: 'DM Sans';
   font-style: italic;
   font-weight: 400;
@@ -211,27 +206,29 @@
   padding-bottom: 4px;
   }
 
-  /* стилізую вікно для картинки окремої книжки */
+/* стилізую вікно для картинки окремої книжки */
+.book-image {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+@media screen and (max-width: 767px) {
   .book-image {
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 14px;
-  }
-  @media screen and (max-width: 767px) {
-    .book-image{
     width: 100%;
     height: auto;
-  }}
-  @media screen and (min-width: 768px) and (max-width: 1439px) {
-    .book-image{
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .book-image {
     width: 218px;
     height: 316px;
-  }}
-  @media screen and (min-width: 1440px) {
-    .book-image{
+  }
+}
+@media screen and (min-width: 1440px) {
+  .book-image {
     width: 180px;
     height: 256px;
-  }}
+}}
 
   .book-image img {
     cursor: pointer;
@@ -266,10 +263,11 @@
     padding-left: 5px;
     padding-bottom: 10px;
   }
+}
 
+.book-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-
-
-
- 
-  

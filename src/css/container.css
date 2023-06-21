@@ -83,7 +83,6 @@
     max-width: 1440px;
     display: flex;
     flex-direction: row;
-      gap: 40px;
       align-items: start;
       padding-left: 24px;
       padding-right: 24px;

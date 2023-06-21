@@ -1,1 +1,13 @@
-// @import '~node_modules/modern-normalize/modern-normalize.css';
+.sidebar-shoppinglist {
+  display: none;
+
+  @media screen and (min-width: 1280px) {
+    display: inherit;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+}
