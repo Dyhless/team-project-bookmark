@@ -1,4 +1,7 @@
 import Notiflix from 'notiflix';
+import { BooksService } from './books-service';
+
+const bookAPI = new BooksService();
 
 (() => {
   const refs = {
@@ -38,20 +41,49 @@ import Notiflix from 'notiflix';
     } else openModal();
     console.log('это айди', id);
     // обработка ошибки фетча?
-    const { book_image, description, author, title, buy_links } =
-      await fetchBookById(id);
-    getLinkToShop(buy_links);
+    try {
+      const book = await bookAPI.fetchBookById(id);
 
-    bookData = {
-      _id: id,
-      book_image,
-      description,
-      author,
-      title,
-    };
+      console.log('book', book);
+      const { book_image, description, author, title, buy_links } = book;
+      getLinkToShop(buy_links);
+      // ========== Додавання до localStorage ==========
 
-    const markup = `<img src="${book_image}" alt="book" class="card-img-modal">
-<div class="text-card-dt"> 
+      const addBtn = document.querySelector('.js-add-to-list');
+
+      addBtn.addEventListener('click', addToShoppingList);
+
+      const BOOKS_STORAGE = 'storage-of-books';
+
+      function isInShoppingList(bookId) {
+        let booksDataJson = localStorage.getItem(BOOKS_STORAGE);
+        if (!booksDataJson) {
+          return false;
+        }
+        let booksData = JSON.parse(booksDataJson);
+        return booksData.some(book => book._id === bookId);
+      }
+
+      function addToShoppingList() {
+        if (isInShoppingList(book._id)) {
+          console.log('The book is already in the shopping list.');
+        } else {
+          let booksDataJson = localStorage.getItem(BOOKS_STORAGE);
+          let booksData = [];
+          if (booksDataJson) {
+            booksData = JSON.parse(booksDataJson);
+          }
+          booksData.push(book);
+          localStorage.setItem(BOOKS_STORAGE, JSON.stringify(booksData));
+          console.log(
+            'Congratulations! You have added the book to the shopping list.'
+          );
+        }
+      }
+
+      //==================
+
+      const markup = `<img src="${book_image}" alt="book" class="card-img-modal">
 <h5 class="title">${title}</h5>
 <p class="author-card-modal">${author}</p>
 <p class="text-card-modal">${description}</p>
@@ -60,30 +92,33 @@ import Notiflix from 'notiflix';
 <li class="li-modal">
 <a href="${amazon_link}" target="_blank">
 <img class="amazon" src="${new URL(
-      '../images/shops/amazon_62x19.png',
-      import.meta.url
-    )}" alt="Amazon"</a>
+        '../images/shops/amazon_62x19.png',
+        import.meta.url
+      )}" alt="Amazon"</a>
 </li>
 <li class="li-modal">
   <a href="${apple_link}" target="_blank">
 <img class="apple" src="${new URL(
-      '../images/shops/apple-book_33x32.png',
-      import.meta.url
-    )}" alt="Apple-book"></a>
+        '../images/shops/apple-book_33x32.png',
+        import.meta.url
+      )}" alt="Apple-book"></a>
 </li>
 <li class="li-modal">
   <a href="${bookshop_link}" target="_blank">
 <img class="book-shop" src="${new URL(
-      '../images/shops/book-shop_38x36.png',
-      import.meta.url
-    )}" alt="Book-shop"></a>
+        '../images/shops/book-shop_38x36.png',
+        import.meta.url
+      )}" alt="Book-shop"></a>
 </li>
 </ul>
 </div>
 `;
-    console.log('markup', markup);
+      console.log('markup', markup);
 
-    renderMarkupModal(markup);
+      renderMarkupModal(markup);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   function getLinkToShop(arr) {
@@ -102,15 +137,6 @@ import Notiflix from 'notiflix';
     refs.cardModal.innerHTML = markup;
   }
   // fetchBookById('643282b1e85766588626a0ba');
-
-  async function fetchBookById(id) {
-    const responce = await fetch(
-      `https://books-backend.p.goit.global/books/${id}`
-    );
-    const bookById = await responce.json();
-    console.log(bookById);
-    return bookById;
-  }
 
   function openModal() {
     //   const isModalOpen =
@@ -141,37 +167,5 @@ import Notiflix from 'notiflix';
       document.removeEventListener('keydown', logBackdropClick);
       window.addEventListener('click', cardForModal);
     } else return;
-  }
-
-  // ========== Додавання до localStorage ==========
-  let bookData = {};
-  const addBtn = document.querySelector('.js-add-to-list');
-
-  addBtn.addEventListener('click', addToShoppingList);
-
-  const BOOKS_STORAGE = 'books';
-
-  function isInShoppingList(bookId) {
-    let booksDataJson = localStorage.getItem(BOOKS_STORAGE);
-    if (!booksDataJson) {
-      return false;
-    }
-    let booksData = JSON.parse(booksDataJson);
-    return booksData.some(book => book._id === bookId);
-  }
-
-  function addToShoppingList() {
-    if (isInShoppingList(bookData._id)) {
-      console.log('Книга вже є у списку покупок');
-    } else {
-      let booksDataJson = localStorage.getItem(BOOKS_STORAGE);
-      let booksData = [];
-      if (booksDataJson) {
-        booksData = JSON.parse(booksDataJson);
-      }
-      booksData.push(bookData);
-      localStorage.setItem(BOOKS_STORAGE, JSON.stringify(booksData));
-      console.log('Вітаємо! Ви додали книгу до списку покупок');
-    }
   }
 })();
