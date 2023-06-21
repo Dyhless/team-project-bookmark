@@ -27,7 +27,6 @@
   right: 0;
   z-index: 200;
 }
-
 .logo {
   display: flex;
   align-items: center;
@@ -150,7 +149,6 @@
   right: 15%;
   top: 9%;
 }
-
 @media screen and (min-width: 768px) {
   .switch {
     right: 28%;
