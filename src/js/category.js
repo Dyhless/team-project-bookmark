@@ -3,17 +3,11 @@ import Notiflix from 'notiflix';
 
 import { loader, showLoader, hideLoader } from './loader';
 
-// вибираєм головний контейнер в category html
 const asideList = document.querySelector('.category');
-// вибираєм головний контейнер в home page html
 const homePageContainer = document.querySelector('.container-books-card');
-//вибираєм список результатів пошуку книжок по категоріям
 
 const listStructure = `<ul class="categBook"></ul>`;
-
-// додаємо ул в дів
 asideList.insertAdjacentHTML('beforeend', listStructure);
-// вибираємо ул
 const listOfCateg = document.querySelector('.categBook');
 
 function getFallbackImageUrl() {
@@ -32,6 +26,15 @@ function getFallbackImageUrl() {
 async function getBooksByCategory(categoryName) {
   showLoader();
   homePageContainer.innerHTML = '';
+  let allBooksCat = document.querySelectorAll('.bookcat');
+  allBooksCat.forEach(element => {
+    if (element.classList.contains('current-page')) {
+      element.classList.remove('current-page');
+    }
+  });
+  const blabla = document.querySelector(`li[value="${categoryName}"]`);
+  blabla.classList.add('current-page');
+
   try {
     const responseCategoty = await axios.get(
       `https://books-backend.p.goit.global/books/category?category=${categoryName}`
@@ -52,13 +55,16 @@ async function getBooksByCategory(categoryName) {
     newCategoryList.classList.add('selected-category');
     homePageContainer.appendChild(newCategoryList);
     const newBookUl = document.querySelector('.selected-category');
+
     //створюємо нові результати пошуку і заповняєм список результатів
     dataFile.forEach(bookRes => {
       const newBookLI = document.createElement('li');
       newBookLI.classList.add('book-card-preview');
-      const bookFace = `<div class="book-preview-container""><div class="book-image">
-      <img src="${bookRes.book_image}" class="img-book" alt="book-title-preview" loading="lazy" onerror="src='${getFallbackImageUrl()}'" data-id="${bookRes._id}">
-                        </div>
+      const bookFace = `<div class="book-preview-container"">
+                          <div class="book-image">
+                            <img src="${bookRes.book_image}" class="img-book" alt="book-title-preview" 
+                            loading="lazy" onerror="src='${getFallbackImageUrl()}'" data-id="${bookRes._id}">
+                          </div>
                         <div>
                           <h2 class="book-title">${bookRes.title}</h2>
                           <p class="book-author">${bookRes.author}</p>
@@ -73,8 +79,6 @@ async function getBooksByCategory(categoryName) {
   }
 }
 
-// створюємо функцію, яка буде викликати всі категорії з сервера. Результат роботи цієї функції
-// це заповнене бокове меню з вибором категорій книг і встановлений слухач на елементи списка
 async function getCategoryList() {
   showLoader();
   try {
@@ -87,8 +91,8 @@ async function getCategoryList() {
     );
 
     const allCategories = document.createElement('li');
-    allCategories.classList.add('bookcat');
-    allCategories.classList.add('allBooks');
+    allCategories.classList.add('bookcat', 'allBooks');
+    allCategories.classList.add('current-page');
     allCategories.textContent = 'All categories';
     listOfCateg.appendChild(allCategories);
     const allCatPoint = document.querySelector('.allBooks');
@@ -96,15 +100,16 @@ async function getCategoryList() {
       window.location.href = 'index.html';
     });
 
+    // categoryList = document.querySelectorAll('.bookcat');
     sortedData.forEach(category => {
       //створюю елемент списку категорій
       const newLICateg = document.createElement('li');
       newLICateg.classList.add('bookcat');
+      newLICateg.setAttribute('value', category.list_name);
       listOfCateg.appendChild(newLICateg);
       newLICateg.innerHTML = category.list_name;
 
       newLICateg.addEventListener('click', () => {
-        //тут виправити нижче
         getBooksByCategory(category.list_name);
       });
     });

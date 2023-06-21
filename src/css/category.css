@@ -66,64 +66,63 @@
 @media screen and (min-width: 768px) {
   .bookcat {
     line-height: 133%;
+letter-spacing: -0.02em;
+    text-transform: uppercase;
+  
+    color: var(--hovertxt);
+    white-space: nowrap;
+  }
+
+  .current-page{
+    cursor: pointer;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 133%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  
+    color: var(--hovertxt);
+    white-space: nowrap;
+  }
+  
+  
+  
+  ::-webkit-scrollbar {
+    width: 8px; /* Стилізація бокового скролу */
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px; /* Ширина полоси прокрутки */
+  }
+  
+  /* Стилізація кришки полоси прокрутки */
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--scroll); /* Колір полоси прокрутки */
+    border-radius: 4px; /* Закругленість країв полоси прокрутки */
+  }
+  
+  /* Стилізація фону полоси прокрутки */
+  ::-webkit-scrollbar-track {
+    background-color: var(--scroll-line); /* Колір фону полоси прокрутки */
+  }
+  
+  /* Стилізація фону полоси прокрутки */
+  ::-webkit-scrollbar-track {
+    background-color: var(--header-background); /* Колір фону полоси прокрутки */
+  }
+  
+  
+  /* Стилізую секцію для вигрузки картинок */
+  .top-books-section {
+    box-sizing: border-box;
   }
 }
 
-.last-word-category {
-  /* стилізація останнього слова назви */
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 108%;
-  letter-spacing: -0.04em;
-
-  color: var(--accent-font-blue-color);
-}
-
-.bookcat:hover,
-.bookcat:focus {
-  cursor: pointer;
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 133%;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-
-  color: var(--hovertxt);
-  white-space: nowrap;
-}
-
-::-webkit-scrollbar {
-  width: 8px; /* Стилізація бокового скролу */
-}
-
-::-webkit-scrollbar {
-  width: 8px; /* Ширина полоси прокрутки */
-}
-
-/* Стилізація кришки полоси прокрутки */
-::-webkit-scrollbar-thumb {
-  background-color: var(--scroll); /* Колір полоси прокрутки */
-  border-radius: 4px; /* Закругленість країв полоси прокрутки */
-}
-
-/* Стилізація фону полоси прокрутки */
-::-webkit-scrollbar-track {
-  background-color: var(--scroll-line); /* Колір фону полоси прокрутки */
-}
-
-/* Стилізація фону полоси прокрутки */
-::-webkit-scrollbar-track {
-  background-color: var(--header-background); /* Колір фону полоси прокрутки */
-}
-
-/* Стилізую секцію для вигрузки картинок */
-.top-books-section {
-  box-sizing: border-box;
-}
+  .container-books-card {
+    box-sizing: border-box;
+  }
 
 .constainer-books-card {
   box-sizing: border-box;
@@ -203,7 +202,9 @@
   line-height: 117%;
   letter-spacing: 0.04em;
   color: var(--paragraph-color);
-}
+  padding-left: px;
+  padding-bottom: 4px;
+  }
 
 /* стилізую вікно для картинки окремої книжки */
 .book-image {
@@ -227,6 +228,40 @@
   .book-image {
     width: 180px;
     height: 256px;
+}}
+
+  .book-image img {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }
+  
+  .book-preview-container{
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .book-preview-container:hover,
+  .book-preview-container:focus {
+    border-radius: 8px;
+    transform: scale(1.1); /* Приближення елементу на 10% */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .book-preview-container .book-author,
+  .book-preview-container .book-title {
+  padding-left: 5;
+  padding-bottom: 5;
+  transition: padding-left 0.3s ease, padding-bottom 0.3s ease;
+}
+
+  .book-preview-container:hover .book-author,
+  .book-preview-container:focus .book-author,
+  .book-preview-container:hover .book-title,
+  .book-preview-container:focus .book-title {
+    padding-left: 5px;
+    padding-bottom: 10px;
   }
 }
 
@@ -236,9 +271,3 @@
   object-fit: cover;
 }
 
-/* @media screen and (max-width: 767px) {
-    }}
-    @media screen and (min-width: 768px) and (max-width: 1439px) {
-    }}
-    @media screen and (min-width: 1440px) {
-    }} */
