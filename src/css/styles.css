@@ -5,7 +5,7 @@
 /* !!! */
 @import url('./header.css');
 
-/*! @import url('./modal-window.css'); */
+@import url('./modal-window.css');   /* Проверить */
 
 @import url('./site-bar.css');
 

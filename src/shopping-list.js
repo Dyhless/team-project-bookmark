@@ -1,8 +1,5 @@
 import './js/slider.js';
-
 import './js/dark-theme.js';
-
-
 
 // Content
 import './js/shopping/shopping-list.js';
