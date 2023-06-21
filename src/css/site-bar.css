@@ -4,7 +4,6 @@
   /* width: 335px; */
   max-width: 335px;
   gap: 40px;
-  margin-right: 40px;
 }
 
 @media screen and (min-width: 768px) {
@@ -13,7 +12,8 @@
     max-width: 672px;
     gap: 32px;
     flex-direction: row;
-    margin-right: 0;
+    /* margin-right: 0; */
+    margin-right: 40px;
   }
 }
 
