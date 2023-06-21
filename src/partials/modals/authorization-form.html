@@ -13,7 +13,7 @@
   id="userBarMenu"
   aria-label="Open user menu"
 >
-  <svg class="userbar-btn__icon-user" width="19" height="19">
+  <svg class="userbar-btn__icon-user" width="35" height="35">
     <use href="./images/sprite.svg#user"></use>
   </svg>
   <p class="userbar-btn__user-name" id="user-name">User name</p>
@@ -22,10 +22,11 @@
   </svg>
   <ul class="dropdown-menu" id="logOutMenu">
     <li>
-      <a href="#" class="dropdown-menu__text" id="logOut">Log out</a>
-      <svg class="dropdown-menu__icon userbar-btn__icon" width="20" height="20">
-        <use href="./images/sprite.svg#arrow-narrow"></use>
-      </svg>
+      <a href="#" class="dropdown-menu__text" id="logOut"><span class="dropdown-menu__text-span"></span>Log out</span>
+        <svg class="dropdown-menu__icon userbar-btn__icon" width="20" height="20">
+          <use href="./images/sprite.svg#arrow-narrow"></use>
+        </svg>
+      </a>
     </li>
   </ul>
 </button>

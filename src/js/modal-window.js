@@ -1,3 +1,6 @@
+
+import Notiflix from "notiflix";
+
 (() => {
   const refs = {
     openModalBtn: document.querySelector('[data-modal-open]'),
@@ -10,6 +13,10 @@
   refs.closeModalBtn.addEventListener('click', closeModal);
 
   let id = '';
+
+  let amazon_link = '';
+  let apple_link = '';
+  let bookshop_link = '';
 
   refs.modal.addEventListener('click', logBackdropClick);
   window.addEventListener('click', cardForModal);
@@ -32,14 +39,61 @@
     } else openModal();
     console.log('это айди', id);
     // обработка ошибки фетча?
-    const { book_image, description, author, title } = await fetchBookById(id);
+    const { book_image, description, author, title, buy_links } =
+      await fetchBookById(id);
+    getLinkToShop(buy_links);
+
+    bookData = {
+      _id: id,
+      book_image,
+      description,
+      author,
+      title,
+    };
 
     const markup = `<img src="${book_image}" alt="book" class="card-img-modal">
 <h5 class="title">${title}</h5>
 <p class="author-card-modal">${author}</p>
-<p class="text-card-modal">${description}</p>`;
+<p class="text-card-modal">${description}</p>
+<ul class="shops-modal">
+<li class="li-modal">
+<a href="${amazon_link}" target="_blank">
+<img class="amazon" src="${new URL(
+      '../images/shops/amazon_62x19.png',
+      import.meta.url
+    )}" alt="Amazon"</a>
+</li>
+<li class="li-modal">
+  <a href="${apple_link}" target="_blank">
+<img class="apple" src="${new URL(
+      '../images/shops/apple-book_33x32.png',
+      import.meta.url
+    )}" alt="Apple-book"></a>
+</li>
+<li class="li-modal">
+  <a href="${bookshop_link}" target="_blank">
+<img class="book-shop" src="${new URL(
+      '../images/shops/book-shop_38x36.png',
+      import.meta.url
+    )}" alt="Book-shop"></a>
+</li>
+</ul>
+`;
     console.log('markup', markup);
+
     renderMarkupModal(markup);
+  }
+
+  function getLinkToShop(arr) {
+    arr.forEach(el => {
+      if (el.name === 'Amazon') {
+        amazon_link = el.url;
+      } else if (el.name === 'Apple Books') {
+        apple_link = el.url;
+      } else if (el.name === 'Bookshop') {
+        bookshop_link = el.url;
+      }
+    });
   }
 
   function renderMarkupModal(markup) {
@@ -85,5 +139,37 @@
       document.removeEventListener('keydown', logBackdropClick);
       window.addEventListener('click', cardForModal);
     } else return;
+  }
+
+  // ========== Додавання до localStorage ==========
+  let bookData = {};
+  const addBtn = document.querySelector('.js-add-to-list');
+
+  addBtn.addEventListener('click', addToShoppingList);
+
+  const BOOKS_STORAGE = 'books';
+
+  function isInShoppingList(bookId) {
+    let booksDataJson = localStorage.getItem(BOOKS_STORAGE);
+    if (!booksDataJson) {
+      return false;
+    }
+    let booksData = JSON.parse(booksDataJson);
+    return booksData.some(book => book._id === bookId);
+  }
+
+  function addToShoppingList() {
+    if (isInShoppingList(bookData._id)) {
+      console.log('Книга вже є у списку покупок');
+    } else {
+      let booksDataJson = localStorage.getItem(BOOKS_STORAGE);
+      let booksData = [];
+      if (booksDataJson) {
+        booksData = JSON.parse(booksDataJson);
+      }
+      booksData.push(bookData);
+      localStorage.setItem(BOOKS_STORAGE, JSON.stringify(booksData));
+      console.log('Вітаємо! Ви додали книгу до списку покупок');
+    }
   }
 })();
