@@ -39,7 +39,7 @@ export default function validateOnSubmit(e) {
       textColor: '#000000',
       notiflixIconColor: '#ffffff',
       fontSize: '18px',
-      // не змінює кольори
+      timeout: '2000',
     });
     return;
   };
@@ -54,6 +54,7 @@ export default function validateOnSubmit(e) {
       textColor: '#000000',
       notiflixIconColor: '#ffffff',
       fontSize: '18px',
+      timeout: '2000',
     });
     return;
   }
@@ -68,6 +69,7 @@ export default function validateOnSubmit(e) {
       textColor: '#000000',
       notiflixIconColor: '#ffffff',
       fontSize: '18px',
+      timeout: '2000',
     });
     return;
   }
@@ -82,6 +84,7 @@ export default function validateOnSubmit(e) {
       textColor: '#000000',
       notiflixIconColor: '#ffffff',
       fontSize: '18px',
+      timeout: '2000',
     });
     return;
   }
@@ -89,6 +92,3 @@ export default function validateOnSubmit(e) {
   // Если проверки прошли успешно => отправляем форму.
   return true;
 }
-
-
-//! Поправить стили сообщений "Notiflix".
