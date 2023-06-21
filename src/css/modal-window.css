@@ -157,3 +157,10 @@ cursor: pointer;
 .li-modal{
   cursor: pointer;
 }
+
+.notify{
+  position: absolute;
+  display: block;
+  bottom: 0px;
+  font-size: 20px;
+}
