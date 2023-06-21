@@ -39,6 +39,7 @@ export default function validateOnSubmit(e) {
       textColor: '#000000',
       notiflixIconColor: '#ffffff',
       fontSize: '18px',
+      timeout: 2000,
       // не змінює кольори
     });
     return;
@@ -54,6 +55,7 @@ export default function validateOnSubmit(e) {
       textColor: '#000000',
       notiflixIconColor: '#ffffff',
       fontSize: '18px',
+      timeout: 2000,
     });
     return;
   }
@@ -68,6 +70,7 @@ export default function validateOnSubmit(e) {
       textColor: '#000000',
       notiflixIconColor: '#ffffff',
       fontSize: '18px',
+      timeout: 2000,
     });
     return;
   }
@@ -82,6 +85,7 @@ export default function validateOnSubmit(e) {
       textColor: '#000000',
       notiflixIconColor: '#ffffff',
       fontSize: '18px',
+      timeout: 2000,
     });
     return;
   }

@@ -9,7 +9,7 @@ import './js/scroll-up.js';
 import './js/header-fixed-position.js';
 import './js/burger.js';
 import './js/loader.js';
-
+import './js/current-page-active.js';
 // Authorization "firebase".
 import './js/modals/firebase/firebase.js';
 import './js/modals/firebase/authorization-servise.js';

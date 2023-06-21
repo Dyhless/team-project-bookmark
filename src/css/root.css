@@ -8,17 +8,7 @@
    --white-color: #fff;
    --black-color: #111111;
 
-   /* --black-color: #111111;
-   --grey-dark: #202024;
-   --blue-color: #4F2EE8;
-   --white-color: #FFFFFF;
-   --main-font-black-color: #111111;
-   --main-font-white-color: #F3F3F3;
-   --paragraph-grey-font-color: #B4AFAF;
-   --paragraph-white-font-color: #F6F6F6;
-   --dark-theme-background-black-color: #111111;
-   --dark-theme-background-grey-color: #202024; */
-
+ /* ті, що змінюються */
     --main-txt-color:  rgba(17, 17, 17, 1);
     --pagination-back: rgba(17, 17, 17, 1);
     --hovertxt: rgba(79, 46, 232, 1);
@@ -40,7 +30,7 @@
     --avtoriz-form: rgba(17, 17. 17, 1);
     --avtoriz-modal-toggle: rgba(17, 17, 17, 0.5);
 
-        --amazon-logo: grayscale(100%);
+    --amazon-logo: grayscale(100%);
      
 
    /* FONTS */
@@ -52,8 +42,6 @@
 
 :root[data-theme=dark] {
 
- --main-txt-color:  rgba(255, 255, 255,1);
-
  /* не міняла */
     --pagination-back: rgba(17, 17,17,1);
     --pagination-next:rgb(234,198,69);
@@ -61,6 +49,7 @@
     --paragraph-color: rgb(180, 175, 175);
 
 /* змінила */
+    --main-txt-color:  rgba(255, 255, 255,1);
     --hovertxt: rgba(234, 198, 69, 1);
     --btn-border:rgba(79, 46, 232, 1);
     --header-background: rgb(17, 17, 17);
