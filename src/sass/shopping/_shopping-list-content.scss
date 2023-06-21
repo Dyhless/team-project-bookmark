@@ -279,15 +279,12 @@
 
 @media screen and (min-width: 768px) {
   .shopping__container {
-      margin-left: 32px;
-      margin-right: auto;
-
+      margin-left: 40px;
     }
 }
 
-@media screen and (min-width: 1024px) {
-  .shopping__container {
-  margin-left: 40px;
-  margin-right: 24px;
-  }
-}
+// @media screen and (min-width: 1024px) {
+//   .shopping__container {
+//   margin-left: 40px;
+//   }
+// }
