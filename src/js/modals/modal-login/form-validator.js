@@ -1,5 +1,5 @@
 // Подключаем библиотеку "Notiflix".
-import {Notify} from 'notiflix';
+import { Notify } from 'notiflix';
 
 // Переменные-ссылки на HTML элементы.
 const authForm = document.querySelector('.modal-form');
@@ -8,17 +8,17 @@ const emailField = document.querySelector('[name=user_email]');
 const passwordField = document.querySelector('#signup-user-password');
 
 // Регулярное выражение для валидации адреса электронной почты.
-const emailRegExp = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
+const emailRegExp =
+  /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
 
 // Регулярное выражение для валидации имени пользователя.
 const nameRegExp = /^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/;
 
 // Обработчик отправки формы.
-authForm.addEventListener('submit', validateOnSubmit);
+// authForm.addEventListener('submit', validateOnSubmit);
 
 // Алгоритм валидации.
 export default function validateOnSubmit(e) {
-
   // Убираем пробелы с данных полученных из "инпутов" формы.
   const name = nameField.value.trim();
   const email = emailField.value.trim();
@@ -42,7 +42,7 @@ export default function validateOnSubmit(e) {
       timeout: '2000',
     });
     return;
-  };
+  }
 
   // Проверка имени пользователя.
   if (!testName) {
