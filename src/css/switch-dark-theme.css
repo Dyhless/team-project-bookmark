@@ -16,20 +16,20 @@
   border-radius: 100px;
   position: relative;
   right: 0%;
-  transition: 0.3s;
 }
 
-/* @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .lable-switch {
     right: 50%;
   }
+  transition: 0.3s;
 }
 
 @media screen and (min-width: 1024px) {
   .lable-switch {
     right: -400%;
-  } */
-/* } */
+  }
+}
 .lable-switch:after {
   content: '';
   position: absolute;

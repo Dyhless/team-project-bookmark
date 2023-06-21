@@ -3,7 +3,7 @@
 
 @import url('./container.css');
 @import url('./header.css');
-@import url('./shopping-list.css');
+/* @import url('./shopping-list.css'); */
 @import url('./modal-window.css');
 
 @import url('./site-bar.css');
@@ -18,6 +18,6 @@
 @import url('./pagination.css');
 @import url('./scroll-up.css');
 
-/* @import url('./loader.css'); */
+@import url('./loader.css');
 
 @import url('./modals/authorization-form.css');
