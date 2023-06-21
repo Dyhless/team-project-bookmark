@@ -90,6 +90,7 @@ overflow: hidden;
     }
 }
 
+
 .img-card-book {
     display: block;
     width: 335px;
@@ -134,7 +135,7 @@ overflow: hidden;
     }
 }
 
-.title-wrap{
+.tirle-wrap{
     width: 335px;
 }
 
@@ -162,7 +163,10 @@ overflow: hidden;
     font-size: 16px;
     line-height: 1.12;
     letter-spacing: -0.04em;
+    white-space: nowrap;
+    overflow: hidden;
     text-transform: uppercase;
+    text-overflow: ellipsis;
     color: var(--main-txt-color);
     margin-bottom: 4px;
 }
@@ -172,7 +176,10 @@ overflow: hidden;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17px;
-    letter-spacing: -0.04em; 
+    letter-spacing: -0.04em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     padding-top: 4px;
     padding-bottom: 4px;
     color: var(--paragraph-color);

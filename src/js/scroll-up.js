@@ -7,7 +7,7 @@ function trackScroll() {
   const offSet = window.pageYOffset;
   const coords = document.documentElement.clientHeight;
   if (offSet > coords) {
-    scrollUpBtn.style.display = 'flex';
+    scrollUpBtn.style.display = 'block';
   } else {
     scrollUpBtn.style.display = 'none';
   }

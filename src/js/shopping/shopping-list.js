@@ -131,7 +131,7 @@ divEl.addEventListener('click', event => {
       destroyChildElement(paginationContainerPages);
     } else {
       divEl.innerHTML = renderMarkUp(sliceArrayBooks());
-      // console.log(sliceArrayBooks());
+      console.log(sliceArrayBooks());
       destroyChildElement(paginationContainerPages);
     }
     checkingArrayBooks();
@@ -172,7 +172,7 @@ paginationsSection.addEventListener(
 );
 function handlerPaginationsButtonsStartPreviousNextStart(event) {
   const activButton = document.querySelector('.active');
-  // console.log(event.target);
+  console.log(event.target);
   if (event.target.tagName !== 'BUTTON') {
     return;
   }

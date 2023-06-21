@@ -52,44 +52,39 @@
   font-weight: 400;
   font-size: 16px;
   letter-spacing: -0.02em;
-  transition: font-weight 0.5s ease;
-  transition: color 0.5s ease;
-}
+  transition: font-weight 0.2s ease;
 
-.bookcat:hover,
-.bookcat:focus {
-  font-weight: 700;
-  line-height: 133%;
+  color: var(--category-name);
 
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-  color: #4F2EE8;
+  transition: color 0.3s ease;
 }
 @media screen and (max-width: 767px) {
   .bookcat {
     line-height: 112%;
-    letter-spacing: -0.02em;
-
   }
 }
 @media screen and (min-width: 768px) {
   .bookcat {
     line-height: 133%;
-    letter-spacing: -0.02em;
+letter-spacing: -0.02em;
+    text-transform: uppercase;
   
+    color: var(--hovertxt);
     white-space: nowrap;
   }
 
   .current-page{
+    cursor: pointer;
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 133%;
     letter-spacing: -0.02em;
     text-transform: uppercase;
-
-    color: #4F2EE8;
+  
+    color: var(--hovertxt);
+    white-space: nowrap;
   }
   
   
