@@ -3,17 +3,11 @@ import Notiflix from 'notiflix';
 
 import { loader, showLoader, hideLoader } from './loader';
 
-// вибираєм головний контейнер в category html
 const asideList = document.querySelector('.category');
-// вибираєм головний контейнер в home page html
 const homePageContainer = document.querySelector('.container-books-card');
-//вибираєм список результатів пошуку книжок по категоріям
 
 const listStructure = `<ul class="categBook"></ul>`;
-
-// додаємо ул в дів
 asideList.insertAdjacentHTML('beforeend', listStructure);
-// вибираємо ул
 const listOfCateg = document.querySelector('.categBook');
 
 function getFallbackImageUrl() {
@@ -31,16 +25,15 @@ function getFallbackImageUrl() {
 //створюємо функцію, яка викликає запити по катекорії
 async function getBooksByCategory(categoryName) {
   showLoader();
-
-
-
   homePageContainer.innerHTML = '';
-  const categoryList = document.querySelectorAll('.bookcat');
-categoryList.forEach((category) => {
-  category.classList.remove('current-page');
-});
-
-
+  let allBooksCat = document.querySelectorAll('.bookcat');
+  allBooksCat.forEach(element => {
+    if (element.classList.contains('current-page')) {
+      element.classList.remove('current-page');
+    }
+  });
+  const blabla = document.querySelector(`li[value="${categoryName}"]`);
+  blabla.classList.add('current-page');
 
   try {
     const responseCategoty = await axios.get(
@@ -67,7 +60,11 @@ categoryList.forEach((category) => {
       const newBookLI = document.createElement('li');
       newBookLI.classList.add('book-card-preview');
       const bookFace = `<div class="book-preview-container""><div class="book-image">
-      <img src="${bookRes.book_image}" class="img-book" alt="book-title-preview" loading="lazy" onerror="src='${getFallbackImageUrl()}'" data-id="${bookRes._id}">
+      <img src="${
+        bookRes.book_image
+      }" class="img-book" alt="book-title-preview" loading="lazy" onerror="src='${getFallbackImageUrl()}'" data-id="${
+        bookRes._id
+      }">
                         </div>
                         <div>
                           <h2 class="book-title">${bookRes.title}</h2>
@@ -97,7 +94,7 @@ async function getCategoryList() {
     );
 
     const allCategories = document.createElement('li');
-    allCategories.classList.add('bookcat','allBooks');
+    allCategories.classList.add('bookcat', 'allBooks');
     allCategories.classList.add('current-page');
     allCategories.textContent = 'All categories';
     listOfCateg.appendChild(allCategories);
@@ -106,20 +103,16 @@ async function getCategoryList() {
       window.location.href = 'index.html';
     });
 
-    categoryList = document.querySelectorAll('.bookcat');
+    // categoryList = document.querySelectorAll('.bookcat');
     sortedData.forEach(category => {
       //створюю елемент списку категорій
       const newLICateg = document.createElement('li');
       newLICateg.classList.add('bookcat');
+      newLICateg.setAttribute('value', category.list_name);
       listOfCateg.appendChild(newLICateg);
       newLICateg.innerHTML = category.list_name;
 
       newLICateg.addEventListener('click', () => {
-        categoryList.forEach((category) => {
-          category.classList.remove('current-page');
-        });
-        // Додаємо клас 'current-page' до активного елемента
-        newLICateg.classList.add('current-page');
         getBooksByCategory(category.list_name);
       });
     });

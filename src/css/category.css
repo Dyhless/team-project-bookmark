@@ -132,7 +132,7 @@
     box-sizing: border-box;
   }
 
-  .constainer-books-card {
+  .container-books-card {
     box-sizing: border-box;
   }
 
@@ -207,6 +207,8 @@
   line-height: 117%;
   letter-spacing: 0.04em;
   color: var(--paragraph-color);
+  padding-left: px;
+  padding-bottom: 4px;
   }
 
   /* стилізую вікно для картинки окремої книжки */
@@ -232,10 +234,40 @@
   }}
 
   .book-image img {
+    cursor: pointer;
     width: 100%;
     height: 100%;
     object-fit: cover;
+
   }
+  
+  .book-preview-container{
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .book-preview-container:hover,
+  .book-preview-container:focus {
+    border-radius: 8px;
+    transform: scale(1.1); /* Приближення елементу на 10% */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .book-preview-container .book-author,
+  .book-preview-container .book-title {
+  padding-left: 5;
+  padding-bottom: 5;
+  transition: padding-left 0.3s ease, padding-bottom 0.3s ease;
+}
+
+  .book-preview-container:hover .book-author,
+  .book-preview-container:focus .book-author,
+  .book-preview-container:hover .book-title,
+  .book-preview-container:focus .book-title {
+    padding-left: 5px;
+    padding-bottom: 10px;
+  }
+
+
 
 
 
