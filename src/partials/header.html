@@ -1,3 +1,6 @@
+<header class="header">
+      
+
 <div class="container header-container">
   <a class="logo" href="/src/index.html">
     <svg width="24" height="24">
@@ -25,5 +28,32 @@
   <div class="form">
     <include src="./partials/modals/authorization-form.html"></include>
   </div>
-  <include src="./partials/burger.html"></include>
+  <div class="menu-burger">
+    <button
+      class="menu-toggle js-open-menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <svg width="28" height="28" aria-label="Turn on/off mobile memu">
+        <use
+          class="mobile-modal-burger"
+          href="./images/sprite.svg#burger"
+        ></use>
+      </svg>
+    </button>
 </div>
+<button class="menu-toggle js-close-menu x-close">
+  <svg
+    class="header-modal-close-black"
+    width="20"
+    height="20"
+    aria-label="Turn on/off mobile memu"
+  >
+    <use
+      class="mobile-icon-menu"
+      href="./images/sprite.svg#x-close"
+    ></use>
+  </svg>
+</button>
+</div>
+</header>
