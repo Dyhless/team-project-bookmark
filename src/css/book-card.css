@@ -72,7 +72,7 @@
 
 .list-category{
 display: flex;
-width:335px;
+width: 335px;
 overflow: hidden;
 }
 @media screen and (min-width: 768px){
