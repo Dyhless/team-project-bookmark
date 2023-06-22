@@ -39,7 +39,8 @@ const bookAPI = new BooksService();
     id = e.target.getAttribute('data-id');
     if (id === null) {
       return;
-    } else openModal();
+    } else e.preventDefault(); // Prevent scrolling to the top
+    openModal();
     // console.log('это айди', id);
     // обработка ошибки фетча?
     try {
@@ -158,6 +159,7 @@ const bookAPI = new BooksService();
     document.body.classList.add('modal-open');
     refs.modal.classList.remove('is-hidden-modal-book');
     document.addEventListener('keydown', logBackdropClick);
+    disableBodyScroll(); // Prevent scrolling
 
     //   const scrollLockMethod = !isModalOpen
     //     ? 'disableBodyScroll'
@@ -170,6 +172,7 @@ const bookAPI = new BooksService();
     refs.modal.classList.add('is-hidden-modal-book');
     document.removeEventListener('keydown', logBackdropClick);
     window.addEventListener('click', cardForModal);
+    enableBodyScroll(); // Enable scroll
   }
 
   function logBackdropClick(e) {
@@ -180,4 +183,17 @@ const bookAPI = new BooksService();
       window.addEventListener('click', cardForModal);
     } else return;
   }
+
+  // Disable body scroll when the modal is open
+  function disableBodyScroll() {
+    document.body.classList.add('modal-open-scroll-lock');
+  }
+
+  // Enable body scroll when the modal is closed
+  function enableBodyScroll() {
+    document.body.classList.remove('modal-open-scroll-lock');
+  }
+
+  // Restore scrolling on window load in case the modal was open during a page refresh
+  window.addEventListener('load', enableBodyScroll);
 })();
