@@ -72,6 +72,13 @@
   transition: color 1, 5s ease;
 }
 
+.nav__svg {
+  position: absolute;
+  margin-left: 4px;
+ /* fill: var(--main-txt-color); */
+}
+
+
 .site-nav__link:hover,
 .site-nav__link:focus {
   fill: var(--accent-font-blue-color);
@@ -80,19 +87,16 @@
 
 .site-nav__link--current {
   background-color: var(--yellow-color);
-  color: var(--main-txt-color);
+  color: var(--black-color);
   border-radius: 36px;
   height: 34px;
   padding: 8px 16px;
   font-weight: 700;
   transition: color 1s ease;
+width: 100%;
+
 }
 
-.nav__svg {
-  position: absolute;
-  margin-left: 4px;
- 
-}
 
 
 .switch {

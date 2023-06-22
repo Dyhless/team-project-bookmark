@@ -5,7 +5,7 @@
 
   letter-spacing: -0.04em;
 
-  color: #111111;
+  color: var(--main-txt-color);
 
   margin-bottom: 40px;
 
@@ -15,7 +15,7 @@
   }
 }
 .shopping__title-span {
-  color: #4f2ee8;
+  color: var(--accent-font-blue-color);
 }
 
 .is-empty__info {
@@ -24,7 +24,7 @@
 
   text-align: center;
   letter-spacing: -0.02em;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--category-name);
 
   @media screen and (min-width: 768px) {
     font-size: 18px;
@@ -70,7 +70,7 @@
 
   position: relative;
 
-  background-color: white;
+  background-color: var(--header-background);
   width: 336px;
   height: auto;
   margin-left: auto;
@@ -78,12 +78,12 @@
   margin-bottom: 20px;
   padding: 20px;
 
-  border: 3px solid rgba(79, 46, 232, 0.4);
+  border: 3px solid var(--shopping-list-border);
   border-radius: 16px;
 
   &:hover,
   &:focus {
-    border: 3px solid #eac645;
+    border: 3px solid var(--yellow-color);
   }
 
   @media screen and (min-width: 768px) {
@@ -169,7 +169,7 @@
   letter-spacing: -0.04em;
   text-transform: uppercase;
 
-  color: #111111;
+  color: var(--main-txt-color);
 }
 
 .shopping__card-category {
@@ -179,7 +179,7 @@
 
   letter-spacing: 0.03em;
 
-  color: #b4afaf;
+  color: var(--paragraph-color);
 }
 
 .shopping__card-author {
@@ -191,7 +191,7 @@
 
   letter-spacing: -0.04em;
 
-  color: #b4afaf;
+  color: var(--paragraph-color);
 }
 
 .shopping__card-description {
@@ -203,7 +203,7 @@
 
   letter-spacing: -0.04em;
 
-  color: #111111;
+  color: var(--main-txt-color);
 
   @media screen and (min-width: 768px) {
     gap: 16px;
@@ -223,6 +223,7 @@
 .shopping-img-amazon {
   width: 48px;
   height: 15px;
+  fill: (--amazon-logo);
 }
 
 .shopping-img-apple {
@@ -258,8 +259,8 @@
   height: 28px;
   border-radius: 50%;
   border-color: transparent;
-  background-color: #4f2ee8;
-
+  background-color: var(--accent-font-blue-color);
+  cursor: pointer;
   transition: background 0.2s ease-out;
 
   @media screen and (min-width: 768px) {
@@ -272,24 +273,14 @@
 }
 .shopping__card-btn:hover,
 .shopping__card-btn:hover {
-  background: #eac645;
+  background: var(--hovertxt);
 }
-
-
-
 
 .shopping__container {
   @media screen and (min-width: 1280px) {
-   width: 996px;
- }
+    width: 996px;
+  }
 }
-
-
-
-
-
-
-
 
 // @media screen and (min-width: 1024px) {
 //   .shopping__container {
