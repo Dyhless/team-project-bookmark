@@ -57,6 +57,7 @@
   letter-spacing: -0.02em;
   transition: font-weight 1.5s ease, color 0, 2 ease;
   color: var(--category-name);
+  cursor: pointer;
 }
 
 .bookcat:hover,

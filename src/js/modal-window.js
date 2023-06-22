@@ -34,6 +34,7 @@ const bookAPI = new BooksService();
 
   async function cardForModal(e) {
     // проверка если попал на картинку
+    e.preventDefault();
 
     id = e.target.getAttribute('data-id');
     if (id === null) {

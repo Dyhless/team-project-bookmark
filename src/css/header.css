@@ -74,6 +74,9 @@
 .site-nav__item {
   padding-top: 24px;
 }
+.site-nav__link {
+  transition: color 1, 5s ease;
+}
 
 .site-nav__link:hover,
 .site-nav__link:focus {
@@ -83,17 +86,20 @@
 
 .site-nav__link--current {
   background-color: var(--yellow-color);
-  color: var(--black-color);
+  color: var(--main-txt-color);
   border-radius: 36px;
   height: 34px;
   padding: 8px 16px;
   font-weight: 700;
+  transition: color 1s ease;
 }
 
 .nav__svg {
   position: absolute;
   margin-left: 4px;
+ 
 }
+
 
 .switch {
   position: absolute;
