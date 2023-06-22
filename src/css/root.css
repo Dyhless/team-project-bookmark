@@ -8,17 +8,6 @@
    --white-color: #fff;
    --black-color: #111111;
 
-   /* --black-color: #111111;
-   --grey-dark: #202024;
-   --blue-color: #4F2EE8;
-   --white-color: #FFFFFF;
-   --main-font-black-color: #111111;
-   --main-font-white-color: #F3F3F3;
-   --paragraph-grey-font-color: #B4AFAF;
-   --paragraph-white-font-color: #F6F6F6;
-   --dark-theme-background-black-color: #111111;
-   --dark-theme-background-grey-color: #202024; */
-
     --main-txt-color:  rgba(17, 17, 17, 1);
     --pagination-back: rgba(17, 17, 17, 1);
     --hovertxt: rgba(79, 46, 232, 1);
@@ -76,7 +65,5 @@
     --avtoriz-modal-toggle: rgba(246, 246, 246, 0.5);  
     --scroll-line: rgba(31, 31, 35, 0.6);
 
-    
     --amazon-logo: brightness(0)invert(1);
-    
 }

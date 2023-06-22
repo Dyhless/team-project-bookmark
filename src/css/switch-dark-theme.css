@@ -22,13 +22,13 @@
   .lable-switch {
     right: 50%;
   }
-  transition: 0.3s;
+  /* transition: 0.3s; */
 }
 
 @media screen and (min-width: 1024px) {
-  .lable-switch {
+  /* .lable-switch {
     right: -400%;
-  }
+  } */
 }
 .lable-switch:after {
   content: '';

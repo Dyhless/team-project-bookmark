@@ -2,7 +2,7 @@
   position: relative;
 
   height: 352px;
-  max-width: 335px;
+  width: 335px;
   padding: 24px 40px;
 
   background: radial-gradient(
@@ -23,7 +23,7 @@
 @media screen and (min-width: 1024px) {
   .slider-swiper {
     height: 490px;
-    max-width: 356px;
+    width: 356px;
   }
 }
 
@@ -43,7 +43,6 @@
 .swiper-container {
   margin-top: 40px;
   max-height: 188px;
-
   overflow: hidden;
 }
 

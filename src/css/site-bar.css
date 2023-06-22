@@ -1,26 +1,27 @@
-.site-bar {
-  display: flex;
-  flex-direction: column;
-  /* width: 335px; */
-  max-width: 335px;
-  gap: 40px;
-}
+/* .site-bar { */
+/* display: flex;  ANDREY*/
+/* flex-direction: column; */
+/* width: 335px; */
+/* max-width: 335px; ANDREY*/
+/* gap: 40px; */
+/* } */
 
 @media screen and (min-width: 768px) {
   .site-bar {
+    display: flex;
     /* width: 672px; */
-    max-width: 672px;
+    /* max-width: 672px;  ANDREY*/
     gap: 32px;
-    flex-direction: row;
+    /* flex-direction: row; ANDREY*/
     /* margin-right: 0; */
-    margin-right: 40px;
+    /* margin-right: 40px;  ANDREY*/
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .site-bar {
     /* width: 356px; */
-    max-width: 356px;
+    /* max-width: 356px; ANDREY*/
     flex-direction: column;
     gap: 86px;
   }
