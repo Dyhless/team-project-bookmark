@@ -62,8 +62,12 @@ async function getBooksByCategory(categoryName) {
       newBookLI.classList.add('book-card-preview');
       const bookFace = `<div class="book-preview-container"">
                           <div class="book-image">
-                            <img src="${bookRes.book_image}" class="img-book" alt="book-title-preview" 
-                            loading="lazy" onerror="src='${getFallbackImageUrl()}'" data-id="${bookRes._id}">
+                            <img src="${
+                              bookRes.book_image
+                            }" class="img-book" alt="book-title-preview" 
+                            loading="lazy" onerror="src='${getFallbackImageUrl()}'" data-id="${
+        bookRes._id
+      }">
                           </div>
                         <div>
                           <h2 class="book-title">${bookRes.title}</h2>
