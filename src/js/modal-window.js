@@ -54,11 +54,10 @@ const bookAPI = new BooksService();
       const removeBtn = document.querySelector('.js-remove-from-list');
 
       addBtn.addEventListener('click', addToShoppingList);
-      removeBtn.addEventListener('click', () =>
-        removeFromShoppingList(book._id)
-      );
+      removeBtn.addEventListener('click', removeFromShoppingList);
 
       const BOOKS_STORAGE = 'storage-of-books';
+      let booksData = JSON.parse(localStorage.getItem(BOOKS_STORAGE)) || [];
 
       function updateAddButton() {
         if (isInShoppingList(id)) {
@@ -73,37 +72,22 @@ const bookAPI = new BooksService();
       }
 
       function isInShoppingList(bookId) {
-        let booksDataJson = localStorage.getItem(BOOKS_STORAGE);
-        if (!booksDataJson) {
-          return false;
-        }
-        let booksData = JSON.parse(booksDataJson);
         return booksData.some(book => book._id === bookId);
       }
 
       function addToShoppingList() {
-        if (isInShoppingList(book._id)) {
+        if (isInShoppingList(id)) {
           console.log('The book is already in the shopping list.');
         } else {
-          let booksDataJson = localStorage.getItem(BOOKS_STORAGE);
-          let booksData = [];
-          if (booksDataJson) {
-            booksData = JSON.parse(booksDataJson);
-          }
           booksData.push(book);
           localStorage.setItem(BOOKS_STORAGE, JSON.stringify(booksData));
           updateAddButton();
         }
       }
 
-      function removeFromShoppingList(bookId) {
-        let booksDataJson = localStorage.getItem(BOOKS_STORAGE);
-        if (booksDataJson === null) {
-          return;
-        }
-        let booksData = JSON.parse(booksDataJson);
-        const updatedBooksData = booksData.filter(item => item._id !== bookId);
-        localStorage.setItem(BOOKS_STORAGE, JSON.stringify(updatedBooksData));
+      function removeFromShoppingList() {
+        booksData = booksData.filter(book => book._id !== id);
+        localStorage.setItem(BOOKS_STORAGE, JSON.stringify(booksData));
         updateAddButton();
       }
 
@@ -142,7 +126,7 @@ const bookAPI = new BooksService();
       renderMarkupModal(markup);
       updateAddButton();
     } catch (error) {
-      // console.log(error);
+      console.log(error);
     }
   }
 
