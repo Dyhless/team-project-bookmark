@@ -54,7 +54,9 @@ const bookAPI = new BooksService();
       const removeBtn = document.querySelector('.js-remove-from-list');
 
       addBtn.addEventListener('click', addToShoppingList);
-      removeBtn.addEventListener('click', () => removeFromShoppingList());
+      removeBtn.addEventListener('click', () =>
+        removeFromShoppingList(book._id)
+      );
 
       const BOOKS_STORAGE = 'storage-of-books';
 
@@ -94,15 +96,13 @@ const bookAPI = new BooksService();
         }
       }
 
-      function removeFromShoppingList() {
+      function removeFromShoppingList(bookId) {
         let booksDataJson = localStorage.getItem(BOOKS_STORAGE);
         if (booksDataJson === null) {
           return;
         }
         let booksData = JSON.parse(booksDataJson);
-        const updatedBooksData = booksData.filter(
-          item => item._id !== book._id
-        );
+        const updatedBooksData = booksData.filter(item => item._id !== bookId);
         localStorage.setItem(BOOKS_STORAGE, JSON.stringify(updatedBooksData));
         updateAddButton();
       }
