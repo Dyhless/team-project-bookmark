@@ -36,8 +36,8 @@
     padding: 20px;
     background: radial-gradient(
       183.6% 183.01% at 59.76% -23.42%,
-      #4f2ee8 18.03%,
-      #ffffff 100%
+      var(--accent-font-blue-color) 18.03%,
+      var(--white-color) 100%
     );
     z-index: 888;
     transform: translateY(-100%);
@@ -47,7 +47,7 @@
     transform: translateY(0);
   }
   .mobile-icon-menu {
-    stroke: black;
+    stroke: var(--main-txt-color);
   }
 
   .x-close {
@@ -56,7 +56,7 @@
     top: 40px;
   }
   .mobile-modal-hamburger {
-    stroke: black;
+    stroke: var(--main-txt-color);
   }
 
   .menu-toggle {

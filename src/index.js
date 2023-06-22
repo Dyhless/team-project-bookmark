@@ -8,7 +8,7 @@ import './js/scroll-up.js';
 // import './js/header-fixed-position.js'; // Проверить
 // import './js/burger.js'; // Проверить
 // import './js/loader.js';  // Проверить
-
+import './js/current-page.js';
 // Authorization "firebase".
 import './js/modals/firebase/firebase.js';
 import './js/modals/firebase/authorization-servise.js';

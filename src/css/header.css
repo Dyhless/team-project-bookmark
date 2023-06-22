@@ -13,7 +13,7 @@
   transition: background-color 0.3s ease;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .header-container {
     /* width: 356px; */
     height: 72px;
@@ -29,67 +29,92 @@
 }
 .logo {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   color: var(--logo-txt);
   font-weight: 700;
-  margin-top: 6px;
+ gap: 8px;
+ margin-top: 18px;
+
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .logo {
-    /* width: 356px; */
-    max-width: 356px;
-    margin-top: 25px;
+   
+    margin-top: 22px; 
   }
 }
 .site-nav {
   display: none;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .site-nav {
     /* width: 356px; */
-    max-width: 356px;
+    
     flex-direction: row;
-    gap: 86px;
+    gap: 24px;
     font-family: 'DM Sans';
     font-weight: 500;
     font-size: 14px;
     line-height: 1.8;
     letter-spacing: -0.04em;
     text-transform: uppercase;
-    color: var (--main-txt-color);
+    color: var(--main-txt-color);
     display: flex;
     align-items: baseline;
-    gap: 10px;
-    margin-left: 75px;
+    
+    margin-left: 40px;
   }
 }
 
 .site-nav__item {
-  padding: 24px;
+  padding-top: 24px;
 }
 
-.site-nav__link:hover {
-  border-radius: 36px;
-  color: var(--yellow-color);
+.site-nav__link:hover,
+.site-nav__link:focus {
+  fill: var(--accent-font-blue-color);
+  color: var(--accent-font-blue-color);
 }
+
+.site-nav__link--current{
+background-color: var(--yellow-color);
+  color: var(--black-color);
+  border-radius: 36px;
+  height: 34px;
+padding: 8px 16px;
+font-weight: 700;
+}
+
 
 .nav__svg {
   position: absolute;
+  margin-left: 4px;
 }
 
 .switch {
   position: absolute;
-  right: 27%;
-  top: 9%;
+  right: 62px;
+  top: 2%;
+}
+
+@media screen and (min-width: 768px) {
+  .switch {
+    right: 240px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .switch {
+    right: 232px;
+  }
 }
 
 .form {
   display: none;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .form {
     height: 42px;
     display: flex;

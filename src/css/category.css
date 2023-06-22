@@ -52,7 +52,8 @@
   font-weight: 400;
   font-size: 16px;
   letter-spacing: -0.02em;
-  transition: font-weight 1.5s ease, color 0,2 ease
+  transition: font-weight 1.5s ease, color 0,2 ease;
+  color: var(--category-name);
 }
 
 .bookcat:hover,
@@ -62,7 +63,7 @@
 
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  color: #4F2EE8;
+  color: var(--hovertxt);
 }
 @media screen and (max-width: 767px) {
   .bookcat {
@@ -88,7 +89,7 @@
     letter-spacing: -0.02em;
     text-transform: uppercase;
 
-    color: #4F2EE8;
+    color: var(--accent-font-blue-color);
   }
   
   
@@ -276,5 +277,5 @@
 }
 
 .last-word-category{
-  color:#4F2EE8;
+  color: var(--accent-font-blue-color);
 }
