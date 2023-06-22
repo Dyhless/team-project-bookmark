@@ -60,7 +60,7 @@
     line-height: 1.8;
     letter-spacing: -0.04em;
     text-transform: uppercase;
-    color: var (--main-txt-color);
+    color: var(--main-txt-color);
     display: flex;
     align-items: baseline;
     gap: 10px;
