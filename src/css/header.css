@@ -1,4 +1,6 @@
 .header-container {
+  overflow: initial;
+  z-index: 999999999;
   position: relative;
   /* width: 100%; */
   top: 0;
@@ -97,4 +99,24 @@
     right: 1%;
     top: 20%;
   }
+}
+
+@media screen and (max-width: 767px) {
+  header.is-open nav .site-nav {
+    position: relative;
+    display: flex;
+
+    flex-direction: column;
+    top: 150px;
+    right: 20px;
+    z-index: 9999999;
+  }
+  /* .site-nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 150px;
+    right: 20px;
+    z-index: 9999999;
+  } */
 }
