@@ -36,11 +36,14 @@
   align-items: center;
   justify-content: center;
   position: absolute;
+  text-transform: uppercase;
+  font-weight: 700;
+
   top: 676px;
-  left: 62px;
+  left: 17px;
   border: 2px solid var(--accent-font-blue-color);
   border-radius: 40px;
-  width: 211px;
+  width: 295px;
   height: 46px;
   background-color: transparent;
   padding: 0;
@@ -62,7 +65,7 @@
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  /* font-size: 14px; */
   line-height: 1.29;
   letter-spacing: -0.01em;
   text-transform: uppercase;
