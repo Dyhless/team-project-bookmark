@@ -90,6 +90,18 @@ overflow: hidden;
     }
 }
 
+.card-book{
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card-book:hover,
+.card-book:focus {
+    border-radius: 8px;
+    transform: scale(0.90); /* Приближення елементу на 10% */
+    box-shadow: 5 5 50px rgba(76, 75, 75, 0.3);
+}
+
+
+
 
 .img-card-book {
     display: block;
