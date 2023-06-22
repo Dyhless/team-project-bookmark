@@ -102,21 +102,21 @@ const bookAPI = new BooksService();
 <p class="text-card-modal">${description}</p>
 <ul class="shops-modal">
 <li class="li-modal">
-<a href="${amazon_link}" target="_blank">
+<a href="${amazon_link}" target="_blank" rel="noopener noreferrer">
 <img class="amazon" src="${new URL(
         '../images/shops/amazon_62x19.png',
         import.meta.url
       )}" alt="Amazon"</a>
 </li>
 <li class="li-modal">
-  <a href="${apple_link}" target="_blank">
+  <a href="${apple_link}" target="_blank" rel="noopener noreferrer">
 <img class="apple" src="${new URL(
         '../images/shops/apple-book_33x32.png',
         import.meta.url
       )}" alt="Apple-book"></a>
 </li>
 <li class="li-modal">
-  <a href="${bookshop_link}" target="_blank">
+  <a href="${bookshop_link}" target="_blank" rel="noopener noreferrer">
 <img class="book-shop" src="${new URL(
         '../images/shops/book-shop_38x36.png',
         import.meta.url
