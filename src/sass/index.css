@@ -12,6 +12,11 @@
   flex-direction: column;
   padding-bottom: 40px;
 }
+@media screen and (min-width: 1280px) {
+  .content {
+    width: 996px;
+  }
+}
 
 .paginations {
   display: flex;
@@ -119,7 +124,7 @@
   }
 }
 
-.active {
+.pagination-def-active {
   background-color: #111111;
   color: white;
 }
@@ -391,5 +396,10 @@
 @media screen and (min-width: 768px) {
   .shopping__container {
     margin-left: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shopping__container {
+    width: 996px;
   }
 }/*# sourceMappingURL=index.css.map */

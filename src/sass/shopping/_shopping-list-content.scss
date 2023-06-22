@@ -277,11 +277,19 @@
 
 
 
-@media screen and (min-width: 768px) {
-  .shopping__container {
-      margin-left: 40px;
-    }
+
+.shopping__container {
+  @media screen and (min-width: 1280px) {
+   width: 996px;
+ }
 }
+
+
+
+
+
+
+
 
 // @media screen and (min-width: 1024px) {
 //   .shopping__container {
