@@ -12,7 +12,7 @@
     display: flex;
     height: 64px;
     width: 30px;
-    left: 65px;
+    left: 205px;
     position: relative;
   }
   .menu-container {
@@ -40,12 +40,12 @@
     stroke: black;
   }
 
-  .x-close {
+  /* .x-close {
     display: block;
     position: relative;
     left: 130px;
     top: 30px;
-  }
+  } */
   .mobile-modal-burger {
     stroke: var(--main-txt-color);
   }

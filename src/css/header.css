@@ -111,12 +111,14 @@
     right: 20px;
     z-index: 9999999;
   }
-  /* .site-nav {
+  header.is-open .menu-burger {
+    display: none;
+  }
+  header.is-open .x-close {
+    z-index: 99999999;
+    display: block;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    top: 150px;
-    right: 20px;
-    z-index: 9999999;
-  } */
+    top: 3px;
+    left: 60px;
+  }
 }
