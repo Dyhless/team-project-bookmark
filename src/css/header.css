@@ -31,66 +31,108 @@
 }
 .logo {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   color: var(--logo-txt);
   font-weight: 700;
-  margin-top: 6px;
+  gap: 8px;
+  margin-top: 18px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .logo {
     /* width: 356px; */
-    max-width: 356px;
-    margin-top: 25px;
+    /* max-width: 356px; */
+    margin-top: 22px;
   }
 }
 .site-nav {
   display: none;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .site-nav {
     /* width: 356px; */
-    max-width: 356px;
+    /* max-width: 356px; */
     flex-direction: row;
-    gap: 86px;
+    gap: 24px;
     font-family: 'DM Sans';
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.8;
+    /* line-height: 1.8;
     letter-spacing: -0.04em;
-    text-transform: uppercase;
+    text-transform: uppercase; */
     color: var(--main-txt-color);
     display: flex;
     align-items: baseline;
-    gap: 10px;
-    margin-left: 75px;
+    /* gap: 10px;*/
+    margin-left: 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .site-nav {
+    margin-left: 76px;
   }
 }
 
 .site-nav__item {
+  padding-top: 24px;
+}
+.site-nav__link {
+  transition: color 1, 5s ease;
+}
+
+.site-nav__link:hover,
+.site-nav__link:focus {
+  fill: var(--accent-font-blue-color);
+  color: var(--accent-font-blue-color);
+}
+
+.site-nav__link--current {
+  background-color: var(--yellow-color);
+  color: var(--main-txt-color);
+  border-radius: 36px;
+  height: 34px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 26px;
+  font-weight: 700;
+  transition: color 1s ease;
+}
+/* .site-nav__item {
   padding: 24px;
 }
 
 .site-nav__link:hover {
   border-radius: 36px;
   color: var(--yellow-color);
-}
+}*/
 
 .nav__svg {
   position: absolute;
+  margin-left: 4px;
 }
 
 .switch {
   position: absolute;
-  right: 27%;
-  top: 9%;
+  right: 62px;
+  top: 2%;
+}
+@media screen and (min-width: 768px) {
+  .switch {
+    right: 240px;
+  }
 }
 
+@media screen and (min-width: 1440px) {
+  .switch {
+    right: 232px;
+  }
+}
 .form {
   display: none;
 }
-
 @media screen and (min-width: 1024px) {
   .form {
     height: 42px;
