@@ -1,5 +1,5 @@
 <!-- USER BAR for not authorized user -->
-<button type="button" class="userbar-btn" id="signUp-open-btn">
+<button class="userbar-btn" id="signUp-open-btn" type="button">
   Sign up
   <svg class="userbar-btn__icon" width="22" height="22">
     <use href="./images/sprite.svg#arrow-narrow"></use>
@@ -7,12 +7,7 @@
 </button>
 
 <!-- USER BAR for authorized user -->
-<button
-  type="button"
-  class="user-block user-out"
-  id="userBarMenu"
-  aria-label="Open user menu"
->
+<button class="user-block user-out" id="userBarMenu" type="button" aria-label="Open user menu">
   <svg class="userbar-btn__icon-user" width="35" height="35">
     <use href="./images/sprite.svg#user"></use>
   </svg>
@@ -22,11 +17,11 @@
   </svg>
   <ul class="dropdown-menu" id="logOutMenu">
     <li>
-      <a href="#" class="dropdown-menu__text" id="logOut"><span class="dropdown-menu__text-span"></span>Log out</span>
+      <a class="dropdown-menu__text" id="logOut" href="#"><Log class="dropdown-menu__text-span">Log out
         <svg class="dropdown-menu__icon userbar-btn__icon" width="20" height="20">
           <use href="./images/sprite.svg#arrow-narrow"></use>
         </svg>
-      </a>
+      </Log></a>
     </li>
   </ul>
 </button>
@@ -34,62 +29,39 @@
 <!-- SIGN UP FORM -->
 <div class="backdrop" id="sign-up-modal">
   <div class="modal-auto" id="sign-up-modal-window">
-    <button
-      class="modal__close-button"
-      type="button"
-      id="signUp-modal-close-btn"
-      aria-label="Close sign-up modal"
-    >
+    <button class="modal__close-button" id="signUp-modal-close-btn" type="button" aria-label="Close sign-up modal">
       <svg class="close-button__x-icon">
         <use href="./images/sprite.svg#x-close"></use>
       </svg>
     </button>
 
-    <form class="modal-form" name="modal-form" id="singUp">
+    <form class="modal-form" id="singUp" name="modal-form">
       <div class="modal-form__input-field" id="name-input-wrapper">
-        <input
-          class="modal-form__input"
-          type="text"
-          id="signup-user-name"
-          name="user_name"
-          placeholder="Ivan Ivanovich"
-        />
-        <label for="user_name" class="modal-form__label">name</label>
+        <input class="modal-form__input" id="signup-user-name" name="user_name" type="text" placeholder="Ivan Ivanovich">
+        <label class="modal-form__label" for="user_name">name</label>
       </div>
       <div class="modal-form__input-field">
-        <input
-          class="modal-form__input"
-          type="email"
-          id="signup-user-email"
-          name="user_email"
-          placeholder="user@mail.com"
-        />
-        <label for="user_email" class="modal-form__label">email</label>
+        <input class="modal-form__input" id="signup-user-email" name="user_email" type="email" placeholder="user@mail.com">
+        <label class="modal-form__label" for="user_email">email</label>
         <svg class="modal-form__icon">
           <use href="./images/sprite.svg#mail"></use>
         </svg>
       </div>
       <div class="modal-form__input-field">
-        <input
-          class="modal-form__input"
-          type="password"
-          id="signup-user-password"
-          name="user_password"
-          placeholder="iWant901BitCoin"
-        />
-        <label for="user_password" class="modal-form__label">password</label>
+        <input class="modal-form__input" id="signup-user-password" name="user_password" type="password" placeholder="iWant901BitCoin">
+        <label class="modal-form__label" for="user_password">password</label>
         <svg class="modal-form__icon">
           <use href="./images/sprite.svg#lock"></use>
         </svg>
       </div>
 
-      <button type="submit" class="modal-form__submit">Sign up</button>
+      <button class="modal-form__submit" type="submit">Sign up</button>
     </form>
     <div class="modal-toggle">
-      <button type="button" class="modal-toggle__el modal-toggle__el--current">
+      <button class="modal-toggle__el modal-toggle__el--current" type="button">
         Sign up
       </button>
-      <button type="button" class="modal-toggle__el" id="signIn-open-btn">
+      <button class="modal-toggle__el" id="signIn-open-btn" type="button">
         Sign in
       </button>
     </div>
@@ -97,56 +69,35 @@
 
   <!-- SIGN IN FORM -->
   <div class="modal-auto" id="sign-in-modal-window">
-    <button
-      class="modal__close-button"
-      id="signIn-modal-close-btn"
-      type="button"
-      aria-label="Close"
-    >
+    <button class="modal__close-button" id="signIn-modal-close-btn" type="button" aria-label="Close">
       <svg class="close-button__x-icon">
         <use href="./images/sprite.svg#x-close"></use>
       </svg>
     </button>
 
-    <form class="modal-form" name="modal-form" id="logIn">
+    <form class="modal-form" id="logIn" name="modal-form">
       <div class="modal-form__input-field" id="mail-input-wrapper">
-        <input
-          class="modal-form__input"
-          type="email"
-          id="signin-user-email"
-          name="user_email"
-          placeholder="user@mail.com"
-        />
-        <label for="user_email" class="modal-form__label">email</label>
+        <input class="modal-form__input" id="signin-user-email" name="user_email" type="email" placeholder="user@mail.com">
+        <label class="modal-form__label" for="user_email">email</label>
         <svg class="modal-form__icon">
           <use href="./images/sprite.svg#mail"></use>
         </svg>
       </div>
       <div class="modal-form__input-field">
-        <input
-          class="modal-form__input"
-          type="password"
-          id="signin-user-password"
-          name="user_password"
-          placeholder="iWant901BitCoin"
-        />
-        <label for="user_password" class="modal-form__label">password</label>
+        <input class="modal-form__input" id="signin-user-password" name="user_password" type="password" placeholder="iWant901BitCoin">
+        <label class="modal-form__label" for="user_password">password</label>
         <svg class="modal-form__icon">
           <use href="./images/sprite.svg#lock"></use>
         </svg>
       </div>
 
-      <button type="submit" class="modal-form__submit">Sign in</button>
+      <button class="modal-form__submit" type="submit">Sign in</button>
     </form>
     <div class="modal-toggle">
-      <button
-        type="button"
-        class="modal-toggle__el"
-        id="signUp-open-btn-second"
-      >
+      <button class="modal-toggle__el" id="signUp-open-btn-second" type="button">
         Sign up
       </button>
-      <button type="button" class="modal-toggle__el modal-toggle__el--current">
+      <button class="modal-toggle__el modal-toggle__el--current" type="button">
         Sign in
       </button>
     </div>
