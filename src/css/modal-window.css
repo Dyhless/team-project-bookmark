@@ -10,10 +10,11 @@
   padding: 40px 24px;
   background-color: var(--backg-overlay-modal);
   transition: opacity 1000ms, visibility 1000ms;
+  
 }
 
 /* Изменил название класса  */
-.backdrop-modal-book.is-hidden-modal-book {
+.is-hidden-modal-book {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -113,9 +114,9 @@
   transition: stroke 250ms;
 }
 
-/* body.modal-open {
+.modal-open {
   overflow: hidden;
-} */
+}
 .card-img-modal {
   width: 192px;
   height: 281px;
