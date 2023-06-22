@@ -61,7 +61,7 @@
 .name-category {
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.29px;
+  line-height: 1.29;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--paragraph-color);
@@ -183,7 +183,7 @@
   font-style: italic;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.17px;
+  line-height: 1.17;
   letter-spacing: -0.04em;
   white-space: nowrap;
   overflow: hidden;
