@@ -223,7 +223,7 @@
 .shopping-img-amazon {
   width: 48px;
   height: 15px;
-  fill: (--amazon-logo);
+  fill: var(--amazon-logo);
 }
 
 .shopping-img-apple {
