@@ -6,7 +6,7 @@ import './js/slider.js';
 import './js/category.js'; // Проверить
 import './js/scroll-up.js';
 // import './js/header-fixed-position.js'; // Проверить
-// import './js/burger.js'; // Проверить
+import './js/burger.js'; // Проверить
 import './js/loader.js'; // Проверить
 import './js/current-page.js';
 // Authorization "firebase".
