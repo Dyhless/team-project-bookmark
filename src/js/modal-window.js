@@ -99,7 +99,7 @@ const bookAPI = new BooksService();
 <div class="text-card-dt"> 
       <h5 class="title">${title}</h5>
 <p class="author-card-modal">${author}</p>
-<p class="text-card-modal">${description}</p>
+<p class="text-card-modal">${description || 'No description'}</p>
 <ul class="shops-modal">
 <li class="li-modal">
 <a href="${amazon_link}" target="_blank" rel="noopener noreferrer">
