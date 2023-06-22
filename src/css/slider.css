@@ -20,7 +20,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .slider-swiper {
     height: 490px;
     width: 356px;
@@ -91,7 +91,7 @@
   background-size: 20px 20px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .swiper-button-next {
     bottom: 24px !important;
   }
