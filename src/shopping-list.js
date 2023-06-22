@@ -1,6 +1,6 @@
 import './js/slider.js';
 import './js/dark-theme.js';
-
+import './js/current-page.js';
 // Content
 import './js/shopping/shopping-list.js';
 
