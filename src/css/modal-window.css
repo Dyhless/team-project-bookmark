@@ -178,7 +178,7 @@ cursor: pointer;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.12;
-
+    color: var(--main-txt-color);
     margin-bottom: 4px;
 
     letter-spacing: -0.04em;
@@ -194,13 +194,13 @@ cursor: pointer;
 
     letter-spacing: -0.04em;
 
-    color: #b4afaf;
+    color: var(--paragraph-color);
   }
 
   .text-card-modal {
     font-size: 14px;
     line-height: 1.29;
-
+    color: var(--main-txt-color);
     margin-bottom: 14px;
 
     letter-spacing: -0.04em;
@@ -239,7 +239,7 @@ cursor: pointer;
 
     letter-spacing: -0.04em;
 
-    color: #b4afaf;
+    color: var(--paragraph-color);
   }
 
   .text-card-modal {
@@ -266,7 +266,7 @@ cursor: pointer;
   font-size: 12px;
   line-height: 14px;
   bottom: 20px;
-  color: #11111180;
+  color: var(--avtoriz-modal-toggle);
   margin-top: 112px;
   padding-bottom: 40px;
   margin-left: auto;
