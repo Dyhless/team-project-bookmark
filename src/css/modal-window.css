@@ -99,7 +99,6 @@
   }
   .modal {
     width: 579px;
-
     height: 465px;
   }
 }
@@ -215,7 +214,7 @@ cursor: pointer;
 
   .modal {
     width: 579px;
-    height: 500px;
+    height: 480px;
   }
 
   .title {
