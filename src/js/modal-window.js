@@ -94,7 +94,8 @@ const bookAPI = new BooksService();
       //==================
 
       const markup = `<img src="${book_image}" alt="book" class="card-img-modal">
-<h5 class="title">${title}</h5>
+<div class="text-card-dt"> 
+      <h5 class="title">${title}</h5>
 <p class="author-card-modal">${author}</p>
 <p class="text-card-modal">${description}</p>
 <ul class="shops-modal">
@@ -120,6 +121,7 @@ const bookAPI = new BooksService();
       )}" alt="Book-shop"></a>
 </li>
 </ul>
+</div>
 `;
       // console.log('markup', markup);
 
