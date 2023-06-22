@@ -92,12 +92,13 @@ overflow: hidden;
 
 .card-book{
     transition: transform 0.3s, box-shadow 0.3s;
+    
 }
 .card-book:hover,
 .card-book:focus {
     border-radius: 8px;
-    transform: scale(0.90); /* Приближення елементу на 10% */
-    box-shadow: 5 5 50px rgba(76, 75, 75, 0.3);
+    transform: scale(1.01); /* Приближення елементу на 10% */
+    box-shadow: 5 5 15px rgba(76, 75, 75, 0.3);
 }
 
 
@@ -198,6 +199,7 @@ overflow: hidden;
 }
 
 .see-more {
+    cursor: pointer;
     display: block;
     font-family: var(--main-font);
     font-weight: 700;
