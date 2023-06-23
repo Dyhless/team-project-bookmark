@@ -8,13 +8,13 @@
   display: none;
 }
 
-.mobile-img {
+/* .mobile-img {
     display: none;
-  }
+  } */
 
-.modal-img{
+/* .modal-img{
   display: none;
-}
+} */
     
 
 
@@ -64,14 +64,14 @@
     gap: 25px;
   }
 
-    .mobile-img {
-      display: flex;
-    }
+  .mobile-img {
+    display: flex;
+  }
 
-        .modal-img {
-          align-self: self-end;
-          width: 100%;
-        }
+  .modal-img {
+    align-self: self-end;
+    width: 100%;
+  }
 }
 
 
