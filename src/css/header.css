@@ -111,12 +111,13 @@
 .switch {
   position: absolute;
   right: 62px;
-  top: -4%;
+  top: -4.5%;
 }
 
 @media screen and (min-width: 768px) {
   .switch {
     right: 240px;
+    top: 0%;
   }
 }
 
