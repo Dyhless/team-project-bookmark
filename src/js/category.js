@@ -117,6 +117,7 @@ async function getCategoryList() {
         getBooksByCategory(category.list_name);
       });
     });
+    hideLoader();
   } catch (error) {
     console.log(error);
     hideLoader();
