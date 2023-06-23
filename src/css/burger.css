@@ -22,7 +22,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 20px;
+    /* padding: 20px; */
     background-image: radial-gradient(
       183.6% 183.01% at 59.76% -23.42%,
       #4f2ee8 18.03%,
@@ -49,4 +49,15 @@
     border: 0;
     padding: 0;
   }
+  .header.is-open .site-nav {
+    gap: 25px;
+  }
+}
+.img {
+  display: flex;
+}
+
+.modal-img {
+  align-self: self-end;
+  width: 100%;
 }
