@@ -1,4 +1,3 @@
-// Импортируем функции из "authorization-form.js".
 import {
   handleClickOnSingInCloseBtn,
   handleClickOnSingUpCloseBtn,
@@ -6,28 +5,21 @@ import {
   userLogOut,
 } from '../modal-login/authorization-form';
 
-// Импортируем функции из "authorization-servise.js".
 import { createUser, onLogOut, onLogin } from './authorization-servise';
 
-// Импортируем функции из "firebase-servise.js".
 import { deleteBookShopping, postShoppingList } from './firebase-servise';
 
-// Импортируем функции из "form-validator.js".
 import validateOnSubmit from '../modal-login/form-validator';
 
-// Переменные-ссылки на HTML элементы.
 const formSingUp = document.getElementById('singUp');
 const formLogIn = document.getElementById('logIn');
 const logOut = document.getElementById('logOut');
 
-// Вешаем слушателей на элементы формы входа в аккаунт.
 formSingUp.addEventListener('submit', onCreateUser);
 formLogIn.addEventListener('submit', onLogIn);
 
-// Вешаем слушателя на кнопку выхода из аккаунта -> "User Bar" в "хедере".
 logOut.addEventListener('click', onLogOutUser);
 
-//!!! - "await"
 async function onCreateUser(e) {
   e.preventDefault();
   const {
@@ -46,23 +38,39 @@ async function onCreateUser(e) {
   handleClickOnSingUpCloseBtn();
 }
 
-//!!!
 async function onLogOutUser(e) {
   e.preventDefault();
   const localList = JSON.parse(localStorage.getItem('storage-of-books'));
   if (localList) {
-    await deleteBookShopping();
-    postShoppingList(localList);
+    try {
+      await deleteBookShopping();
+      postShoppingList(localList);
+    } catch (error) {
+      if (error.response && error.response.status === 401) {
+        // Ошибка 401 Unauthorized
+        // Пользователь не авторизован, производим выход без запроса на сервер
+        localStorage.removeItem('uid');
+        localStorage.removeItem('token');
+        userLogOut();
+        onLogOut();
+        const shoppingListContainer = document.querySelector('.shopping__list');
+        if (shoppingListContainer) {
+          shoppingListContainer.classList.add('hidden');
+        }
+        return;
+      }
+      // Обработка других ошибок
+      console.log(error);
+    }
   }
   userLogOut();
   onLogOut();
-
-  // Скрыть список выбранных книг
   const shoppingListContainer = document.querySelector('.shopping__list');
-  shoppingListContainer.classList.add('hidden');
+  if (shoppingListContainer) {
+    shoppingListContainer.classList.add('hidden');
+  }
 }
 
-//!!!
 function onLogIn(e) {
   e.preventDefault();
   const {
@@ -74,12 +82,11 @@ function onLogIn(e) {
   onLogin(userEmail, userPassword);
   handleClickOnSingInCloseBtn();
   const token = JSON.parse(localStorage.getItem('token'));
-  // console.log(token);
   if (token) {
-    // Отобразить список выбранных книг
     const shoppingListContainer = document.querySelector('.shopping__list');
-    shoppingListContainer.classList.remove('hidden');
-
+    if (shoppingListContainer) {
+      shoppingListContainer.classList.remove('hidden');
+    }
     userLogIn();
   }
 }
