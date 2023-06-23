@@ -25,9 +25,7 @@
   /* transition: 0.3s; */
 /* } */ 
 
-@media screen and (min-width: 1024px) {
-  
-}
+
 .lable-switch:after {
   content: '';
   position: absolute;

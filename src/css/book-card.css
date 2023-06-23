@@ -96,7 +96,7 @@
 .card-book:focus {
   border-radius: 8px;
   transform: scale(1.01); /* Приближення елементу на 10% */
-  box-shadow: 5 5 15px rgba(76, 75, 75, 0.3);
+  box-shadow: 5px 5px 15px rgba(76, 75, 75, 0.3);
 }
 
 .img-card-book {
