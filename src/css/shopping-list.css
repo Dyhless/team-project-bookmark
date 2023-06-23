@@ -22,13 +22,13 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023.9px) {
+@media screen and (min-width: 768px) and (max-width: 1439.9px) {
   .shopping-list__title {
     margin: 40px 32px 140px 32px;
   }
 }
 
-@media screen and (max-width: 1023.9px) {
+@media screen and (max-width: 1439.9px) {
   .support-ukraine {
     display: none;
   }
@@ -65,7 +65,7 @@
   color: var(--category-name);
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .flex-container-shopping {
     display: flex;
     margin: 0 auto;

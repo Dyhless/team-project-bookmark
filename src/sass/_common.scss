@@ -1,7 +1,7 @@
 .sidebar-shoppinglist {
   display: none;
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1440px) {
     display: inherit;
   }
 }
@@ -14,7 +14,7 @@
 
 
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1440px) {
     width: 996px;
     margin-left: 40px;
   }
