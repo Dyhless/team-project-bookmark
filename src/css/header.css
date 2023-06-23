@@ -62,10 +62,11 @@
     color: var(--main-txt-color);
     display: flex;
     align-items: center;
-
+    
     margin-left: 40px;
   }
 }
+
 
 @media screen and (min-width: 1440px) {
   .site-nav {
@@ -78,6 +79,7 @@
 } */
 .site-nav__link {
   transition: color 1, 5s ease;
+  fill: var(--main-txt-color);
 }
 
 .nav__svg {

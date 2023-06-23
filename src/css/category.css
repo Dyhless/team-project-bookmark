@@ -93,7 +93,7 @@
     letter-spacing: -0.02em;
     text-transform: uppercase;
 
-    color: var(--accent-font-blue-color);
+    color: var(--hovertxt);
   }
 
   ::-webkit-scrollbar {
