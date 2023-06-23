@@ -1,5 +1,5 @@
 // Импорт переменных-ссылок на изображения из "icon-path-refs.js".
-import getIconPaths from './icon-path-refs';
+import getIconPaths from './icon-path-refs.js';
 const {
   appleBooksIconPath,
   bookShopIconPath,
@@ -24,7 +24,7 @@ const SHOPPING_LIST_STORAGE_KEY = 'storage-of-books';
 const shoppingList =
   JSON.parse(localStorage.getItem(SHOPPING_LIST_STORAGE_KEY)) || [];
 
-// !===============Paginagions variables=================
+// // // !===============Paginagions variables=================
 
 const isMobile = window.innerWidth < 767;
 
@@ -138,8 +138,8 @@ divEl.addEventListener('click', event => {
   }
 });
 
-// !=====================Paginations==========================
-// !==========================================================
+// // !=====================Paginations==========================
+// // !==========================================================
 for (let i = 1; i <= totalPages; i++) {
   if (shoppingList.length <= 3) {
     return;
@@ -153,7 +153,7 @@ for (let i = 1; i <= totalPages; i++) {
   activDisplayFlexOnElement(paginationContainerBackBtn);
   activDisplayFlexOnElement(paginationContainerEndBtn);
 
-  // handler button pages
+//   // handler button pages
   button.addEventListener('click', () => {
     currentPage = pageNumber;
     deleteMurkup();
@@ -164,15 +164,18 @@ for (let i = 1; i <= totalPages; i++) {
   paginationContainerPages.appendChild(button);
 }
 
-paginationContainerPages.firstChild.classList.add('pagination-def-active');
-
-paginationsSection.addEventListener(
+if (paginationContainerPages.firstChild !==  null){
+  paginationContainerPages.firstChild.classList.add('pagination-def-active');
+  paginationsSection.addEventListener(
+      'click',
+      handlerPaginationsButtonsStartPreviousNextStart
+    );
+    paginationsSection.addEventListener(
   'click',
   handlerPaginationsButtonsStartPreviousNextStart
 );
 function handlerPaginationsButtonsStartPreviousNextStart(event) {
   const activButton = document.querySelector('.pagination-def-active');
-  // console.log(event.target);
   if (event.target.tagName !== 'BUTTON') {
     return;
   }
@@ -217,8 +220,8 @@ function handlerPaginationsButtonsStartPreviousNextStart(event) {
       highlighteTheСurrentРage(paginationContainerPages.lastElementChild);
       break;
     default:
-      break;
   }
+}
 }
 
 paginationContainerPages.addEventListener(
@@ -233,8 +236,8 @@ function handleButtonPaginationContainerPages(event) {
   highlighteTheСurrentРage(event.target);
 }
 
-// !==================functionsPaginations====================
-// !==========================================================
+// // !==================functionsPaginations====================
+// // !==========================================================
 
 function deleteMurkup() {
   divEl.innerHTML = '';
