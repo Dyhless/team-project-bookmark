@@ -81,6 +81,7 @@
   fill: var(--main-txt-color);
 }
 
+
 .nav__svg {
   position: absolute;
   margin-left: 4px;
@@ -156,7 +157,8 @@
     z-index: 99999999;
     display: block;
     position: relative;
-    top: 3px;
-    left: 110px;
+    /* top: 10px; */
+    bottom: 22px;
+    left: 56px;
   }
 }
