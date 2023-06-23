@@ -117,12 +117,13 @@
 @media screen and (min-width: 768px) {
   .switch {
     right: 240px;
-    top: 0%;
+    top: 5px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .switch {
+    top: 5px;
     right: 232px;
   }
 }
