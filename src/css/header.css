@@ -62,11 +62,10 @@
     color: var(--main-txt-color);
     display: flex;
     align-items: center;
-    
+
     margin-left: 40px;
   }
 }
-
 
 @media screen and (min-width: 1440px) {
   .site-nav {
@@ -145,10 +144,9 @@
   header.is-open nav .site-nav {
     position: relative;
     display: flex;
-
+    justify-content: center;
     flex-direction: column;
-    top: 183px;
-    right: 20px;
+    top: 247px;
     z-index: 9999999;
   }
   header.is-open .menu-burger {

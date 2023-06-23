@@ -1,6 +1,7 @@
 import './js/slider.js';
 import './js/dark-theme.js';
 import './js/current-page.js';
+import './js/burger.js';
 // Content
 import './js/shopping/shopping-list.js';
 
@@ -12,4 +13,3 @@ import './js/modals/firebase/firebase-servise.js';
 // Authorization "modal-login".
 import './js/modals/modal-login/authorization-form.js';
 import './js/modals/modal-login/form-validator.js';
-
