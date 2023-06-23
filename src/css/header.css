@@ -155,7 +155,7 @@
     z-index: 99999999;
     display: block;
     position: relative;
-    top: 3px;
-    left: 110px;
+    /* top: 3px; */
+    left: 105px;
   }
 }
