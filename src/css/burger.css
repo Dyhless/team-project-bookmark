@@ -7,6 +7,17 @@
 .x-close {
   display: none;
 }
+
+.mobile-img {
+    display: none;
+  }
+
+.modal-img{
+  display: none;
+}
+    
+
+
 @media screen and (max-width: 767px) {
   .menu-burger {
     display: flex;
@@ -52,12 +63,17 @@
   .header.is-open .site-nav {
     gap: 25px;
   }
-}
-.img {
-  display: flex;
+
+    .mobile-img {
+      display: flex;
+    }
+
+        .modal-img {
+          align-self: self-end;
+          width: 100%;
+        }
 }
 
-.modal-img {
-  align-self: self-end;
-  width: 100%;
-}
+
+
+
