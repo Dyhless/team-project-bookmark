@@ -1,5 +1,3 @@
-
-// Импортируем функции из "authorization-form.js".
 import {
   handleClickOnSingInCloseBtn,
   handleClickOnSingUpCloseBtn,
@@ -7,28 +5,18 @@ import {
   userLogOut,
 } from '../modal-login/authorization-form';
 
-// Импортируем функции из "authorization-servise.js".
 import { createUser, onLogOut, onLogin } from './authorization-servise';
-
-// Импортируем функции из "firebase-servise.js".
 import { deleteBookShopping, postShoppingList } from './firebase-servise';
-
-// Импортируем функции из "form-validator.js".
 import validateOnSubmit from '../modal-login/form-validator';
 
-// Переменные-ссылки на HTML элементы.
 const formSingUp = document.getElementById('singUp');
 const formLogIn = document.getElementById('logIn');
 const logOut = document.getElementById('logOut');
 
-// Вешаем слушателей на элементы формы входа в аккаунт.
 formSingUp.addEventListener('submit', onCreateUser);
 formLogIn.addEventListener('submit', onLogIn);
-
-// Вешаем слушателя на кнопку выхода из аккаунта -> "User Bar" в "хедере".
 logOut.addEventListener('click', onLogOutUser);
 
-//!!! - "await"
 async function onCreateUser(e) {
   e.preventDefault();
   const {
@@ -47,19 +35,26 @@ async function onCreateUser(e) {
   handleClickOnSingUpCloseBtn();
 }
 
-//!!!
-async function onLogOutUser(e) {
+function onLogOutUser(e) {
   e.preventDefault();
   const localList = JSON.parse(localStorage.getItem('storage-of-books'));
   if (localList) {
-    await deleteBookShopping();
-    postShoppingList(localList);
+    deleteBookShopping()
+      .then(() => {
+        postShoppingList(localList);
+      })
+      .finally(() => {
+        localStorage.clear(); // Очищаем локальное хранилище
+        userLogOut();
+        onLogOut();
+      });
+  } else {
+    localStorage.clear(); // Очищаем локальное хранилище
+    userLogOut();
+    onLogOut();
   }
-  userLogOut();
-  onLogOut();
 }
 
-//!!!
 function onLogIn(e) {
   e.preventDefault();
   const {
@@ -71,7 +66,6 @@ function onLogIn(e) {
   onLogin(userEmail, userPassword);
   handleClickOnSingInCloseBtn();
   const token = JSON.parse(localStorage.getItem('token'));
-  // console.log(token);
   if (token) {
     userLogIn();
   }
