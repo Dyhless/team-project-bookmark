@@ -90,3 +90,7 @@
 .shopping__container {
   margin-left: 40px;
 }
+
+.hidden {
+  display: none;
+}
