@@ -16,7 +16,7 @@
   width: 54px;
   height: 54px;
 
-  background-color: #4f2ee8;
+  background-color: var(--hovertxt);
 
   opacity: 1;
   border-radius: 50%;
