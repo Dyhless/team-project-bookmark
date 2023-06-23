@@ -12,11 +12,9 @@ const signUpModalWindowEl = document.getElementById('sign-up-modal-window');
 const logOutMenu = document.getElementById('logOutMenu');
 const singUpBtn = document.querySelector('.userbar-btn');
 
-
 // Слушатель на кнопке "SignUp" в "хедере".
 openSignUpBtnEl.addEventListener('click', handleClickOnSingUpOpenBtn);
 //! Добавить слушатель для кнопки "SignUp" мобильного меню.
-
 
 //! Слушатели аутентификации - рассортировать по функциям "Open" и "Close", добавляя в "Open" (addEventListener) и удаляя их в "Close".
 closeSignUpBtnEl.addEventListener('click', handleClickOnSingUpCloseBtn); // => Open
@@ -86,10 +84,3 @@ export function userLogOut() {
 function openUserBarMenu() {
   logOutMenu.classList.toggle('logout-menu');
 }
-
-
-//! Нужно исправить:
-// 1. Нужно что-то делать с "рефами", мусорка в коде.
-// 2. Много слушателей "навешал" и ни одного не убрал.
-// 3. При переключение с "Sign in" на "Sign up" происходит резкий переход.
-// 4. С мобильным меню БЕДА, нет ни меню, ни кнопок, ни алгоритмов...

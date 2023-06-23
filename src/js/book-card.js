@@ -88,7 +88,7 @@ async function updateBooksCategories() {
         });
       });
     }
-    //     //======= /Дашин код ==============
+
   }
   hideLoader();
 }
