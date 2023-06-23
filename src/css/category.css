@@ -58,7 +58,7 @@
   transition: font-weight 1.5s ease, color 0, 2 ease;
   color: var(--category-name);
   cursor: pointer;
-  transition: color, 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bookcat:hover,
@@ -117,9 +117,7 @@
 
   /* Стилізація фону полоси прокрутки */
   ::-webkit-scrollbar-track {
-    background-color: var(
-      --header-background
-    ); /* Колір фону полоси прокрутки */
+    background-color: var(--header-background); /* Колір фону полоси прокрутки */
   }
 }
 
@@ -223,7 +221,7 @@
   line-height: 117%;
   letter-spacing: 0.04em;
   color: var(--paragraph-color);
-  padding-left: px;
+
   padding-bottom: 4px;
 }
 
@@ -267,13 +265,13 @@
 .book-preview-container:focus {
   border-radius: 8px;
   transform: scale(1.1); /* Приближення елементу на 10% */
-  box-shadow: 50 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 50px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .book-preview-container .book-author,
 .book-preview-container .book-title {
-  padding-left: 5;
-  padding-bottom: 5;
+  padding-left: 5px;
+  padding-bottom: 5px;
   transition: padding-left 0.3s ease, padding-bottom 0.3s ease;
 }
 
