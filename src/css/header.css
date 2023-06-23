@@ -141,6 +141,7 @@
 
 @media screen and (max-width: 767px) {
   header.is-open nav .site-nav {
+    max-width: 100%;
     position: relative;
     display: flex;
     justify-content: center;
@@ -155,7 +156,9 @@
     z-index: 99999999;
     display: block;
     position: relative;
-    /* top: 3px; */
-    left: 105px;
+    right: 5px;
+  }
+  header.is-open nav {
+    width: 100%;
   }
 }
