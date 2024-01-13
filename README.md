@@ -8,15 +8,15 @@ various platforms.
 
 **Technologies were used:**
 
-- HTML+CSS
-- Javascript
-- Agile/Scrum methodologies
+- `HTML+CSS`
+- `Javascript`
+- `Agile/Scrum` methodologies
 
 The service [Firebase](https://firebase.google.com/docs/web/setup) was used for
 user registration.
 
-This project was created with Parcel. For familiarization and setting additional
-features [refer to documentation](https://parceljs.org/).
+This project was created with `Parcel`. For familiarization and setting
+additional features [refer to documentation](https://parceljs.org/).
 
 **Developers involved in the project:**
 
