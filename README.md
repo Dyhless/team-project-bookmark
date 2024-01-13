@@ -8,7 +8,9 @@ various platforms.
 
 **Technologies were used:**
 
-- `HTML+CSS`
+- `HTML`
+- `CSS`
+- `sass`
 - `Javascript`
 - `Agile/Scrum` methodologies
 
